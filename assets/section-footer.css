@@ -28,8 +28,6 @@
 
   .footer__content-top {
     padding-bottom: 3rem;
-    padding-left: calc(4rem / var(--font-body-scale));
-    padding-right: calc(4rem / var(--font-body-scale));
   }
 }
 
@@ -110,8 +108,9 @@
 
 @media screen and (min-width: 750px) {
   .footer-block {
-    display: block;
+    display: inline-block;
     margin-top: 0;
+    padding: 0px 15px 0px 10px;
   }
 }
 
@@ -129,7 +128,23 @@
 .footer-block--newsletter:only-child {
   margin-top: 0;
 }
-
+.footer-block--newsletter .footer__logo {
+  max-width: 176px;
+}
+.footer-block--newsletter .footer__logo img {
+  width: 100%;
+}
+.footer-block--newsletter .footer__btn {
+  margin: 20px auto;
+  text-align: center;
+}
+.footer-block--newsletter .footer__btn button {
+  background: black;
+  color: white;
+  font-weight: 700;
+  padding: 5px 20px;
+  font-size: 13px;
+}
 @media screen and (max-width: 749px) {
   .footer-block.footer-block--menu:only-child {
     text-align: left;
@@ -144,14 +159,13 @@
 }
 
 .footer-block__heading {
-  margin-bottom: 2rem;
   margin-top: 0;
-  font-size: calc(var(--font-heading-scale) * 1.6rem);
+  margin-bottom: 0;
 }
 
 @media screen and (min-width: 990px) {
   .footer-block__heading {
-    font-size: calc(var(--font-heading-scale) * 1.8rem);
+    font-size: calc(var(--font-heading-scale) * 1.4rem);
   }
 }
 
@@ -177,7 +191,40 @@
 .newsletter-form__field-wrapper {
   max-width: 36rem;
 }
+.footer__blocks-wrapper  {
+  display: flex;
+  justify-content: center;
+  background: url(//gigaplus.makeshop.jp/isimaruudon/common/img/bg_footer_li.jpg) repeat;
+}
 
+.footer__blocks-wrapper  .footer-link {
+  margin: 0;
+  padding: 20px 0;
+  display: flex;
+}
+.footer__blocks-wrapper  .footer-link li {
+  position: relative;
+  display: flex;
+  list-style-type: none;
+  margin: 10px;
+}
+.footer-link li:not(:last-child):after {
+  position: absolute;
+  content: "";
+  width: 1px;
+  top: 7px;
+  height: 10px;
+  background-color: gray;
+  right: -10px;
+}
+.footer__blocks-wrapper  .footer-link li .footer-block__heading {
+  padding: 0px 15px 0px 10px;
+}
+@media screen and (max-width: 750px) {
+  .footer__blocks-wrapper  {
+    display: none;
+  }
+}
 @media screen and (min-width: 750px) {
   /* Pushes other components to the right of the flexbox */
   .footer-block__newsletter:not(:only-child) {
@@ -240,10 +287,50 @@
   }
 
 }
-
+.footer__contact {
+ text-align: center;
+}
+.footer__image #image__deliver,#image__fax {
+  display: none;
+}
+.footer__image img {
+  margin: 0 10px;
+  max-width: 33.33333%;
+}
+.footer__contact .footer__button-sp {
+   display: block;
+}
+.footer__contact .footer__button-sp button {
+  margin: 20px 10px;
+}
+.footer__contact .footer__button-sp button:nth-child(1) {
+  background-color: #1877f2;
+  border: none;
+  outline: none;
+  color: white;
+  border-radius: 4px;
+}
+.footer__contact .footer__button-sp button:nth-child(2) {
+  background-color: #1d9bf0;
+  border: none;
+  outline: none;
+  color: white;
+  border-radius: 10px;
+}
 @media screen and (min-width: 750px) {
   .footer-block__newsletter + .footer__list-social {
     margin-top: 0;
+  }
+   .footer__image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .footer__image #image__deliver,#image__fax{
+    display: inline-block;
+  }
+  .footer__contact .footer__button-sp {
+    display: none;
   }
 }
 
@@ -643,5 +730,57 @@ noscript .localization-selector.link {
     .footer__content-top .grid__item {
       padding-left: 3rem;
     }
+  }
+}
+.footer__nav {
+  display: none;
+}
+.footer__nav-menu {
+  list-style-type: none;
+  border-top: 1px solid #e0e0e0;;
+  padding: 0;
+}
+.footer__nav-menu li {
+  border-bottom: 1px solid #e0e0e0;
+  padding: 15px 30px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer__copyright {
+  background: black ;
+  color: white;
+  font-weight: 700;
+}
+.footer__copyright p {
+  margin: 0;
+  padding: 10px 0;
+}
+.footer__nav--text {
+  text-align: center;
+}
+.footer__nav--text .footer__nav-both {
+  display: flex;
+  justify-content: center;
+}
+.footer__nav-both p {
+  margin: 0 20px;
+  font-weight: 700;
+  font-size: 12px;
+}
+.footer__nav--text > p {
+  margin: 10px auto;
+  background: black;
+  color: white;
+  display: inline-block;
+}
+@media  screen and (max-width: 750px){
+  .footer__nav {
+    display: block;
+  }
+  .footer__copyright {
+    border-top: 1px dotted #c4c4c4;
+    background: white ;
+    color: #333;
   }
 }

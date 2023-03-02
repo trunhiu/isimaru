@@ -8,34 +8,43 @@
         "footer-0": {
           "type": "link_list",
           "settings": {
-            "heading": "Quick links",
+            "heading": "Home",
             "menu": "footer"
           }
         },
         "footer-1": {
           "type": "link_list",
           "settings": {
-            "heading": "Info",
+            "heading": "個人情報保護ポリシー",
             "menu": "footer"
           }
         },
-        "footer-2": {
-          "type": "text",
+        "23dc492f-d739-4486-822a-5c19ec74baa9": {
+          "type": "link_list",
           "settings": {
-            "heading": "Our mission",
-            "subtext": "<p>Share contact information, store details, and brand content with your customers.<\/p>"
+            "heading": "特定商取引法表示",
+            "menu": "footer"
+          }
+        },
+        "e731b03e-b65e-478e-8b7c-acc708469915": {
+          "type": "link_list",
+          "settings": {
+            "heading": "お問い合わせ",
+            "menu": "footer"
           }
         }
       },
       "block_order": [
         "footer-0",
         "footer-1",
-        "footer-2"
+        "23dc492f-d739-4486-822a-5c19ec74baa9",
+        "e731b03e-b65e-478e-8b7c-acc708469915"
       ],
       "settings": {
         "color_scheme": "background-1",
         "newsletter_enable": true,
         "newsletter_heading": "Subscribe to our emails",
+        "enable_follow_on_shop": false,
         "show_social": true,
         "enable_country_selector": false,
         "enable_language_selector": false,
