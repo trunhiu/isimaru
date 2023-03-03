@@ -5,421 +5,889 @@
 
 {%- style -%}
   .section-{{ section.id }}-padding {
-    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
-    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}
+    px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}
+    px;
   }
 
   @media screen and (min-width: 750px) {
     .section-{{ section.id }}-padding {
-      padding-top: {{ section.settings.padding_top }}px;
-      padding-bottom: {{ section.settings.padding_bottom }}px;
+      padding-top: {{ section.settings.padding_top }}
+      px;
+      padding-bottom: {{ section.settings.padding_bottom }}
+      px;
     }
   }
 {%- endstyle -%}
 
-<link rel="stylesheet" href="{{ 'component-deferred-media.css' | asset_url }}" media="print" onload="this.media='all'">
+<link
+  rel="stylesheet"
+  href="{{ 'component-deferred-media.css' | asset_url }}"
+  media="print"
+  onload="this.media='all'">
 
-<div class="color-{{ section.settings.color_scheme }} gradient isolate">
-  <div class="page-width{% if section.settings.heading == blank %} no-heading{% endif %} section-{{ section.id }}-padding">
-    <h2 class="collage-wrapper-title inline-richtext {{ section.settings.heading_size }}">{{ section.settings.heading }}</h2>
-    <div class="collage{% if section.settings.mobile_layout == 'collage' %} collage--mobile{% endif %}">
-      {%- for block in section.blocks -%}
-        <div
-          class="collage__item collage__item--{{ block.type }} collage__item--{{ section.settings.desktop_layout }}"
-          {{ block.shopify_attributes }}
-        >
-          {%- case block.type -%}
-            {%- when 'image' -%}
-              <div class="collage-card {% if section.settings.card_styles == 'none' %}global-media-settings{% else %}card-wrapper {{ section.settings.card_styles }} color-{{ settings.card_color_scheme }}{% endif %}">
-                <div
-                  class="media media--transparent ratio"
-                  {% if block.settings.image != blank %}
-                    style="--ratio-percent: {{ 1 | divided_by: block.settings.image.aspect_ratio | times: 100 }}%"
-                  {% else %}
-                    style="--ratio-percent: 100%"
-                  {% endif %}
-                >
-                  {%- if block.settings.image != blank -%}
-                    {%- capture sizes -%}(min-width: {{ settings.page_width }}px) {% if section.blocks.size == 1 %}calc({{ settings.page_width }}px - 100px){% else %}{{ settings.page_width | minus: 100 | times: 0.67 | round }}px{% endif %}, (min-width: 750px){% if section.blocks.size == 1 %} calc(100vw - 100px){% else %} 500px{% endif %}, calc(100vw - 30px){%- endcapture -%}
-                    {{
-                      block.settings.image
-                      | image_url: width: 3000
-                      | image_tag: loading: 'lazy', sizes: sizes, widths: '550, 720, 990, 1100, 1500, 2200, 3000'
-                    }}
-                  {%- else -%}
-                    {{ 'image' | placeholder_svg_tag: 'placeholder-svg placeholder' }}
-                  {%- endif -%}
-                </div>
-              </div>
-            {%- when 'product' -%}
-              {% render 'card-product',
-                card_product: block.settings.product,
-                media_aspect_ratio: 'adapt',
-                show_secondary_image: block.settings.second_image,
-                extend_height: true
-              %}
-            {%- when 'collection' -%}
-              {% render 'card-collection',
-                card_collection: block.settings.collection,
-                media_aspect_ratio: 'adapt',
-                columns: 2,
-                extend_height: true,
-                wrapper_class: section.settings.card_styles
-              %}
-            {%- when 'video' -%}
-              <div class="collage-card {% if section.settings.card_styles == 'none' %}global-media-settings{% else %}{{ section.settings.card_styles }} color-{{ settings.card_color_scheme }}{% endif %}">
-                <noscript>
-                  <a
-                    href="{{ block.settings.video_url }}"
-                    class="collage-card__link"
-                  >
-                    <div
-                      class="media media--transparent ratio"
-                      {% if block.settings.cover_image != blank %}
-                        style="--ratio-percent: {{ 1 | divided_by: block.settings.cover_image.aspect_ratio | times: 100 }}%"
-                      {% else %}
-                        style="--ratio-percent: 100%"
-                      {% endif %}
-                    >
-                      {%- if block.settings.cover_image != blank -%}
-                        {%- capture sizes -%}
-                          (min-width: {{ settings.page_width }}px)
-                          {% if section.blocks.size == 1 -%}
-                            calc({{ settings.page_width }}px - 100px)
-                          {%- else -%}
-                            {{- settings.page_width | minus: 100 | times: 0.67 | round }}px
-                          {%- endif -%}
-                          , (min-width: 750px)
-                          {%- if section.blocks.size == 1 %} calc(100vw - 100px){% else %} 500px{% endif -%}
-                          , calc(100vw - 30px)
-                        {%- endcapture -%}
-                        {{
-                          block.settings.cover_image
-                          | image_url: width: 3000
-                          | image_tag: loading: 'lazy', sizes: sizes, widths: '550, 720, 990, 1100, 1500, 2200, 3000'
-                        }}
-                      {%- else -%}
-                        {{ 'collection-2' | placeholder_svg_tag: 'placeholder-svg placeholder' }}
-                      {%- endif -%}
-                    </div>
-                  </a>
-                </noscript>
-                <modal-opener class="no-js-hidden" data-modal="#PopupModal-{{ block.id }}">
-                  <div class="deferred-media">
-                    <button
-                      class="deferred-media__poster full-unstyled-link"
-                      type="button"
-                      aria-label="{{ 'sections.video.load_video' | t: description: block.settings.description | escape }}"
-                      aria-haspopup="dialog"
-                      data-media-id="{{ block.settings.video_url.id }}"
-                    >
-                      <div
-                        class="media media--transparent ratio"
-                        {% if block.settings.cover_image != blank %}
-                          style="--ratio-percent: {{ 1 | divided_by: block.settings.cover_image.aspect_ratio | times: 100 }}%"
-                        {% else %}
-                          style="--ratio-percent: 100%"
-                        {% endif %}
-                      >
-                        <span class="deferred-media__poster-button motion-reduce">
-                          {%- render 'icon-play' -%}
-                        </span>
-
-                        {%- if block.settings.cover_image != blank -%}
-                          {%- capture sizes -%}
-                            (min-width: {{ settings.page_width }}px)
-                            {% if section.blocks.size == 1 -%}
-                              calc({{ settings.page_width }}px - 100px)
-                            {%- else -%}
-                              {{- settings.page_width | minus: 100 | times: 0.67 | round }}px
-                            {%- endif -%}
-                            , (min-width: 750px)
-                            {%- if section.blocks.size == 1 %} calc(100vw - 100px){% else %} 500px{% endif -%}
-                            , calc(100vw - 30px)
-                          {%- endcapture -%}
-                          {{
-                            block.settings.cover_image
-                            | image_url: width: 3000
-                            | image_tag: loading: 'lazy', sizes: sizes, widths: '550, 720, 990, 1100, 1500, 2200, 3000'
-                          }}
-                        {%- else -%}
-                          {{ 'collection-2' | placeholder_svg_tag: 'placeholder-svg placeholder' }}
-                        {%- endif -%}
-                      </div>
-                    </button>
-                  </div>
-                </modal-opener>
-                <modal-dialog id="PopupModal-{{ block.id }}" class="modal-video media-modal color-background-1">
-                  <div
-                    class="modal-video__content"
-                    role="dialog"
-                    aria-label="{{ block.settings.description | escape }}"
-                    aria-modal="true"
-                    tabindex="-1"
-                  >
-                    <button
-                      id="ModalClose-{{ block.id }}"
-                      type="button"
-                      class="modal-video__toggle"
-                      aria-label="{{ 'accessibility.close' | t }}"
-                    >
-                      {% render 'icon-close' %}
-                    </button>
-                    <div class="modal-video__content-info">
-                      <deferred-media class="modal-video__video template-popup">
-                        <template>
-                          {%- if block.settings.video_url.type == 'youtube' -%}
-                            <iframe
-                              src="https://www.youtube.com/embed/{{ block.settings.video_url.id }}?enablejsapi=1"
-                              class="js-youtube"
-                              allow="autoplay; encrypted-media"
-                              allowfullscreen
-                              title="{{ block.settings.description | escape }}"
-                            ></iframe>
-                          {%- else -%}
-                            <iframe
-                              src="https://player.vimeo.com/video/{{ block.settings.video_url.id }}"
-                              class="js-vimeo"
-                              allow="autoplay; encrypted-media"
-                              allowfullscreen
-                              title="{{ block.settings.description | escape }}"
-                            ></iframe>
-                          {%- endif -%}
-                        </template>
-                      </deferred-media>
-                    </div>
-                  </div>
-                </modal-dialog>
-              </div>
-          {%- endcase -%}
+<section class="ranking">
+  <div class="ranking-container">
+    <div>&nbsp;</div>
+    <div class="ranking-right">
+      <div class="ranking-right-image">
+        <a href="#">
+          <img src="../assets/pc_bnrtop_2022rank.jpg" alt="">
+        </a>
+      </div>
+      <div class="ranking-right-image">
+        <a href="#">
+          <img src="../assets/chumoku_bnr.png" alt="">
+        </a>
+      </div>
+      <div class="ranking-content">
+        <h2>
+          <img src="../assets/ti_ranking.png" alt="">
+        </h2>
+        <div class="ranking-image">
+          <img src="../assets/ranking.png" alt="">
         </div>
-      {%- endfor -%}
+        <div class="ranking-all-item">
+          <div class="ranking-item">
+            <div class="ranking-item-image">
+              <img src="../assets/0000000000292_rgK3bls.jpg" alt="">
+            </div>
+            <div class="ranking-item-detail">
+              <p class="ranking-item-name">
+                <a href="#">半生讃岐石丸うどん包丁切り（10袋）</a>
+              </p>
+              <p class="ranking-item-price">2,850円（税込）</p>
+            </div>
+          </div>
+          <div class="ranking-item">
+            <div class="ranking-item-image">
+              <img src="../assets/0000000000262_0GDXYIl.jpg" alt="">
+            </div>
+            <div class="ranking-item-detail">
+              <p class="ranking-item-name">
+                <a href="#">半生讃岐うどん（つゆ付）（6袋）</a>
+              </p>
+              <p class="ranking-item-price">1,920円（税込）</p>
+            </div>
+          </div>
+          <div class="ranking-item">
+            <div class="ranking-item-image">
+              <img src="../assets/0000000000322_YM23zHF.jpg" alt="">
+            </div>
+            <div class="ranking-item-detail">
+              <p class="ranking-item-name">
+                <a href="#">半生味噌煮込うどん（6袋）</a>
+              </p>
+              <p class="ranking-item-price">2,550円（税込）</p>
+            </div>
+          </div>
+          <div class="ranking-item">
+            <div class="ranking-item-image">
+              <img src="../assets/0000000001252_dmt8yFA.jpg" alt="">
+            </div>
+            <div class="ranking-item-detail">
+              <p class="ranking-item-name">
+                <a href="#">半生煮込カレーうどんKS-7（6袋）</a>
+              </p>
+              <p class="ranking-item-price">2,850円（税込）</p>
+            </div>
+          </div>
+          <div class="ranking-item">
+            <div class="ranking-item-image">
+              <img src="../assets/0000000005042_5Q3D0AO.jpg" alt="">
+            </div>
+            <div class="ranking-item-detail">
+              <p class="ranking-item-name">
+                <a href="#">国産 芳純讃岐うどん４００ｇ（10袋）</a>
+              </p>
+              <p class="ranking-item-price">3,400円（税込）</p>
+            </div>
+          </div>
+        </div>
+        <p class="ranking-content-bottom">半生うどん？半生麺？乾燥うどん？乾麺？どれにしようか迷ったときに、まずはこちらの人気ランキングをご覧ください！
+          <br>
+          <a href="#">讃岐うどん 年間売上ランキングはこちら</a>
+        </p>
+      </div>
+      <div class="ranking-content">
+        <h2>
+          <img src="../assets/tit_ranking02.png" alt="">
+        </h2>
+        <div class="ranking-image">
+          <img src="../assets/ranking.png" alt="">
+        </div>
+        <div class="ranking-all-item">
+          <div class="ranking-item">
+            <div class="ranking-item-image">
+              <img src="../assets/0000000001812_zhg7Z9t.jpg" alt="">
+            </div>
+            <div class="ranking-item-detail">
+              <p class="ranking-item-name">
+                <a href="#">UG-5 国産 半生讃岐うどん「うどん丸」</a>
+              </p>
+              <p class="ranking-item-price">5,400円（税込）</p>
+            </div>
+          </div>
+          <div class="ranking-item">
+            <div class="ranking-item-image">
+              <img src="../assets/0000000001072_BCqj7cc.jpg" alt="">
+            </div>
+            <div class="ranking-item-detail">
+              <p class="ranking-item-name">
+                <a href="#">S-2 きつねうどんセット【送料込※】</a>
+              </p>
+              <p class="ranking-item-price">3,380円（税込）</p>
+            </div>
+          </div>
+          <div class="ranking-item">
+            <div class="ranking-item-image">
+              <img src="../assets/0000000002292.jpg" alt="">
+            </div>
+            <div class="ranking-item-detail">
+              <p class="ranking-item-name">
+                <a href="#">US-30 半生讃岐うどん包丁切り</a>
+              </p>
+              <p class="ranking-item-price">3,240円（税込）</p>
+            </div>
+          </div>
+          <div class="ranking-item">
+            <div class="ranking-item-image">
+              <img src="../assets/0000000001802_6EbuFoo.jpg" alt="">
+            </div>
+            <div class="ranking-item-detail">
+              <p class="ranking-item-name">
+                <a href="#">UG-3 国産 半生讃岐うどん「うどん丸」</a>
+              </p>
+              <p class="ranking-item-price">3,240円（税込）</p>
+            </div>
+          </div>
+          <div class="ranking-item">
+            <div class="ranking-item-image">
+              <img src="../assets/0000000005392_yXuG5v7.jpg" alt="">
+            </div>
+            <div class="ranking-item-detail">
+              <p class="ranking-item-name">
+                <a href="#">HP-7S 石丸製麺おすすめセット5種の詰合せ【送料込※】</a>
+              </p>
+              <p class="ranking-item-price">2,500円（税込）</p>
+            </div>
+          </div>
+        </div>
+        <p class="ranking-content-bottom">お歳暮やお中元など季節の贈り物から、プチギフトや手土産。迷ったときにはまずはこちらの人気ランキングをご覧ください
+          <br>
+          <a href="#">讃岐うどん 年間売上ランキングはこちら</a>
+        </p>
+      </div>
+      <div class="recommend">
+        <h2>
+          <img src="../assets/maintitle1.gif" alt="">
+        </h2>
+        <div class="recommend-all-item">
+          <div class="recommend-item">
+            <div class="recommend-item-image">
+              <a href="#">
+                <img src="../assets/0000000005483_46wq7zt.jpg" alt="">
+              </a>
+            </div>
+            <div class="recommend-item-name">
+              <a href="#">
+                〈全粒粉100％〉国産小麦 まるごと全粒粉極細パスタ（1袋）
+              </a>
+            </div>
+            <div class="recommend-item-price">
+              400円（税込）
+            </div>
+          </div>
+          <div class="recommend-item">
+            <div class="recommend-item-image">
+              <a href="#">
+                <img src="../assets/0000000003773_x3hGTIp.jpg" alt="">
+              </a>
+            </div>
+            <div class="recommend-item-name">
+              <a href="#">
+                瀬戸の誉 讃岐うどん包丁切り（1袋）
+              </a>
+            </div>
+            <div class="recommend-item-price">
+              350円（税込）
+            </div>
+          </div>
+          <div class="recommend-item">
+            <div class="recommend-item-image">
+              <a href="#">
+                <img src="../assets/0000000001503_er0lLTB.jpg" alt="">
+              </a>
+            </div>
+            <div class="recommend-item-name">
+              <a href="#">
+                半生味噌煮込うどん（1袋）
+              </a>
+            </div>
+            <div class="recommend-item-price">
+              450円（税込）
+            </div>
+          </div>
+          <div class="recommend-item">
+            <div class="recommend-item-image">
+              <a href="#">
+                <img src="../assets/0000000005473_63F79LF.jpg" alt="">
+              </a>
+            </div>
+            <div class="recommend-item-name">
+              <a href="#">
+                SA-2 香り味わう桜うどん つゆ付きセット【送料込】
+              </a>
+            </div>
+            <div class="recommend-item-price">
+              1,280円（税込）
+            </div>
+          </div>
+          <div class="recommend-item">
+            <div class="recommend-item-image">
+              <a href="#">
+                <img src="../assets/0000000004503_5EmaMFK.jpg" alt="">
+              </a>
+            </div>
+            <div class="recommend-item-name">
+              <a href="#">
+                MUG-2 全粒粉100%国産小麦をまるごと使った食物繊維たっぷり細うどんお試しセット(つゆ付)【送料込】
+              </a>
+            </div>
+            <div class="recommend-item-price">
+              1,080円（税込）
+            </div>
+          </div>
+          <div class="recommend-item">
+            <div class="recommend-item-image">
+              <a href="#">
+                <img src="../assets/0000000005523_PxQvhGH.jpg" alt="">
+              </a>
+            </div>
+            <div class="recommend-item-name">
+              <a href="#">
+                RM-12H 石丸讃岐ラーメン 北海道スープセット【送料込※】
+              </a>
+            </div>
+            <div class="recommend-item-price">
+              2,800円（税込）
+            </div>
+          </div>
+          <div class="recommend-item">
+            <div class="recommend-item-image">
+              <a href="#">
+                <img src="../assets/0000000001523_5t3Ut2b.jpg" alt="">
+              </a>
+            </div>
+            <div class="recommend-item-name">
+              <a href="#">
+                業務用半生讃岐うどん包丁切り（1袋）
+              </a>
+            </div>
+            <div class="recommend-item-price">
+              560円（税込）
+            </div>
+          </div>
+          <div class="recommend-item">
+            <div class="recommend-item-image">
+              <a href="#">
+                <img src="../assets/0000000000973.jpg" alt="">
+              </a>
+            </div>
+            <div class="recommend-item-name">
+              <a href="#">
+                KS-6 煮込カレーうどん
+              </a>
+            </div>
+            <div class="recommend-item-price">
+              1,000円（税込）
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="review">
+        <h2>
+          <img src="../assets/tit_customer.png" alt="">
+        </h2>
+        <div class="review-table">
+          <div class="review-table-row">
+            <div class="review-table-product">
+              <p>
+                <a href="#">RM-12H 石丸讃岐ラーメン 北海道スープセット【送料込※】</a>
+              </p>
+              <p>評価★★★★★</p>
+              <p>2023/02/23</p>
+              <p>たこさん</p>
+            </div>
+            <div class="review-table-comment">
+              うどん屋のラーメン？？とちょっと疑いながら注文しましたが、つるつるもちもちで、とてもおいしい麺でした。
+            </div>
+            <hr>
+          </div>
+          <div class="review-table-row">
+            <div class="review-table-product">
+              <p>
+                <a href="#">MUG-1 全粒粉100%国産小麦をまるごと使った食物繊維たっぷり細うどんお試しセット(麺のみ)【送料込】</a>
+              </p>
+              <p>評価★★★★★</p>
+              <p>2023/02/21</p>
+              <p>Jimさん</p>
+            </div>
+            <div class="review-table-comment">
+              こしがあり食べやすく美味しかったです。
+            </div>
+            <hr>
+          </div>
+          <div class="review-table-row">
+            <div class="review-table-product">
+              <p>
+                <a href="#">SA-6 香り味わう桜うどん（6袋）【送料込※】</a>
+              </p>
+              <p>評価★★★★★</p>
+              <p>2023/02/14</p>
+              <p>らむさん</p>
+            </div>
+            <div class="review-table-comment">
+              桜うどんの注文も3年目になりました。一足早く春を感じることが出来ます。去年、ホワイトデーにお裾分けした先様から高評価を頂き、今年も持参する予定でいます。
+            </div>
+            <hr>
+          </div>
+          <div class="review-table-row">
+            <div class="review-table-product">
+              <p>
+                <a href="#">国産 芳純讃岐そうめん４００ｇ（20袋）</a>
+              </p>
+              <p>評価★★★★★</p>
+              <p>2023/02/11</p>
+              <p>釣り友さん</p>
+            </div>
+            <div class="review-table-comment">
+              毎年購入させて頂いてます!お値段以上のお品物が来て!近所の方にバンバンお福分けさせて頂いて喜ばれてます。また購入させて頂きます!おすすめしたくないけどおすすめです。笑
+            </div>
+            <hr>
+          </div>
+          <div class="review-table-row">
+            <div class="review-table-product">
+              <p>
+                <a href="#">【予約】石丸福箱【送料込※】</a>
+              </p>
+              <p>評価★★★★★</p>
+              <p>2023/02/23</p>
+              <p>まどまどまどさん</p>
+            </div>
+            <div class="review-table-comment">
+              毎年購入させて頂いてます!お値段以上のお品物が来て!近所の方にバンバンお福分けさせて頂いて喜ばれてます。また購入させて頂きます!おすすめしたくないけどおすすめです。笑
+            </div>
+            <hr>
+          </div>
+          <div class="review-table-row">
+            <div class="review-table-product">
+              <p>
+                <a href="#">MUG-1 全粒粉100%国産小麦をまるごと使った食物繊維たっぷり細うどんお試しセット(麺のみ)【送料込】</a>
+              </p>
+              <p>評価★★★★★</p>
+              <p>2023/01/25</p>
+              <p>aiさん</p>
+            </div>
+            <div class="review-table-comment">
+              香ばしくてコシもあって美味しく頂きました。
+            </div>
+            <hr>
+          </div>
+          <div class="review-table-row">
+            <div class="review-table-product">
+              <p>
+                <a href="#">【予約】石丸福箱【送料込※】</a>
+              </p>
+              <p>評価★★★★★</p>
+              <p>2023/01/20</p>
+              <p>ルンルンさん</p>
+            </div>
+            <div class="review-table-comment">
+              半生包丁切りうどん、とてもおいしいです。つい半生の食べなれたうどんを買ってしまうのですが、福袋はいろいろな味を楽しめるのでとてもいいです。
+            </div>
+            <hr>
+          </div>
+          <div class="review-table-row">
+            <div class="review-table-product">
+              <p>
+                <a href="#">MUG-1 全粒粉100%国産小麦をまるごと使った食物繊維たっぷり細うどんお試しセット(麺のみ)【送料込】</a>
+              </p>
+              <p>評価★★★★★</p>
+              <p>2023/01/25</p>
+              <p>aiさん</p>
+            </div>
+            <div class="review-table-comment">
+              香ばしくてコシもあって美味しく頂きました。
+            </div>
+            <hr>
+          </div>
+          <div class="review-table-row">
+            <div class="review-table-product">
+              <p>
+                <a href="#">【予約】石丸福箱【送料込※】</a>
+              </p>
+              <p>評価★★★★★</p>
+              <p>2023/01/20</p>
+              <p>ルンルンさん</p>
+            </div>
+            <div class="review-table-comment">
+              半生包丁切りうどん、とてもおいしいです。つい半生の食べなれたうどんを買ってしまうのですが、福袋はいろいろな味を楽しめるのでとてもいいです。
+            </div>
+            <hr>
+          </div>
+          <div class="review-table-row">
+            <div class="review-table-product">
+              <p>
+                <a href="#">技の極み 讃岐細うどん包丁切り（12袋）</a>
+              </p>
+              <p>評価★★★★★</p>
+              <p>2023/01/15</p>
+              <p>釣り友さん</p>
+            </div>
+            <div class="review-table-comment">
+              今回値上げ前に特別斡旋という事で4箱も買いだめしました。これでひとまず安心しています。この細麺はとにかく美味しく、焼きそば風、スパゲッティ風、冷やし中華風、もちろん冷やしうどんでいただきます。
+            </div>
+            <hr>
+          </div>
+        </div>
+      </div>
+      <div class="top-review">
+        <h2>
+          <img src="../assets/newstitle.gif" alt="">
+        </h2>
+        <div class="top-review-content">
+          <div class="top-review-comment">
+            <div class="top-review-comment-time">
+              <p>[2023/02/21]</p>
+            </div>
+            <div class="top-review-comment-top">
+              <a href="#">「MONOQLO」2023年3月号で「半生讃岐石丸うどん」が「感動の安くて良いモノ」ベストバリューに選ばれました！</a>
+            </div>
+          </div>
+          <div class="top-review-comment">
+            <div class="top-review-comment-time">
+              <p>[2023/01/04]</p>
+            </div>
+            <div class="top-review-comment-top">
+              <a href="#">商品の価格改定及び２月１日の石丸うどんの日についてのお知らせ</a>
+            </div>
+          </div>
+          <div class="top-review-comment">
+            <div class="top-review-comment-time">
+              <p>[2022/11/26]</p>
+            </div>
+            <div class="top-review-comment-top">
+              <a href="#">年末年始の休業日のお知らせ</a>
+            </div>
+          </div>
+          <div class="top-review-comment">
+            <div class="top-review-comment-time">
+              <p>[2022/10/26]</p>
+            </div>
+            <div class="top-review-comment-top">
+              <a href="#">「かんたんExcel注文」の開始と、複数配送機能の停止について</a>
+            </div>
+          </div>
+          <div class="top-review-comment">
+            <div class="top-review-comment-time">
+              <p>[2022/09/02]</p>
+            </div>
+            <div class="top-review-comment-top">
+              <a href="#">2022年 秋のおいしいうどんキャンペーン開始！新商品や人気商品も満載です！</a>
+            </div>
+          </div>
+          <div class="top-review-comment">
+            <div class="top-review-comment-time">
+              <p>[2022/08/16]</p>
+            </div>
+            <div class="top-review-comment-top">
+              <a href="#">amazonログイン（amazon pay）の取り扱い終了について</a>
+            </div>
+          </div>
+          <div class="top-review-comment">
+            <div class="top-review-comment-time">
+              <p>[2022/07/16]</p>
+            </div>
+            <div class="top-review-comment-top">
+              <a href="#">夏季休業日のお知らせ</a>
+            </div>
+          </div>
+          <div class="top-review-comment">
+            <div class="top-review-comment-time">
+              <p>[2022/05/26]</p>
+            </div>
+            <div class="top-review-comment-top">
+              <a href="#">6月からの紙袋・ビニール袋　有料化について</a>
+            </div>
+          </div>
+          <div class="top-review-comment">
+            <div class="top-review-comment-time">
+              <p>[2022/05/09]</p>
+            </div>
+            <div class="top-review-comment-top">
+              <a href="#">2022年 夏の涼麺キャンペーン開始！細めんの早割も同時開催中！</a>
+            </div>
+          </div>
+          <div class="top-review-comment">
+            <div class="top-review-comment-time">
+              <p>[2022/04/06]</p>
+            </div>
+            <div class="top-review-comment-top">
+              <a href="#">ゴールデンウイークの休業日のお知らせ</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="noodle">
+        <h3>石丸製麺のたいせつなもの</h3>
+        <div class="noodle-content">
+          <div class="noodle-item">
+            <img src="../assets/img_noodle01.png" alt="">
+          </div>
+          <div class="noodle-item">
+            <img src="../assets/img_noodle02.png" alt="">
+          </div>
+          <div class="noodle-item">
+            <img src="../assets/img_noodle03.png" alt="">
+          </div>
+          <div class="noodle-item">
+            <img src="../assets/img_noodle04.png" alt="">
+          </div>
+        </div>
+        <a href="#">
+          <img src="../assets/btn_noodle.png" alt="">
+        </a>
+      </div>
+      <div class="instagram">
+        <p>
+          <a href="#">
+            <img src="../assets/instagram.jpg" alt="">
+          </a>
+        </p>
+        <div class="instagram-area">
+          <div class="instagram-item">
+            <a href="#">
+              <img src="../assets/334311495_1250949709106295_6597074960720182789_n.jpg" alt="">
+            </a>
+          </div>
+          <div class="instagram-item">
+            <a href="#">
+              <img src="../assets/333020445_1365573114266939_6037101679778765002_n.jpg" alt="">
+            </a>
+          </div>
+          <div class="instagram-item">
+            <a href="#">
+              <img src="../assets/332701145_1252102829060541_4887736751980573330_n.jpg" alt="">
+            </a>
+          </div>
+          <div class="instagram-item">
+            <a href="#">
+              <img src="../assets/332572836_6158079290889718_438715996678021633_n.jpg" alt="">
+            </a>
+          </div>
+          <div class="instagram-item">
+            <a href="#">
+              <img src="../assets/332577192_949751432861117_5659205830039964306_n.jpg" alt="">
+            </a>
+          </div>
+          <div class="instagram-item">
+            <a href="#">
+              <img src="../assets/330995746_3319155031682567_2145823914628811210_n.jpg" alt="">
+            </a>
+          </div>
+          <div class="instagram-item">
+            <a href="#">
+              <img src="../assets/330984207_897130054834318_1168059813389660639_n.jpg" alt="">
+            </a>
+          </div>
+          <div class="instagram-item">
+            <a href="#">
+              <img src="../assets/331025890_586789270002888_8662412056909257600_n.jpg" alt="">
+            </a>
+          </div>
+          <div class="instagram-item">
+            <a href="#">
+              <img src="../assets/330864379_609495931013103_7812795554657242866_n.jpg" alt="">
+            </a>
+          </div>
+          <div class="instagram-item">
+            <a href="#">
+              <img src="../assets/329927003_703356381246589_2622448371702221014_n.jpg" alt="">
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="web_fb">
+        <div class="web_fb-content1">
+          <h3>
+            <img src="../assets/tit_web.png" alt="">
+          </h3>
+          <p>こんにちはＷＥＢ店長の山下です。気がつけば3月ですね。私は、「春」が大好きです。筍や春野菜などの食べ物も好きですし、何といっても柔らかくてやさしい「春の空気」が好きです。今からなんだかウキウキしています。さて、3月は新生活を前に色々と準備や移動で慌ただしいことが多い月です。旬の食べ物をとり入れた栄養満点の食事をきっちりして、楽しい春を迎えましょう♪</p>
+        </div>
+        <div class="web_fb-content2">
+          <a href="#">
+            <img src="../assets/140coupon.png" alt="">
+          </a>
+        </div>
+      </div>
+      <div class="top-banner">
+        <div class="top-banner-item">
+          <a href="#">
+            <img src="../assets/pc_bnr_2022.jpg" alt="">
+          </a>
+        </div>
+        <div class="top-banner-item">
+          <a href="#">
+            <img src="../assets/btn_snav04.png" alt="">
+          </a>
+        </div>
+        <div class="top-banner-item">
+          <a href="#">
+            <img src="../assets/btn_snav05.png" alt="">
+          </a>
+        </div>
+        <div class="top-banner-item">
+          <a href="#">
+            <img src="../assets/btn_snav07.png" alt="">
+          </a>
+        </div>
+        <div class="top-banner-item">
+          <a href="#">
+            <img src="../assets/gyoumu_img.jpg" alt="">
+          </a>
+        </div>
+        <div class="top-banner-item">
+          <a href="#">
+            <img src="../assets/btn_snav08.jpg" alt="">
+          </a>
+        </div>
+        <div class="top-banner-item">
+          <a href="#">
+            <img src="../assets/btn_snav09.png" alt="">
+          </a>
+        </div>
+        <div class="top-banner-item">
+          <a href="#">
+            <img src="../assets/toshiake_toha.jpg" alt="">
+          </a>
+        </div>
+        <div class="top-banner-item">
+          <a href="#">
+            <img src="../assets/minna_bnr.jpg" alt="">
+          </a>
+        </div>
+      </div>
     </div>
   </div>
-</div>
+</section>
 
 {% schema %}
-{
-  "name": "t:sections.collage.name",
-  "tag": "section",
-  "class": "section",
-  "disabled_on": {
-    "groups": ["header", "footer"]
-  },
-  "settings": [
-    {
-      "type": "inline_richtext",
-      "id": "heading",
-      "default": "Multimedia collage",
-      "label": "t:sections.collage.settings.heading.label"
+  {
+    "name": "t:sections.collage.name",
+    "tag": "section",
+    "class": "section",
+    "disabled_on": {
+      "groups": ["header", "footer"]
     },
-    {
-      "type": "select",
-      "id": "heading_size",
-      "options": [
-        {
-          "value": "h2",
-          "label": "t:sections.all.heading_size.options__1.label"
-        },
-        {
-          "value": "h1",
-          "label": "t:sections.all.heading_size.options__2.label"
-        },
-        {
-          "value": "h0",
-          "label": "t:sections.all.heading_size.options__3.label"
-        }
-      ],
-      "default": "h1",
-      "label": "t:sections.all.heading_size.label"
-    },
-    {
-      "type": "select",
-      "id": "desktop_layout",
-      "options": [
-        {
-          "value": "left",
-          "label": "t:sections.collage.settings.desktop_layout.options__1.label"
-        },
-        {
-          "value": "right",
-          "label": "t:sections.collage.settings.desktop_layout.options__2.label"
-        }
-      ],
-      "default": "left",
-      "label": "t:sections.collage.settings.desktop_layout.label"
-    },
-    {
-      "type": "select",
-      "id": "mobile_layout",
-      "options": [
-        {
-          "value": "collage",
-          "label": "t:sections.collage.settings.mobile_layout.options__1.label"
-        },
-        {
-          "value": "column",
-          "label": "t:sections.collage.settings.mobile_layout.options__2.label"
-        }
-      ],
-      "default": "column",
-      "label": "t:sections.collage.settings.mobile_layout.label"
-    },
-    {
-      "type": "select",
-      "id": "card_styles",
-      "options": [
-        {
-          "value": "none",
-          "label": "t:sections.collage.settings.card_styles.options__1.label"
-        },
-        {
-          "value": "product-card-wrapper",
-          "label": "t:sections.collage.settings.card_styles.options__2.label"
-        }
-      ],
-      "default": "product-card-wrapper",
-      "info": "t:sections.collage.settings.card_styles.info",
-      "label": "t:sections.collage.settings.card_styles.label"
-    },
-    {
-      "type": "select",
-      "id": "color_scheme",
-      "options": [
-        {
-          "value": "accent-1",
-          "label": "t:sections.all.colors.accent_1.label"
-        },
-        {
-          "value": "accent-2",
-          "label": "t:sections.all.colors.accent_2.label"
-        },
-        {
-          "value": "background-1",
-          "label": "t:sections.all.colors.background_1.label"
-        },
-        {
-          "value": "background-2",
-          "label": "t:sections.all.colors.background_2.label"
-        },
-        {
-          "value": "inverse",
-          "label": "t:sections.all.colors.inverse.label"
-        }
-      ],
-      "default": "background-1",
-      "label": "t:sections.all.colors.label",
-      "info": "t:sections.all.colors.has_cards_info"
-    },
-    {
-      "type": "header",
-      "content": "t:sections.all.padding.section_padding_heading"
-    },
-    {
-      "type": "range",
-      "id": "padding_top",
-      "min": 0,
-      "max": 100,
-      "step": 4,
-      "unit": "px",
-      "label": "t:sections.all.padding.padding_top",
-      "default": 36
-    },
-    {
-      "type": "range",
-      "id": "padding_bottom",
-      "min": 0,
-      "max": 100,
-      "step": 4,
-      "unit": "px",
-      "label": "t:sections.all.padding.padding_bottom",
-      "default": 36
-    }
-  ],
-  "blocks": [
-    {
-      "type": "image",
-      "name": "t:sections.collage.blocks.image.name",
-      "settings": [
-        {
-          "type": "image_picker",
-          "id": "image",
-          "label": "t:sections.collage.blocks.image.settings.image.label"
-        }
-      ]
-    },
-    {
-      "type": "product",
-      "name": "t:sections.collage.blocks.product.name",
-      "settings": [
-        {
-          "type": "product",
-          "id": "product",
-          "label": "t:sections.collage.blocks.product.settings.product.label"
-        },
-        {
-          "type": "checkbox",
-          "id": "second_image",
-          "default": false,
-          "label": "t:sections.collage.blocks.product.settings.second_image.label"
-        }
-      ]
-    },
-    {
-      "type": "collection",
-      "name": "t:sections.collage.blocks.collection.name",
-      "settings": [
-        {
-          "type": "collection",
-          "id": "collection",
-          "label": "t:sections.collage.blocks.collection.settings.collection.label"
-        }
-      ]
-    },
-    {
-      "type": "video",
-      "name": "t:sections.collage.blocks.video.name",
-      "settings": [
-        {
-          "type": "image_picker",
-          "id": "cover_image",
-          "label": "t:sections.collage.blocks.video.settings.cover_image.label"
-        },
-        {
-          "type": "video_url",
-          "id": "video_url",
-          "accept": ["youtube", "vimeo"],
-          "default": "https://www.youtube.com/watch?v=_9VUPq3SxOc",
-          "label": "t:sections.collage.blocks.video.settings.video_url.label",
-          "placeholder": "t:sections.collage.blocks.video.settings.video_url.placeholder",
-          "info": "t:sections.collage.blocks.video.settings.video_url.info"
-        },
-        {
-          "type": "text",
-          "id": "description",
-          "default": "Describe the video",
-          "label": "t:sections.collage.blocks.video.settings.description.label",
-          "info": "t:sections.collage.blocks.video.settings.description.info"
-        }
-      ]
-    }
-  ],
-  "max_blocks": 3,
-  "presets": [
-    {
-      "name": "t:sections.collage.presets.name",
-      "blocks": [
-        {
-          "type": "image"
-        },
-        {
-          "type": "product"
-        },
-        {
-          "type": "collection"
-        }
-      ]
-    }
-  ]
-}
+    "settings": [
+      {
+        "type": "inline_richtext",
+        "id": "heading",
+        "default": "Multimedia collage",
+        "label": "t:sections.collage.settings.heading.label"
+      },
+      {
+        "type": "select",
+        "id": "heading_size",
+        "options": [
+          {
+            "value": "h2",
+            "label": "t:sections.all.heading_size.options__1.label"
+          }, {
+            "value": "h1",
+            "label": "t:sections.all.heading_size.options__2.label"
+          }, {
+            "value": "h0",
+            "label": "t:sections.all.heading_size.options__3.label"
+          }
+        ],
+        "default": "h1",
+        "label": "t:sections.all.heading_size.label"
+      },
+      {
+        "type": "select",
+        "id": "desktop_layout",
+        "options": [
+          {
+            "value": "left",
+            "label": "t:sections.collage.settings.desktop_layout.options__1.label"
+          }, {
+            "value": "right",
+            "label": "t:sections.collage.settings.desktop_layout.options__2.label"
+          }
+        ],
+        "default": "left",
+        "label": "t:sections.collage.settings.desktop_layout.label"
+      },
+      {
+        "type": "select",
+        "id": "mobile_layout",
+        "options": [
+          {
+            "value": "collage",
+            "label": "t:sections.collage.settings.mobile_layout.options__1.label"
+          }, {
+            "value": "column",
+            "label": "t:sections.collage.settings.mobile_layout.options__2.label"
+          }
+        ],
+        "default": "column",
+        "label": "t:sections.collage.settings.mobile_layout.label"
+      }, {
+        "type": "select",
+        "id": "card_styles",
+        "options": [
+          {
+            "value": "none",
+            "label": "t:sections.collage.settings.card_styles.options__1.label"
+          }, {
+            "value": "product-card-wrapper",
+            "label": "t:sections.collage.settings.card_styles.options__2.label"
+          }
+        ],
+        "default": "product-card-wrapper",
+        "info": "t:sections.collage.settings.card_styles.info",
+        "label": "t:sections.collage.settings.card_styles.label"
+      }, {
+        "type": "select",
+        "id": "color_scheme",
+        "options": [
+          {
+            "value": "accent-1",
+            "label": "t:sections.all.colors.accent_1.label"
+          },
+          {
+            "value": "accent-2",
+            "label": "t:sections.all.colors.accent_2.label"
+          },
+          {
+            "value": "background-1",
+            "label": "t:sections.all.colors.background_1.label"
+          },
+          {
+            "value": "background-2",
+            "label": "t:sections.all.colors.background_2.label"
+          }, {
+            "value": "inverse",
+            "label": "t:sections.all.colors.inverse.label"
+          }
+        ],
+        "default": "background-1",
+        "label": "t:sections.all.colors.label",
+        "info": "t:sections.all.colors.has_cards_info"
+      }, {
+        "type": "header",
+        "content": "t:sections.all.padding.section_padding_heading"
+      }, {
+        "type": "range",
+        "id": "padding_top",
+        "min": 0,
+        "max": 100,
+        "step": 4,
+        "unit": "px",
+        "label": "t:sections.all.padding.padding_top",
+        "default": 36
+      }, {
+        "type": "range",
+        "id": "padding_bottom",
+        "min": 0,
+        "max": 100,
+        "step": 4,
+        "unit": "px",
+        "label": "t:sections.all.padding.padding_bottom",
+        "default": 36
+      }
+    ],
+    "blocks": [
+      {
+        "type": "image",
+        "name": "t:sections.collage.blocks.image.name",
+        "settings": [
+          {
+            "type": "image_picker",
+            "id": "image",
+            "label": "t:sections.collage.blocks.image.settings.image.label"
+          }
+        ]
+      }, {
+        "type": "product",
+        "name": "t:sections.collage.blocks.product.name",
+        "settings": [
+          {
+            "type": "product",
+            "id": "product",
+            "label": "t:sections.collage.blocks.product.settings.product.label"
+          }, {
+            "type": "checkbox",
+            "id": "second_image",
+            "default": false,
+            "label": "t:sections.collage.blocks.product.settings.second_image.label"
+          }
+        ]
+      }, {
+        "type": "collection",
+        "name": "t:sections.collage.blocks.collection.name",
+        "settings": [
+          {
+            "type": "collection",
+            "id": "collection",
+            "label": "t:sections.collage.blocks.collection.settings.collection.label"
+          }
+        ]
+      }, {
+        "type": "video",
+        "name": "t:sections.collage.blocks.video.name",
+        "settings": [
+          {
+            "type": "image_picker",
+            "id": "cover_image",
+            "label": "t:sections.collage.blocks.video.settings.cover_image.label"
+          }, {
+            "type": "video_url",
+            "id": "video_url",
+            "accept": [
+              "youtube", "vimeo"
+            ],
+            "default": "https://www.youtube.com/watch?v=_9VUPq3SxOc",
+            "label": "t:sections.collage.blocks.video.settings.video_url.label",
+            "placeholder": "t:sections.collage.blocks.video.settings.video_url.placeholder",
+            "info": "t:sections.collage.blocks.video.settings.video_url.info"
+          }, {
+            "type": "text",
+            "id": "description",
+            "default": "Describe the video",
+            "label": "t:sections.collage.blocks.video.settings.description.label",
+            "info": "t:sections.collage.blocks.video.settings.description.info"
+          }
+        ]
+      }
+    ],
+    "max_blocks": 3,
+    "presets": [
+      {
+        "name": "t:sections.collage.presets.name",
+        "blocks": [
+          {
+            "type": "image"
+          }, {
+            "type": "product"
+          }, {
+            "type": "collection"
+          }
+        ]
+      }
+    ]
+  }
 {% endschema %}

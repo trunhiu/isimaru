@@ -195,3 +195,367 @@
   outline: none;
   box-shadow: none;
 }
+
+/********************************** ranking ****************************/
+
+.ranking-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 250px 920px;
+  column-gap: 25px;
+}
+
+.ranking-right-image {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.ranking-right-image:hover {
+  opacity: 0.6;
+}
+
+.ranking-image img {
+  width: 100%;
+}
+
+/********************************** ranking content ****************************/
+
+.ranking-content {
+  margin-bottom: 50px;
+}
+
+.ranking-all-item {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  column-gap: 15px;
+}
+
+.ranking-item {
+  max-width: 172px;
+}
+
+.ranking-item-image img {
+  max-width: 172px;
+  border: 1px solid #ddd
+}
+
+.ranking-item-image img:hover {
+  opacity: 0.6;
+}
+
+.ranking-item-detail p {
+  margin: 0;
+}
+
+.ranking-item-detail .ranking-item-name a {
+  color: #333;
+  font-size: 15px;
+  font-family: Avenir, "Open Sans", "Helvetica Neue", Helvetica, Arial, Verdana, Roboto, 游ゴシック, "Yu Gothic", 游ゴシック体, YuGothic, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", メイリオ, Meiryo, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+  text-decoration: none;
+}
+
+.ranking-item-detail .ranking-item-name a:hover {
+  color: #f78500;
+}
+
+.ranking-item-detail .ranking-item-price {
+  color: #992927;
+  font-size: 15px;
+  font-family: Avenir, "Open Sans", "Helvetica Neue", Helvetica, Arial, Verdana, Roboto, 游ゴシック, "Yu Gothic", 游ゴシック体, YuGothic, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", メイリオ, Meiryo, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+}
+
+.ranking-content-bottom {
+  margin-top: 50px;
+  font-size: 15px;
+  text-align: right;
+  color: rgb(51, 51, 51);
+  font-family: Avenir, "Open Sans", "Helvetica Neue", Helvetica, Arial, Verdana, Roboto, 游ゴシック, "Yu Gothic", 游ゴシック体, YuGothic, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", メイリオ, Meiryo, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+}
+
+.ranking-content-bottom a {
+  font-size: 15px;
+  color: rgb(51, 51, 51);
+  font-family: Avenir, "Open Sans", "Helvetica Neue", Helvetica, Arial, Verdana, Roboto, 游ゴシック, "Yu Gothic", 游ゴシック体, YuGothic, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", メイリオ, Meiryo, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+}
+
+.ranking-content-bottom a:hover {
+  color: #f78500;
+}
+
+/********************************** recommend ****************************/
+
+.recommend {
+  margin-bottom: 50px;
+}
+
+.recommend-all-item {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  column-gap: 10px;
+  row-gap: 20px;
+}
+
+.recommend-item-image img {
+  border: 1px solid #ddd;
+}
+
+.recommend-item-image img:hover {
+  opacity: 0.6;
+}
+
+.recommend-item-name a {
+  text-decoration: none;
+  font-size: 14px;
+  color: #333;
+  font-family: Avenir, "Open Sans", "Helvetica Neue", Helvetica, Arial, Verdana, Roboto, 游ゴシック, "Yu Gothic", 游ゴシック体, YuGothic, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", メイリオ, Meiryo, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+}
+
+.recommend-item-price {
+  color: #992927;
+  font-size: 14px;
+  font-family: Avenir, "Open Sans", "Helvetica Neue", Helvetica, Arial, Verdana, Roboto, 游ゴシック, "Yu Gothic", 游ゴシック体, YuGothic, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", メイリオ, Meiryo, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+}
+
+/********************************** review ****************************/
+
+
+.review h2 {
+  margin: 0 0 10px 0;
+}
+
+.review hr {
+  margin: 0;
+  border-top: 1px dashed #8c8b8b;
+}
+
+.review-table {
+  height: 450px;
+  overflow-y: scroll;
+}
+
+.review-table-product {
+  width: 95%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 440px 160px 110px 160px ;
+}
+
+.review-table-product p {
+  margin: 0;
+}
+
+.review-table-product p a {
+  color: #333;
+  font-family: Avenir, "Open Sans", "Helvetica Neue", Helvetica, Arial, Verdana, Roboto, 游ゴシック, "Yu Gothic", 游ゴシック体, YuGothic, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", メイリオ, Meiryo, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+  font-size: 15px;
+}
+
+.review-table-product p a:hover {
+  color: #f78500;
+  text-decoration: none;
+}
+
+.review-table-comment {
+  color: #333;
+  font-family: Avenir, "Open Sans", "Helvetica Neue", Helvetica, Arial, Verdana, Roboto, 游ゴシック, "Yu Gothic", 游ゴシック体, YuGothic, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", メイリオ, Meiryo, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+  font-size: 15px;
+  width: 95%;
+  margin: 0 auto 10px;
+}
+
+/********************************** top-review ****************************/
+
+.top-review {
+  margin-bottom: 50px;
+}
+
+.top-review h2 {
+  margin: 0;
+}
+
+.top-review-content {
+  height: 220px;
+  overflow-y: scroll;
+}
+
+.top-review-comment {
+  display: flex;
+  border-bottom: 1px solid #e3e4e4;
+  padding: 0 5px;
+  margin: 10px 0;
+}
+
+.top-review-comment p {
+  margin: 0;
+}
+
+.top-review-comment-time {
+  flex-basis: 10%;
+}
+
+.top-review-comment-time p {
+  color: #333;
+  font-family: Avenir, "Open Sans", "Helvetica Neue", Helvetica, Arial, Verdana, Roboto, 游ゴシック, "Yu Gothic", 游ゴシック体, YuGothic, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", メイリオ, Meiryo, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+  font-size: 14px;
+}
+
+.top-review-comment-top a {
+  text-decoration: none;
+  color: #333;
+  font-family: Avenir, "Open Sans", "Helvetica Neue", Helvetica, Arial, Verdana, Roboto, 游ゴシック, "Yu Gothic", 游ゴシック体, YuGothic, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", メイリオ, Meiryo, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+  font-size: 14px;
+}
+
+.top-review-comment-top a:hover {
+  text-decoration: underline;
+  color: #f78500;
+}
+
+
+/************************************ noodle **************************************/
+
+.noodle {
+  margin: 60px 0;
+  background-color: #f4ecec;
+  padding: 25px 0;
+}
+
+.noodle h3 {
+  margin: 0 0 20px 0;
+  font-family: "Roboto Slab", Garamond, "Times New Roman", 游明朝, "Yu Mincho", 游明朝体, YuMincho, "ヒラギノ明朝 Pro W3", "Hiragino Mincho Pro", HiraMinProN-W3, HGS明朝E, "ＭＳ Ｐ明朝", "MS PMincho", serif;
+  font-size: 26px;
+  color: rgb(160, 111, 48);
+  text-align: center;
+  font-weight: 700;
+}
+
+.noodle-content {
+  display: flex;
+  justify-content: center;
+}
+
+.noodle-item {
+  margin: 0 15px;
+}
+
+.noodle a {
+  margin-top: 25px;
+  display: flex;
+  justify-content: center;
+}
+
+.noodle a:hover {
+  opacity: 0.6;
+}
+
+
+/****************************** instagram ****************************/
+
+.instagram {
+  margin-bottom: 50px;
+}
+
+.instagram p {
+  margin: 0;
+}
+
+.instagram p a {
+  display: flex;
+  justify-content: center;
+}
+
+.instagram p a img {
+  max-width: 200px;
+  max-height: 100px;
+  object-fit: cover;
+}
+
+.instagram p a img:hover {
+  opacity: 0.6;
+}
+
+.instagram-area {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  row-gap: 10px;
+}
+
+.instagram-item {
+  max-width: 170px;
+  max-height: 170px;
+}
+
+.instagram-item a img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.instagram-item a img:hover {
+  opacity: 0.6;
+}
+
+
+/*********************************** web fb **********************************/
+
+.web_fb {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 40px;
+}
+
+.web_fb-content1 h3 {
+  background-image: url(../assets/pngtree-wood-grain-simple-background-image_768018.jpg);
+  text-align: center;
+  margin: 0;
+}
+
+.web_fb-content1 {
+  max-height: 310px;
+  border: 5px solid #ece3d5;
+  margin-right: 40px;
+}
+
+.web_fb-content1 p {
+  margin: 0;
+  font-size: 14px;
+  color: #333;
+  padding: 20px;
+  font-family: Avenir, "Open Sans", "Helvetica Neue", Helvetica, Arial, Verdana, Roboto, 游ゴシック, "Yu Gothic", 游ゴシック体, YuGothic, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", メイリオ, Meiryo, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+  line-height: 1.6;
+}
+
+.web_fb-content2 a img {
+  object-fit: cover;
+}
+
+.web_fb-content2 a img:hover {
+  opacity: 0.6;
+}
+
+/*********************************************** top-banner *******************************/
+
+.top-banner {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 50px;
+}
+
+.top-banner-item {
+  flex-basis: 33.33%;
+  max-width: 252px;
+  max-height: 137px;
+  margin: 10px 20px;
+}
+
+.top-banner-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.top-banner-item img:hover {
+  opacity: 0.6;
+}
