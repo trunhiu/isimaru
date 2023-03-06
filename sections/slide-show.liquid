@@ -1,46 +1,17 @@
 {{ 'slide-show.css' | asset_url | stylesheet_tag }}
   <div class="image-slider container">
+        {% for block in section.blocks %}
+  {% case block.type %}
+    {% when 'slide' %}
       <div class="image-item">
         <div class="image">
-          <img src="../assets/slide1.jpeg" alt="" class="pc-tablet" />
+          <img src = "{{ block.settings.image | img_url: 'original' }}" class="pc-tablet"/>
         </div>
       </div>
-      <div class="image-item">
-        <div class="image">
-          <img src="../assets/slide2.jpeg" alt="" class="pc-tablet" />
-        </div>
-      </div>
-      <div class="image-item">
-        <div class="image">
-          <img src="../assets/slide3.png" alt="" class="pc-tablet" />
-        </div>
-      </div>
-      <div class="image-item">
-        <div class="image">
-          <img src="../assets/slide4.png" alt="" class="pc-tablet" />
-        </div>
-      </div>
-      <div class="image-item">
-        <div class="image">
-          <img src="../assets/slide5.jpeg" alt="" class="pc-tablet" />
-        </div>
-      </div>
-      <div class="image-item">
-        <div class="image">
-          <img src="../assets/slide6.png" alt="" class="pc-tablet" />
-        </div>
-      </div>
-      <div class="image-item">
-        <div class="image">
-          <img src="../assets/slide7.png" alt="" class="pc-tablet" />
-        </div>
-      </div>
-      <div class="image-item">
-        <div class="image">
-          <img src="../assets/slide7.png" alt="" class="pc-tablet" />
-        </div>
-      </div>
+  {% endcase %}
+{% endfor %}
     </div>
+
 <script>
 $(".image-slider").slick({
   dots: true,
@@ -70,3 +41,30 @@ $(".image-slider").slick({
 });
 
 </script>
+{% schema %}
+{
+  "name": "Slideshow",
+  "tag": "section",
+  "class": "slideshow",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Slideshow"
+    }
+  ],
+  "blocks": [
+     {
+       "name": "Slide",
+       "type": "slide",
+       "settings": [
+         {
+           "type": "image_picker",
+           "id": "image",
+           "label": "Image"
+         }
+       ]
+     }
+   ]
+}
+{% endschema %}
