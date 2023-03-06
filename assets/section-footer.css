@@ -295,9 +295,12 @@ img {
 .footer__contact {
  text-align: center;
 }
-.footer__image #image__deliver,#image__fax {
-  display: none;
+.footer__image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
+
 .footer__image .footer__image-deliver{
   max-width: 333px;
 }
@@ -308,7 +311,7 @@ img {
   max-width: 188px;
 }
 .footer__contact .footer__button-sp {
-   display: block;
+   display: none;
 }
 .footer__contact .footer__button-sp button {
   margin: 20px 10px;
@@ -331,17 +334,9 @@ img {
   .footer-block__newsletter + .footer__list-social {
     margin-top: 0;
   }
-   .footer__image {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-  }
+
   .footer__image #image__deliver,#image__fax{
     display: inline-block;
-  }
-  .footer__contact .footer__button-sp {
-    display: none;
   }
 }
 
@@ -736,10 +731,7 @@ noscript .localization-selector.link {
   display: inline-block;
 }
 @media  screen and (max-width: 750px){
-  .footer__nav {
-    display: block;
-  }
-  .footer__copyright {
+  .footer__copyrightSp {
     border-top: 1px dotted #c4c4c4;
     background: white ;
     color: #333;

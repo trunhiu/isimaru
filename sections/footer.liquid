@@ -286,6 +286,30 @@
   window.onresize =  resizeText;
   const footerBlockHeading = document.querySelector(".footer-link li:last-child ")
   footerBlockHeading.innerHTML = '<p class="footer-block__heading inline-richtext">お問い合わせ</p>'
+  const footerButtonSp = document.querySelector(".footer__contact .footer__button-sp");
+  const imageDeliver = document.querySelector(".footer__image #image__deliver");
+  const imageFax = document.querySelector(".footer__image #image__fax");
+  const footerNav = document.querySelector(".footer__nav")
+  const footerCopyRight = document.querySelector(".footer__copyright")
+  // kiem tra thiet bi co phai mobile hay khong?
+  const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+  const isTablet = /iPad|Android/i.test(navigator.userAgent) && !/Mobile/i.test(navigator.userAgent);
+  const isDesktop = !/Mobile|Tablet/i.test(navigator.userAgent);
+  if (isMobile) {
+  footerButtonSp.style.display = "block";
+  imageDeliver.style.display = "none";
+  imageFax.style.display = "none";
+  footerNav.style.display = "block";
+  footerCopyRight.classList.add("footer__copyrightSp");
+  } 
+  if(isTablet) {
+    footerButtonSp.style.display = "none";
+  imageDeliver.style.display = "block";
+  imageFax.style.display = "block";
+  footerNav.style.display = "none";
+  footerCopyRight.classList.remove("footer__copyrightSp");
+  } 
+
 {% endjavascript %}
 
 {% schema %}
