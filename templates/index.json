@@ -201,10 +201,13 @@
     },
     "payment_box" : {
       "type": "payment-box",
+    "slide-show":{
+      "type":"slide-show",
       "settings": {}
     }
   },
   "order": [
+    "slide-show",
     "image_banner",
     "rich_text",
     "featured_collection",
@@ -213,4 +216,5 @@
     "multicolumn",
     "payment_box"
   ]
+  } 
 }
