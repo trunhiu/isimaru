@@ -1,3 +1,8 @@
+
+img {
+  width: 100%;
+}
+
 .footer {
   border-top: 0.1rem solid rgba(var(--color-foreground), 0.08);
 }
@@ -293,9 +298,14 @@
 .footer__image #image__deliver,#image__fax {
   display: none;
 }
-.footer__image img {
-  margin: 0 10px;
-  max-width: 33.33333%;
+.footer__image .footer__image-deliver{
+  max-width: 333px;
+}
+.footer__image .footer__image-contact{
+  max-width: 246px;
+}
+.footer__image .footer__image-fax{
+  max-width: 188px;
 }
 .footer__contact .footer__button-sp {
    display: block;
@@ -325,6 +335,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    gap: 10px;
   }
   .footer__image #image__deliver,#image__fax{
     display: inline-block;
@@ -599,62 +610,12 @@ noscript .localization-selector.link {
   justify-content: flex-end;
 }
 
-@media screen and (max-width: 749px) {
-  .footer-block-image,
-  .footer-block-image.left,
-  .footer-block-image.center,
-  .footer-block-image.right {
-    justify-content: center;
-  }
-}
-
-.footer-block__image-wrapper {
-  box-shadow: var(--media-shadow-horizontal-offset)
-    var(--media-shadow-vertical-offset)
-    var(--media-shadow-blur-radius)
-    rgba(var(--color-shadow), var(--media-shadow-opacity));
-  margin-bottom: max(calc(2rem + var(--media-shadow-vertical-offset) * var(--media-shadow-visible)), 2rem);
-  overflow: hidden !important;
-}
 
 .footer-block__image-wrapper img {
   display: block;
   height: auto;
   max-width: 100%;
 }
-
-.footer-block__brand-info {
-  text-align: left;
-}
-
-.footer-block:only-child .footer-block__brand-info {
-  text-align: center;
-}
-
-.footer-block:only-child > .footer-block__brand-info > .footer-block__image-wrapper {
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.footer-block-image > img,
-.footer-block__brand-info > img {
-  height: auto;
-}
-
-.footer-block:only-child .footer-block__brand-info .footer__list-social.list-social {
-  justify-content: center;
-}
-
-.footer-block__brand-info .footer__list-social.list-social {
-  justify-content: flex-start;
-  margin-left: -1.3rem;
-  margin-right: -1.3rem;
-}
-
-.footer-block__details-content .placeholder-svg {
-  max-width: 20rem;
-}
-
 .copyright__content {
   font-size: 1.1rem;
 }
