@@ -1,0 +1,302 @@
+p,
+h2 {
+    font-family: "游明朝", "Yu Mincho", "游明朝体", "YuMincho", "ヒラギノ明朝 Pro W3", "Hiragino Mincho Pro", "HiraMinProN-W3", "HGS明朝E", "ＭＳ Ｐ明朝", "MS PMincho", serif;
+}
+
+img {
+    width: 100%;
+}
+
+.about__slogan {
+    width: 920px;
+}
+
+ul.breadcrumb {
+    padding: 10px 16px;
+    list-style: none;
+}
+
+ul.breadcrumb li {
+    display: inline;
+    font-size: 15px;
+}
+
+ul.breadcrumb li+li:before {
+    padding: 8px;
+    color: black;
+    content: ">";
+}
+
+ul.breadcrumb li a {
+    color: black;
+    text-decoration: underline;
+}
+
+ul.breadcrumb li a:hover {
+    color: #f78500;
+    text-decoration: none;
+}
+
+.slogan__company {
+    max-width: 920px;
+    background-image: url("../assets/bg_commit_a.png");
+    background-repeat: no-repeat;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.slogan__company h2 {
+    font-weight: 700;
+    padding-top: 50px;
+}
+
+.slogan__company p {
+    font-weight: 700;
+    font-size: 16px;
+    padding-bottom: 30px;
+}
+
+.hospital p {
+    margin: 0;
+    text-align: right;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.description__company {
+    text-align: center;
+}
+
+.description__company h2 {
+    color: #b50101;
+    font-weight: 700;
+}
+
+.description__company p {
+    font-weight: 700;
+}
+
+.company__bio {
+    padding: 32px;
+    text-align: center;
+    background-image: url("../assets/bgr-bio.png");
+}
+
+.company__bio h2 {
+    border-bottom: 1px solid #a06f30;
+    display: inline-block;
+}
+
+.company__bio h2 span {
+    color: #a06f30;
+}
+
+.greate__man {
+    display: flex;
+}
+
+.greate__man p {
+    text-align: left;
+    font-size: 14px;
+}
+
+.greate__man img {
+    padding-right: 40px;
+    width: 300px;
+}
+
+.device__history .history__image {
+    display: flex;
+    gap: 15px;
+}
+
+.device__history p {
+    margin: 0;
+    font-weight: 700;
+    font-size: 14px;
+}
+
+.wheat {
+    margin: 35px 0;
+}
+
+.wheat p {
+    font-size: 14px;
+}
+
+.wheat__intro {
+    max-width: 500px;
+}
+
+.wheat img {
+    width: 100px;
+    height: 100px;
+    float: right;
+}
+
+.insurance p:nth-child(1) {
+    margin: 0;
+}
+
+.important___thing h2 {
+    overflow: hidden;
+    text-align: center;
+}
+
+.important___thing h2::before,
+.important___thing h2::after {
+    background-color: #ddcdbc;
+    content: "";
+    display: inline-block;
+    height: 1px;
+    position: relative;
+    vertical-align: middle;
+    width: 50%;
+}
+
+.important___thing h2::before {
+    right: 0.5em;
+    margin-left: -50%;
+}
+
+.important___thing h2::after {
+    left: 0.5em;
+    margin-right: -50%;
+}
+
+.important___thing h2 span {
+    color: #a06f30;
+    font-weight: 700;
+}
+
+.important___thing>h2>span>img {
+    margin-top: 10px;
+    max-width: 180px;
+    display: inline-block;
+    vertical-align: -20px;
+}
+
+.important__card {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.important__card .important__item {
+    margin: 10px;
+    width: 390px;
+    position: relative;
+}
+
+.important__item .important__item-text {
+    position: absolute;
+    z-index: 2;
+    text-align: center;
+    bottom: 0;
+    left: 5%;
+}
+
+.important__item:nth-child(1) .important__item-text {
+    position: absolute;
+    z-index: 2;
+    text-align: center;
+    bottom: 5%;
+    left: 5%;
+}
+
+.important__item .important__item-text span {
+    color: #b50101;
+    font-weight: bold;
+}
+
+.important__item .important__item-text p {
+    font-weight: bold;
+    font-size: 14px;
+    text-align: left;
+    max-width: 380px;
+}
+
+.mobile-sp {
+    max-width: 920px !important;
+}
+
+.mobile__sp-text {
+    font-size: 13px !important;
+    display: block;
+}
+
+.history__image-Sp {
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+@media screen and (min-width:567px) {
+    .wheat img {
+        width: 185px;
+        height: auto;
+        margin: 0 70px;
+    }
+}
+
+@media screen and (max-width:456px) {
+    .important___thing h2::before {
+        right: 0.5em;
+        margin-left: -105%;
+        top: 76px;
+    }
+
+    .important___thing h2::after {
+        left: 0.5em;
+        top: -48px;
+        margin-right: -105%;
+    }
+
+    .important___thing h2 span {
+        display: block;
+    }
+
+    .important___thing h2::before,
+    .important___thing h2::after {
+        height: 3px;
+    }
+
+    .greate__man img {
+        padding: 0;
+    }
+
+    .company__bio {
+        padding: 15px;
+    }
+
+    .company__bio h2 {
+        font-size: 12px;
+        font-weight: bold;
+    }
+
+    .greate__man p {
+        font-size: 13px !important;
+    }
+
+    .important__item .important__item-text {
+        left: 0 !important;
+    }
+
+    .important__item .important__item-text p {
+        font-size: 13px;
+        padding: 0 5px;
+    }
+
+    .description__company p {
+        font-size: 12px;
+    }
+
+    .slogan__company p {
+        font-size: 14px;
+        padding: 5px 10px;
+    }
+}
+
+.important__item-textSp {
+    background: rgba(255, 255, 255, 0.7);
+    margin: 45px 30px;
+}
