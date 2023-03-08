@@ -1,0 +1,17 @@
+<style>
+    .back-to-top {
+        text-align: center;
+    }
+</style>
+<div class="back-to-top ">
+  <img src="../assets/back_top.png" alt="">
+</div>
+<script>
+    const backTop = document.querySelector(".back-to-top")
+    backTop.addEventListener('click', () => {
+        window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+  });
+});
+</script>
