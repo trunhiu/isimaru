@@ -1,0 +1,579 @@
+p,h2,span {
+    font-family: "游明朝" , "Yu Mincho" , "游明朝体" , "YuMincho" , "ヒラギノ明朝 Pro W3" , "Hiragino Mincho Pro" , "HiraMinProN-W3" , "HGS明朝E" , "ＭＳ Ｐ明朝" , "MS PMincho" , serif;
+}
+ul.breadcrumb {
+    list-style: none;
+    background: #f2efeb;
+    border: 1px solid #d6d3cf;
+}
+ul.breadcrumb li {
+    display: inline;
+    font-size: 11px;
+}
+.container {
+    width: 920px;
+    background-image: url("../assets/bgr_content.png");
+    background-repeat: no-repeat;
+}
+ul.breadcrumb li+li:before {
+    padding: 8px;
+    color: black;
+    content: ">";
+}
+
+ul.breadcrumb li a {
+    color: black;
+    text-decoration: underline;
+}
+
+ul.breadcrumb li a:hover {
+    color: #f78500;
+    text-decoration: none;
+}
+.prev-next {
+    display: flex;
+    justify-content: space-between;
+    font-size: 11px;
+    align-items: center;
+    margin-bottom: 30px;
+}
+.prev-next span {
+    text-decoration: underline;
+}
+.prev-next i{
+    font-size: 8px;
+}
+.image-gallery {
+    width: 480px;
+}
+.image-container {
+    position: relative;
+}
+
+.thumbnails {
+    position: absolute;
+    left: 0;
+}
+
+.thumbnail {
+    width: 55px;
+    height: 55px;
+    cursor: pointer;
+    margin-right: 5px;
+    border: 1px solid #ccc;
+    padding: 2px;
+}
+.detail {
+    display: flex;
+    justify-content: space-between;
+}
+.detail h2 {
+    font-weight: bold;
+    margin-top: 0;
+}
+.detail__info {
+    width: 420px;
+}
+.detail__info-note {
+    padding-top: 25px;
+    border-bottom: 1px dotted #ccc;
+    border-top: 1px dotted #ccc;
+}
+.detail__info-note > span {
+    background:#092679;
+    color: white;
+    font-weight: bold;
+    padding: 10px;
+    border-radius: 8px;
+    font-size: 23px;
+}
+.detail__info ul:first-child {
+    font-size: 20px;
+    list-style-type: none;
+    padding: 0;
+}
+.detail__info-note ul li span {
+    color: #c0392b;
+}
+.detail__info p {
+    font-size: 20px;
+}
+.detail__description {
+    font-size: 20px;
+    padding-left: 25px;
+}
+.detail__image {
+    display: flex;
+    justify-content: space-between;
+}
+.detail__image img{
+    width: 210px;
+}
+.count__price input{
+    width: 20px;
+    height: 20px;
+}
+.count__price span {
+    display: flex;
+    flex-direction: column;
+}
+.count__price span i {
+    border: 1px solid #ccc;
+    font-size: 15px;
+    color: black;
+    width: 20px;
+    gap: 10px;
+    text-align: center;
+    margin: 2px 0;
+}
+.count__word {
+    text-align: right;
+    font-size: 11px;
+    color: #999;
+}
+.button__cart button{
+    color: white;
+    background: #c1a86b;
+    border: none;
+    outline: none;
+    padding: 20px;
+    font-size: 20px;
+    cursor: pointer;
+    margin: 20px 0;
+}
+.button__cart button:hover {
+    opacity: 0.8;
+}
+.button__cart i {
+    transform: scaleX(-1.2);
+}
+.ship__info {
+    color: #596d75;
+    border: 1px solid #ccc;
+    text-align: center;
+}
+.letter p{
+    background: black ;
+    color: white;
+    padding: 0 10px;
+    display: inline-block;
+    font-size: 11px;
+    font-weight: bold;
+    margin: 0;
+}
+.twitter p{
+    background: #1d9bf0;
+    color: white;
+    display: inline-block;
+    padding: 0 12px;
+    border-radius: 20px;
+    margin: 0;
+    font-size: 11px;
+    font-weight: bold;
+}
+.like {
+    display:flex;
+    align-items: center;
+    gap: 15px;
+}
+.like p {
+    background: #1877f2;
+    color: white;
+    font-size: 11px;
+    padding: 5px 10px;
+    border-radius: 4px;
+}
+.like span{
+    display: inline-block;
+    font-size: 11px;
+    color:black;
+}
+.like span a {
+    color: #385898;
+    cursor: pointer;
+    text-decoration: none;
+}
+.trick h2{
+    font-weight: bold;
+}
+.trick ul {
+    list-style-type: decimal;
+    padding-left: 20px;
+    margin: 0;
+}
+.trick p {
+    font-weight: bold;
+    margin: 0 20px;
+}
+.comment h2 {
+    border-bottom: 1px solid #c1a86b;
+}
+.comment h2 span {
+    color: #c1a86b;
+}
+.rate__item {
+    padding-left: 30px;
+}
+.rate__item label{
+    font-size: 15px;
+}
+
+.rate__item input {
+}
+.rate__user {
+}
+.rate__user input{
+    width: 30%;
+    margin-left: 20px;
+}
+.rate__info {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+.rate-icon {
+    display:flex;
+    gap: 20px;
+    align-items: center;
+}
+.star__icon{
+    width: 12px;
+}
+.rate__content input{
+    width: 85%;
+    margin-left: 9%;
+    height: 40px;
+}
+.assessment__form {
+    text-align: center;
+    margin: 20px 0;
+}
+.assessment__form button {
+    background: black;
+    color: white;
+    padding: 2px 10px;
+}
+.review__item {
+    border: 1px solid #ccc;
+    padding: 10px;
+    background: #f7f7f7;
+    margin-top: 10px;
+}
+.review__count .review__title{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.review__count {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px dashed #ccc;
+}
+.review__count p{
+    margin: 0;
+}
+.review__content {
+    background: white;
+    padding: 0 20px;
+}
+.products__interest h2 {
+    border-bottom: 1px solid rgb(160, 111, 48);
+    font-size: 24px;
+    font-weight: bold;
+}
+.products__interest h2 span {
+    color:rgb(160, 111, 48) ;
+}
+.wishlist {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+.wishlist__item {
+    width: 210px;
+}
+.wishlist__item img {
+    border: 1px solid #ddd;
+}
+.wishlist__item img:hover {
+    opacity: 0.8;
+}
+.wishlist__item span{
+    color: #333;
+    text-decoration: underline;
+    font-size: 15px;
+    cursor: pointer;
+}
+.wishlist__item span:hover {
+    color: #f78500;
+    text-decoration: none;
+}
+.wishlist__item p {
+    font-weight: bold;
+    color: #992927;
+    font-size: 14px;
+    margin: 0;
+}
+.ranking .wishlist {
+    gap: 10px;
+}
+.ranking .wishlist__item{
+    width: 174px;
+}
+.slider {
+    position: relative;
+    width: 100%;
+    height: 400px;
+    overflow: hidden;
+}
+.slider-container {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.3s ease-in-out;
+}
+
+.slider-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.slider .dots-container {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+}
+
+.slider .dots-container .dot {
+    width: 12px;
+    height: 12px;
+    margin: 0 6px;
+    border-radius: 50%;
+    background-color: #ccc;
+    cursor: pointer;
+}
+.slider .dots-container .dot.active {
+    background-color: #f00;
+}
+
+.prev-btn,
+.next-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: dimgray;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    opacity: 0.6;
+    outline: none;
+    font-size: 20px;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.prev-btn {
+    left: 10px;
+}
+
+.next-btn {
+    right: 10px;
+}
+.buy__often {
+    padding: 0 10px;
+}
+.buy__often h2{
+    text-align: center;
+    font-size: 13px;
+    border-bottom: 1px solid #a06f30;
+}
+.buy__often h2 span{
+    color: #a06f30;
+}
+.reviewRateStar {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    font-size: 11px;
+}
+.reviewRateStar img {
+    width:17px;
+    height: 17px;
+}
+.into__money {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    gap: 10px;
+}
+.into__money span {
+    font-weight: bold;
+    font-size: 22px;
+}
+.into__money p {
+    border: 1px solid #666;
+    padding: 2px 6px;
+    color: #666;
+    font-size: 16px;
+}
+.option {
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    padding: 20px 10px;
+}
+.option select{
+    width: 100%;
+    padding: 10px 0;
+}
+.option select:nth-child(2){
+    margin: 20px 0;
+}
+.option label input {
+    width: 60px;
+    height: 40px;
+}
+.enter__keyword-Sp {
+    text-align: center;
+}
+.enter__keyword-Sp p {
+    margin: 0;
+    font-size: 11px;
+}
+.enter__keyword-Sp input {
+    width: 100%;
+    height: 30px;
+}
+.add__cart {
+    padding: 0 10px;
+}
+.add__cart button {
+    margin: 10px 0;
+    background: #c1a86b;
+    font-weight: bold;
+    border: none;
+    color: white;
+    font-size: 17px;
+    padding: 10px;
+    width: 100%;
+}
+.add__cart p {
+    text-align: right;
+}
+.detail__image-sp img{
+    width: 210px;
+}
+.cart__shopping-sp img{
+    width: 31px;
+}
+.cart__shopping-sp span{
+    color: #333333;
+    font-size: 20px;
+}
+.see__more {
+    display: flex;
+    flex-direction: column;
+}
+.see__more p {
+    text-decoration: none;
+    color: #333333;
+    font-size: 20px;
+    margin: 0;
+}
+.direct {
+    padding-left: 10px;
+    list-style-type: decimal;
+}
+.banner__ads {
+    margin: 20px 0;
+}
+.wishlist__item-sp {
+    width: 30%;
+}
+.buy__often .wishlist {
+    gap: 15px;
+}
+.buy__often .wishlist__item-sp p {
+    font-size: 11px;
+    text-decoration:none;
+    color: #333333;
+}
+.review__list-Sp .review__count p {
+    font-size: 13px;
+    color: #999;
+}
+.review__list-Sp .review__content p {
+    font-size: 13px;
+}
+.see__more-sp {
+    margin: 0;
+    border: 1px solid #ccc;
+    display: inline-block;
+    font-size: 11px;
+    line-height: 2.5;
+}
+.review__list-Sp .letter {
+    text-align: center;
+}
+.review__list-Sp .letter button {
+    background: #333 none repeat scroll 0 0;
+    color: #fff;
+    font-size: 14px;
+    font-weight: bold;
+    padding: 10px 0;
+    width: 80%;
+}
+.media__contact-sp {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+.media__contact-sp .twitter p{
+    line-height: 2.5;
+    padding: 0 20px;
+}
+.trend__sp .wishlist__item-sp {
+    width: 23%;
+}
+.trend__sp .wishlist {
+    position: relative;
+    justify-content: center;
+}
+.btn__arrow .left,.btn__arrow .right {
+    position: absolute;
+    top: 50%;
+    display: flex;
+    border: none;
+    padding: 5px 8px;
+    background: #F1F1F1;
+    color: #ccc;
+    border: 1px solid #FFFFFF;
+}
+.btn__arrow .left {
+    left: 0;
+    background: #F1F1F1;
+    color: #ccc;
+}
+.btn__arrow .right {
+    right: 0;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+    background-image: linear-gradient(to bottom, #FFFFFF, #DDDDDD);
+}
+.trend__sp .wishlist .wishlist__item-sp p {
+    margin: 0;
+}
+
+.trend__sp .wishlist .wishlist__item-sp p:last-child {
+    text-decoration: none;
+    font-size: 12px;
+    line-height: 0px;
+    color: #FF0000;
+    padding-top: 10px;
+}
+
+.container-Sp {
+    display: none;
+}
