@@ -1,0 +1,215 @@
+.container {
+    max-width: 1200px;
+    margin-right: auto;
+    margin-left: auto;
+    padding-right: 15px;
+    padding-left: 15px;
+    width: 100%;
+}
+ul {
+    list-style-type: none;
+}
+img {
+    width: 100%;
+}
+.row {
+    display: flex;
+    flex-wrap: wrap;
+}
+.col {
+    flex: 1 0 0%;
+    max-width: 33.333333%;
+    border: 1px solid #eaeae9;
+}
+.col:nth-child(2) {
+    margin: 0 10px;
+}
+
+.payment__item .payment__item-header {
+    border-bottom:1px solid #eaeae9; 
+    text-align: center;
+    background: url(//gigaplus.makeshop.jp/isimaruudon/common/img/bg_tit_foot.jpg) repeat;
+}
+.payment__item .payment__item-header h2{
+    font-size: 18px;
+    font-weight: 700;
+    color: #222;
+}
+.payment__item-content .payment__item-text {
+    margin-top: 20px;
+    padding: 0 8px;
+}
+.payment__item-content  span {
+    border-left: 4px solid #c4aa6d;
+    padding: 0 8px;
+    color: #333;
+    font-family: "游明朝","Yu Mincho","游明朝体","YuMincho","ヒラギノ明朝 Pro W3","Hiragino Mincho Pro","HiraMinProN-W3","HGS明朝E","ＭＳ Ｐ明朝","MS PMincho",serif;
+    font-weight: 700;
+    font-size: 14px;
+}
+.payment__item-content .payment__item-text img {
+    padding: 0 12px;
+}
+.payment__item-content p {
+    font-size: 13px;
+    padding: 0 10px;
+    margin: 0;
+}
+.payment__item-text .payment__item-image img{
+    padding: 0;
+    max-width: 48px;
+}
+.payment__item-text .payment__item-description {
+    padding: 0 20px;
+    font-size: 14px;
+    margin: 0;
+    list-style-type: none;
+}
+.payment__item-text .payment__item-description li::before {
+    content: "•";
+    font-size: 15px;
+    padding-right: 5px;
+}
+.payment__item-text .info-ship {
+    padding: 0 20px;
+    font-size: 13px;
+    margin: 0;
+    list-style-type: none;
+}
+.sub-header {
+    border-top:1px solid #eaeae9 ;
+    margin-top: 20px;
+}
+.info-ship {
+    padding: 10px 0 !important;
+}
+#date__time {
+    margin-left: 20px;
+}
+.info__contact {
+    margin-bottom: 30px;
+}
+.info__contact p:not(:first-child) {
+    padding-left: 0;
+}
+.ship_image {
+    max-width: 360px;
+    border-bottom: 2px solid #dfd3b6;
+}
+.ship_image img{
+    width: 100%;
+}
+.table__count {
+    width: 93%;
+    margin: 10px auto 0;
+    border-collapse: collapse;
+    border: 1px solid  #d7d7d7;
+}
+.table__count th {
+    border-bottom: 1px solid  #d7d7d7;
+    font-size: 11px;
+    background-color: #fffcf3;
+}
+.table__count th, .table__count td {
+    text-align: center;
+    padding: 3px;
+    border: #d7d7d7 solid 1px;
+    border-right: #d7d7d7 solid 1px;
+}
+.table__count td {
+    color: #ab0000;
+    font-size: 15px;
+}
+.info__ship {
+    margin: 0 20px ;
+    border-bottom: 1px solid gray;
+}
+.info__ship p {
+    padding: 0 !important;
+    font-size: 11px;
+}
+.info__ship p:nth-child(2){
+    margin-bottom: 20px;
+}
+.ship__address {
+    font-weight: 700;
+}
+.payment_info-ship:nth-child(2) .info__ship {
+    margin: 0 12px;
+    border: none;
+}
+.payment_info-ship:nth-child(2) .info__ship p:nth-child(2) {
+    margin: 20px 0;
+    font-size: 13px;
+}
+.industry__image {
+    max-width: 192px ;
+}
+.menu__sp {
+    margin-top: 30px;
+    border: 1px solid #c5c5c5;
+}
+.menu__sp h2 {
+    background-color: #0e293a;
+    color: #fff;
+    font-weight: 700;
+    text-align: center;
+    margin: 0;
+    padding: 10px 0;
+}
+.menu__sp > ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+.menu__sp .list__sp {
+    position: relative;
+}
+.menu__sp .list__sp p{
+    margin: 0;
+    padding: 15px 10px;
+    color: #0e293a;
+    background: #f6f6f6;
+    cursor: pointer;
+    border-bottom: 1px solid #c5c5c5;
+}
+
+.menu__sp .list__sp p:active{
+    background: #00d4ff;
+    transition: background 200ms;
+}
+.menu__sp .list__sp i {
+    position: absolute;
+    right: 10px;
+    font-size: 14px;
+}
+.menu__sp .list__sp .fa-caret-right {
+    font-size: 16px;
+    right: 14px;
+}
+.active__list-sp{
+    background: #00d4ff !important;
+}
+.sub__menu li {
+    width: 100%;
+    border-bottom: 1px solid #c5c5c5;
+    padding: 15px 10px;
+}
+.sub__menu li span {
+    padding-left: 15px;
+}
+.sub__menu li:active {
+    background: #00d4ff;
+    transition: background 200ms;
+}
+.sub__menu {
+    padding-left: 0px;
+    display: none;
+    transition: all 0.3s ease;
+}
+.show {
+    display: block;
+}
+.hide {
+    display: none;
+}
