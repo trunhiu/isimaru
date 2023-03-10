@@ -1,5 +1,71 @@
 {
   "sections": {
+    "slide-show": {
+      "type": "slide-show",
+      "blocks": {
+        "9331fa92-c48d-445c-b4f1-94678d5617ca": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/slide1.jpg"
+          }
+        },
+        "151e8847-23f0-4c49-b5fd-78ce1604ece5": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/slide2.jpg"
+          }
+        },
+        "e137dd36-776c-4150-b1e1-a2dd906d0e12": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/slide3.png"
+          }
+        },
+        "4bfa3518-660e-4c33-b124-c68159069ade": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/slide4.png"
+          }
+        },
+        "af7de422-989c-45ac-afbd-b1dfaa1cccec": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/slide5.jpg"
+          }
+        },
+        "78443a17-099c-404f-b59a-0c14c0e0b079": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/slide6.png"
+          }
+        },
+        "eefa6a1a-2263-45a8-9119-6ccf7ffef6ae": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/slide7.png"
+          }
+        },
+        "f43d105e-78c3-49c0-913c-78ac6a892016": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/slide8.png"
+          }
+        }
+      },
+      "block_order": [
+        "9331fa92-c48d-445c-b4f1-94678d5617ca",
+        "151e8847-23f0-4c49-b5fd-78ce1604ece5",
+        "e137dd36-776c-4150-b1e1-a2dd906d0e12",
+        "4bfa3518-660e-4c33-b124-c68159069ade",
+        "af7de422-989c-45ac-afbd-b1dfaa1cccec",
+        "78443a17-099c-404f-b59a-0c14c0e0b079",
+        "eefa6a1a-2263-45a8-9119-6ccf7ffef6ae",
+        "f43d105e-78c3-49c0-913c-78ac6a892016"
+      ],
+      "settings": {
+        "title": ""
+      }
+    },
     "image_banner": {
       "type": "image-banner",
       "blocks": {
@@ -21,7 +87,7 @@
           "type": "buttons",
           "settings": {
             "button_label_1": "Shop all",
-            "button_link_1": "shopify://collections/all",
+            "button_link_1": "shopify:\/\/collections\/all",
             "button_style_secondary_1": true,
             "button_label_2": "",
             "button_link_2": "",
@@ -37,7 +103,6 @@
       "settings": {
         "image_overlay_opacity": 40,
         "image_height": "large",
-        "adapt_height_first_image": false,
         "desktop_content_position": "bottom-center",
         "show_text_box": false,
         "desktop_content_alignment": "center",
@@ -69,6 +134,8 @@
         "text"
       ],
       "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
         "color_scheme": "background-1",
         "full_width": true,
         "padding_top": 40,
@@ -80,17 +147,24 @@
       "settings": {
         "title": "Featured products",
         "heading_size": "h2",
+        "description": "",
+        "show_description": false,
+        "description_style": "body",
         "collection": "all",
         "products_to_show": 8,
         "columns_desktop": 4,
-        "color_scheme": "background-1",
+        "full_width": false,
         "show_view_all": false,
-        "swipe_on_mobile": false,
+        "view_all_style": "solid",
+        "enable_desktop_slider": false,
+        "color_scheme": "background-1",
         "image_ratio": "adapt",
         "show_secondary_image": true,
         "show_vendor": false,
         "show_rating": false,
+        "enable_quick_add": false,
         "columns_mobile": "2",
+        "swipe_on_mobile": false,
         "padding_top": 28,
         "padding_bottom": 36
       }
@@ -128,6 +202,7 @@
         "heading_size": "h2",
         "desktop_layout": "left",
         "mobile_layout": "collage",
+        "card_styles": "product-card-wrapper",
         "color_scheme": "background-1",
         "padding_top": 36,
         "padding_bottom": 36
@@ -137,8 +212,9 @@
       "type": "video",
       "settings": {
         "heading": "",
-        "video_url": "https://www.youtube.com/watch?v=_9VUPq3SxOc",
         "heading_size": "h1",
+        "enable_video_looping": false,
+        "video_url": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc",
         "description": "",
         "full_width": false,
         "color_scheme": "background-1",
@@ -192,19 +268,25 @@
         "background_style": "none",
         "button_label": "",
         "button_link": "",
-        "swipe_on_mobile": false,
         "color_scheme": "background-1",
         "columns_mobile": "1",
+        "swipe_on_mobile": false,
         "padding_top": 36,
         "padding_bottom": 36
       }
+<<<<<<< HEAD
     },
     "payment_box" : {
       "type": "payment-box",
+    "slide-show":{
+      "type":"slide-show",
       "settings": {}
+=======
+>>>>>>> 1136b54 (Create setting slider)
     }
   },
   "order": [
+    "slide-show",
     "image_banner",
     "rich_text",
     "featured_collection",
@@ -213,4 +295,9 @@
     "multicolumn",
     "payment_box"
   ]
+<<<<<<< HEAD
+  } 
 }
+=======
+}
+>>>>>>> 1136b54 (Create setting slider)
