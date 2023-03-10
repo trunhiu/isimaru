@@ -1,0 +1,146 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300;400;500;600;700;800&display=swap');
+header {
+    font-family: "Roboto Slab" , Garamond , "Times New Roman" , "ÞâÌÀÄ«" , "Yu Mincho" , "ÞâÌÀÄ«ÂÎ" , "YuMincho" , "¥Ò¥é¥®¥ÎÌÀÄ« Pro W3" , "Hiragino Mincho Pro" , "HiraMinProN-W3" , "HGSÌÀÄ«E" , "£Í£Ó £ÐÌÀÄ«" , "MS PMincho" , serif;
+}
+
+header a {
+    cursor: pointer;
+}
+
+.header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    height: 100%;
+}
+
+.header-menu-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-height: 126px;
+}
+
+.header-logo {
+    max-width: 174px;
+    height: 100px;
+}
+
+.header-right-top {
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    height: 30px;
+    font-size: 13px;
+}
+
+.header-right-top .header-right-top-link {
+    color: #fff;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: bold;
+    padding: 5px 15px;
+    display: inline-block;
+    background: #0e293a;
+    border-bottom-right-radius: 3px;
+    border-bottom-left-radius: 3px;
+    font-family: Avenir, "Open Sans", "Helvetica Neue", Helvetica, Arial, Verdana, Roboto, 游ゴシック, "Yu Gothic", 游ゴシック体, YuGothic, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", メイリオ, Meiryo, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+}
+
+.header-right-top ul {
+    background-image: url(./bg_pattern.png);
+    display: flex;
+    list-style: none;
+    padding-left: 0;
+    max-width: 452px;
+    margin-right: 18px;
+    white-space: nowrap;
+    line-height: 28px;
+}
+
+.header-right-top a {
+    font-size: 13px;
+    color: #333;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.header-right-top ul li a {
+    padding: 10px 10px 4px;
+}
+
+.header-right-bottom {
+    padding: 10px 0 11px 0;
+}
+
+.header-right-bottom ul li {
+    height: 80px;
+}
+
+.header-right-bottom ul li:nth-child(1)a img{
+    width: 333px;
+}
+
+.header-right-bottom ul li:nth-child(2)a img{
+    width: 246px;
+}
+
+.header-right-bottom ul li:last-child a img{
+    width: 160px;
+}
+
+.header-right-bottom ul{
+    display: flex;
+    list-style: none;
+    margin: 0;
+}
+
+.header-right-bottom ul li:nth-child(2) {
+    margin-left: 20px;
+}
+
+.header-right-bottom ul li:nth-child(3) {
+    margin-left: 10px;
+}
+
+.header-menu-bottom ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+}
+
+.header-nav {
+    background-color: #000;
+    max-height: 38px;
+    margin-bottom: 25px;
+}
+
+.header-menu-bottom ul {
+    max-height: 38px;
+    margin: 0;
+}
+
+.header-menu-bottom ul a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+}
+
+.header-menu-bottom ul li:last-child {
+    transform: translateY(14px);
+}
+
+.header-menu-bottom ul li .header-menu-bottom-cart {
+    color: rgb(51, 51, 51);
+    margin: 0;
+    font-size: 11px;
+    text-align: right;
+    transform: translateY(-8px);
+    padding-right: 8px;
+}
+
+.header-menu-bottom ul li .header-menu-bottom-cart em {
+    color: #ff0000;
+    font-weight: bold;
+    font-style: normal;
+}
