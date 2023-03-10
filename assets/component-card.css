@@ -1,10 +1,13 @@
+h2,p,span {
+  font-family: 游明朝, "Yu Mincho", 游明朝体, YuMincho, "ヒラギノ明朝 Pro W3", "Hiragino Mincho Pro", HiraMinProN-W3, HGS明朝E, "ＭＳ Ｐ明朝", "MS PMincho", serif;
+}
+
 .card-wrapper {
   color: inherit;
   height: 100%;
   position: relative;
   text-decoration: none;
 }
-
 .card {
   text-decoration: none;
   text-align: var(--text-alignment);
@@ -361,4 +364,43 @@
 
 .card-article-info {
   margin-top: 1rem;
+}
+/**/
+.feature__list-product {
+  width: 920px;
+  float: right;
+}
+.feature__list-product h2 {
+  border-bottom: 1px solid rgb(160, 111, 48);
+}
+.feature__list-product span {
+  color: rgb(160, 111, 48);
+}
+.feature__list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.feature__list .feature__item {
+  width: 24%;
+}
+.feature__item img {
+  border: 1px solid #ccc;
+  cursor: pointer;
+}
+.feature__item img:hover {
+  opacity: 0.8;
+}
+.feature__item p {
+  margin: 0;
+  cursor: pointer;
+  font-size: 14px;
+  line-height: 1.4;
+}
+.feature__item p:hover {
+  color: #f78500;
+}
+.feature__item span {
+  color: #992927;
+  font-weight: bold;
 }
