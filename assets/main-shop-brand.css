@@ -1,0 +1,153 @@
+h2, span, p {
+    font-family: "游明朝", "Yu Mincho", "游明朝体", "YuMincho", "ヒラギノ明朝 Pro W3", "Hiragino Mincho Pro", "HiraMinProN-W3", "HGS明朝E", "ＭＳ Ｐ明朝", "MS PMincho", serif;
+}
+#shop-brand {
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    gap: 10px;
+}
+
+.category {
+    width: 920px;
+}
+
+ul.breadcrumb-shop {
+    list-style: none;
+    padding: 0;
+}
+
+ul.breadcrumb-shop li {
+    display: inline;
+    font-size: 15px;
+}
+
+ul.breadcrumb-shop li + li:before {
+    padding: 8px;
+    color: black;
+    content: ">";
+}
+
+ul.breadcrumb-shop li a {
+    color: black;
+    text-decoration: underline;
+}
+
+ul.breadcrumb-shop li a:hover {
+    color: #f78500;
+    text-decoration: none;
+}
+.category__pc > h2 {
+    border-bottom: 1px solid #a06f30;
+    font-weight: bold;
+}
+.category__pc > h2 > span {
+    color: #a06f30;
+}
+.final__search {
+    padding: 10px 50px;
+}
+table {
+    width: 100%;
+    text-align: left;
+}
+table th {
+    background-image: url("../assets/bg_pattern.png");
+}
+.final__search .final__search-btn {
+    text-align: center;
+}
+.final__search button {
+    margin: 20px 0;
+    padding: 10px 60px;
+    background: black;
+    color: white;
+    border: none;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+}
+.final__search button:hover {
+    opacity: 0.8;
+}
+.filter__tag {
+    display: flex;
+    justify-content: space-between;
+}
+.filter__tag ul {
+    display: flex;
+    list-style-type: none;
+}
+.filter__tag ul li:not(:first-child) {
+    margin-right: 20px;
+    text-decoration: underline;
+    cursor: pointer;
+}
+.filter__tag ul li:not(:first-child):hover {
+    color: #f78500;
+    text-decoration: none;
+}
+.product__list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+.product__item .product__image p{
+    height: 90px !important;
+}
+.button__cart {
+    border: none !important;
+}
+
+.paginate-brand ul {
+    margin: 60px 0;
+    text-align: center;
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    align-items: center;
+}
+.paginate-brand ul li:not(:nth-child(1),:nth-child(4)) {
+    background: #FFF8EF none repeat scroll 0 0;
+    padding: 0 6px ;
+    border: 1px solid #ccc;
+}
+.paginate-brand ul li:not(:nth-child(1)):hover{
+    color: #f78500;
+    cursor: pointer;
+}
+.resultCount {
+    border-top: 1px solid #a06f30;
+    font-size: 12px;
+    text-align: right;
+    padding-top: 10px;
+}
+.more-btn {
+    text-align: center;
+    margin: 30px 0 ;
+}
+.more-btn button {
+    border: 1px solid #bfa669;
+    color: #a06f30;
+    font-weight: bold;
+    background: none;
+    padding: 10px;
+}
+@media screen and (max-width: 567px) {
+    .product__item .product__image p{
+        height: 60px !important;
+        font-size: 11px !important;
+        line-height: 1.4;
+    }
+    .product__item .product__image {
+        width: auto !important;
+    }
+    #shop-brand {
+        gap: 0;
+        padding: 0 10px;
+    }
+    ul.breadcrumb-shop {
+        margin-bottom: 0;
+    }
+}

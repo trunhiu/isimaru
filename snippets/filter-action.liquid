@@ -1,0 +1,59 @@
+<style>
+    .filter__action {
+        margin: 10px 0;
+        border-top: 1px solid #ccc;
+        border-bottom: 1px solid #ccc ;
+    }
+    .breadcrumb__filter {
+        display: flex;
+        padding: 0;
+        justify-content: center;
+    }
+    .breadcrumb__filter li{
+        position: relative;
+        display: flex;
+        font-size: 12px;
+        list-style-type: none;
+        margin: 10px 14px;
+    }
+    .breadcrumb__filter li:not(:last-child):after {
+        position: absolute;
+        content: "";
+        width: 1px;
+        top: 7px;
+        height: 10px;
+        background-color: gray;
+        right: -10px;
+    }
+    .filter__button {
+        display: flex;
+        justify-content: space-around;
+    }
+    .filter__button span {
+        font-size: 13px;
+    }
+    .filter__button select {
+        width: 40%;
+    }
+</style>
+<div class="filter__action hide">
+    <ul class="breadcrumb__filter">
+        <li>おすすめ順</li>
+        <li>新着順</li>
+        <li>高い順</li>
+        <li>安い順</li>
+    </ul>
+    <div class="filter__button">
+          <span>表示件数：
+          <select name="" id="">
+            <option value="">30件</option>
+            <option value="">60件</option>
+            <option value="">90件</option>
+          </select>
+          </span>
+        <span>表示方法：
+            <i class="fa-solid fa-list" style="color: lightgray ;font-size: 20px"></i>
+          <i class="fa-solid fa-table-cells" style="font-size: 20px"></i>
+          </span>
+    </div>
+</div>

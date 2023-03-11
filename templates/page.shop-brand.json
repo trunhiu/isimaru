@@ -1,10 +1,228 @@
 {
   "sections": {
     "main": {
-      "type": "main-page",
+      "type": "main-shop-brand",
+      "blocks": {
+        "3588d234-5395-4ab5-a3de-1939019a95f0": {
+          "type": "product-list",
+          "settings": {
+            "title": "半生味噌打ち込みうどん16人前セット【送料込※】",
+            "image": "shopify:\/\/shop_images\/category1.jpg",
+            "price": 3600
+          }
+        },
+        "e09b87a6-74c9-4a21-8819-02af77a59ede": {
+          "type": "product-list",
+          "settings": {
+            "title": "半生味噌打ち込みうどん8人前セット【送料込※】",
+            "image": "shopify:\/\/shop_images\/category2.jpg",
+            "price": 2300
+          }
+        },
+        "c3366d95-0bb5-440b-a8b3-808df7d3424d": {
+          "type": "product-list",
+          "settings": {
+            "title": "半生讃岐石丸うどん包丁切り（20袋）",
+            "image": "shopify:\/\/shop_images\/mainImg1_c940fcaf-82d1-4c30-8a40-af879d4149a8.jpg",
+            "price": 4997
+          }
+        },
+        "d42ca8ea-7622-40d9-9670-7dd487457079": {
+          "type": "product-list",
+          "settings": {
+            "title": "半生讃岐石丸うどん包丁切り（20袋）",
+            "image": "shopify:\/\/shop_images\/category3.jpg",
+            "price": 5000
+          }
+        },
+        "a349be07-c080-4f1a-9e2d-eaba5049ba77": {
+          "type": "product-list",
+          "settings": {
+            "title": "RM-4HM 石丸讃岐ラーメン 北海道スープお試しセット（みそ）【送料込】",
+            "image": "shopify:\/\/shop_images\/category4.jpg",
+            "price": 1300
+          }
+        },
+        "2df28fe5-3ccc-47f0-8b37-894a415ac8cb": {
+          "type": "product-list",
+          "settings": {
+            "title": "RM-4HS 石丸讃岐ラーメン 北海道スープお試しセット（塩）【送料込】",
+            "image": "shopify:\/\/shop_images\/category5.jpg",
+            "price": 1300
+          }
+        },
+        "39d3432f-b801-4589-8c6a-38414ae8ef65": {
+          "type": "product-list",
+          "settings": {
+            "title": "HP-7S 石丸製麺おすすめセット5種の詰合せ【送料込※】",
+            "image": "shopify:\/\/shop_images\/category6.jpg",
+            "price": 2500
+          }
+        },
+        "395244b8-a589-4d49-92ab-a4cf257f48f8": {
+          "type": "product-list",
+          "settings": {
+            "title": "HP-24 半生讃岐石丸うどん24人前セット つゆ付【送料込※】",
+            "image": "shopify:\/\/shop_images\/wishlist3.jpg",
+            "price": 3500
+          }
+        },
+        "75dc9a32-2b7f-443c-8497-835473431e3e": {
+          "type": "product-list",
+          "settings": {
+            "title": "HP-7A 半生讃岐石丸うどん9人前セット つゆ付き【送料込※】",
+            "image": "shopify:\/\/shop_images\/wishlist11.jpg",
+            "price": 1890
+          }
+        },
+        "a79dcb2c-6ed0-4777-ab61-ff310ad98bd3": {
+          "type": "product-list",
+          "settings": {
+            "title": "HP-15B 半生讃岐石丸うどん15人前セット（つゆ付）",
+            "image": "shopify:\/\/shop_images\/wishlist6.jpg",
+            "price": 1900
+          }
+        },
+        "739c49d0-a5aa-428f-91e6-022ed955fd91": {
+          "type": "product-list",
+          "settings": {
+            "title": "HP-15A 半生讃岐石丸うどん15人前セット（麺のみ）",
+            "image": "shopify:\/\/shop_images\/wishlist5.jpg",
+            "price": 1450
+          }
+        },
+        "5f771304-44e1-46f7-b86d-fed91c9bb702": {
+          "type": "product-list",
+          "settings": {
+            "title": "HP-4半生讃岐石丸うどんお試しセット【送料無料】",
+            "image": "shopify:\/\/shop_images\/category19.jpg",
+            "price": 1000
+          }
+        },
+        "431cb137-26f9-4789-bfd1-8fb238764b76": {
+          "type": "product-list",
+          "settings": {
+            "title": "W-20A 厳選 半生めんセット",
+            "image": "shopify:\/\/shop_images\/category8.jpg",
+            "price": 2600
+          }
+        },
+        "a0013523-54c2-4781-a292-a0a395ff3ea7": {
+          "type": "product-list",
+          "settings": {
+            "title": "RM-12H 石丸讃岐ラーメン 北海道スープセット【送料込※】",
+            "image": "shopify:\/\/shop_images\/category9.jpg",
+            "price": 2800
+          }
+        },
+        "71edc086-68f0-4800-8ff5-695501793e1c": {
+          "type": "product-list",
+          "settings": {
+            "title": "半生讃岐石丸うどん包丁切り（10袋）",
+            "image": "shopify:\/\/shop_images\/wishlist7.jpg",
+            "price": 2850
+          }
+        },
+        "73df0146-0c55-43d7-b9fb-3192ce4bae2e": {
+          "type": "product-list",
+          "settings": {
+            "title": "半生讃岐石丸うどん包丁切り（1袋）",
+            "image": "shopify:\/\/shop_images\/category10.jpg",
+            "price": 310
+          }
+        },
+        "ec91c642-593f-4b2a-8ee1-2d9e855237cd": {
+          "type": "product-list",
+          "settings": {
+            "title": "【数量限定】讃岐鶏だし塩ラーメン【送料込※】",
+            "image": "shopify:\/\/shop_images\/category11.jpg",
+            "price": 2000
+          }
+        },
+        "5be1fbd5-98b8-46a2-9285-9eca805b2a2d": {
+          "type": "product-list",
+          "settings": {
+            "title": "SA-2 香り味わう桜うどん つゆ付きセット【送料込】",
+            "image": "shopify:\/\/shop_images\/category12.jpg",
+            "price": 1280
+          }
+        },
+        "696cf2af-d210-482d-8604-dbb6218f52c6": {
+          "type": "product-list",
+          "settings": {
+            "title": "業務用半生讃岐うどん包丁切り（1袋）",
+            "image": "shopify:\/\/shop_images\/category13.jpg",
+            "price": 560
+          }
+        },
+        "47e78266-35f4-4924-b71e-81af2cb42b1f": {
+          "type": "product-list",
+          "settings": {
+            "title": "業務用半生讃岐うどん包丁切り（6袋）",
+            "image": "shopify:\/\/shop_images\/category14.jpg",
+            "price": 3180
+          }
+        },
+        "64f5bdcd-b7fc-4113-9add-915d330d7865": {
+          "type": "product-list",
+          "settings": {
+            "title": "TEO-4T 低糖質細うどん（糖質オフつゆ付）【送料込※】",
+            "image": "shopify:\/\/shop_images\/category16.jpg",
+            "price": 3800
+          }
+        },
+        "82c967f5-afb1-408b-a18b-0766ed5511a0": {
+          "type": "product-list",
+          "settings": {
+            "title": "低糖質細うどん（1袋）",
+            "image": "shopify:\/\/shop_images\/category17.jpg",
+            "price": 640
+          }
+        },
+        "fc1a0ef7-6677-4f88-9bb4-560ccc54b0e7": {
+          "type": "product-list",
+          "settings": {
+            "title": "香り味わう桜うどん（1袋）",
+            "image": "shopify:\/\/shop_images\/category18.jpg",
+            "price": 380
+          }
+        },
+        "3b242e30-4f86-44ae-aa83-97693902ea04": {
+          "type": "product-list",
+          "settings": {
+            "title": "HP-4半生讃岐石丸うどんお試しセット【送料無料】",
+            "image": "shopify:\/\/shop_images\/category19_64ae518f-06da-43b0-b0bb-0d07987b0aa9.jpg",
+            "price": 1000
+          }
+        }
+      },
+      "block_order": [
+        "3588d234-5395-4ab5-a3de-1939019a95f0",
+        "e09b87a6-74c9-4a21-8819-02af77a59ede",
+        "c3366d95-0bb5-440b-a8b3-808df7d3424d",
+        "d42ca8ea-7622-40d9-9670-7dd487457079",
+        "a349be07-c080-4f1a-9e2d-eaba5049ba77",
+        "2df28fe5-3ccc-47f0-8b37-894a415ac8cb",
+        "39d3432f-b801-4589-8c6a-38414ae8ef65",
+        "395244b8-a589-4d49-92ab-a4cf257f48f8",
+        "75dc9a32-2b7f-443c-8497-835473431e3e",
+        "a79dcb2c-6ed0-4777-ab61-ff310ad98bd3",
+        "739c49d0-a5aa-428f-91e6-022ed955fd91",
+        "5f771304-44e1-46f7-b86d-fed91c9bb702",
+        "431cb137-26f9-4789-bfd1-8fb238764b76",
+        "a0013523-54c2-4781-a292-a0a395ff3ea7",
+        "71edc086-68f0-4800-8ff5-695501793e1c",
+        "73df0146-0c55-43d7-b9fb-3192ce4bae2e",
+        "ec91c642-593f-4b2a-8ee1-2d9e855237cd",
+        "5be1fbd5-98b8-46a2-9285-9eca805b2a2d",
+        "696cf2af-d210-482d-8604-dbb6218f52c6",
+        "47e78266-35f4-4924-b71e-81af2cb42b1f",
+        "64f5bdcd-b7fc-4113-9add-915d330d7865",
+        "82c967f5-afb1-408b-a18b-0766ed5511a0",
+        "fc1a0ef7-6677-4f88-9bb4-560ccc54b0e7",
+        "3b242e30-4f86-44ae-aa83-97693902ea04"
+      ],
       "settings": {
-        "padding_top": 28,
-        "padding_bottom": 28
       }
     }
   },
