@@ -11,7 +11,7 @@
             <div class="payment__item-text">
               <span>クレジットカード（手数料無料）</span>
               <div class="payment__card-image">
-                <img src="../assets/img_payment.png" alt="">
+                <img src="{{ '../assets/img_payment.png' | asset_url }}" alt="payment">
               </div>
               <p>
                 荷物の発送が完了した時点でカード会社へ代金を請求します</p>
@@ -40,11 +40,11 @@
             <div class="payment__item-text">
               <span>【前払い】コンビニ決済</span>
               <div class="payment__item-image">
-                <img src="../assets/logo_711.gif" alt="">
-                <img src="../assets/logo_lawson.gif" alt="">
-                <img src="../assets/logo_ministop.gif" alt="">
-                <img src="../assets/logo_seico.gif" alt="">
-                <img src="../assets/logo_familymart.gif" alt="">
+                <img src="{{ '../assets/logo_711.gif' | asset_url }}" alt="711">
+                <img src="{{ '../assets/logo_lawson.gif' | asset_url }}" alt="lawson">
+                <img src="{{ '../assets/logo_ministop.gif' | asset_url }}" alt="ministop">
+                <img src="{{ '../assets/logo_seico.gif' | asset_url }}" alt="seico">
+                <img src="{{ '../assets/logo_familymart.gif' | asset_url }}" alt="familymart">
               </div>
               <ul class="payment__item-description">
                 <li>コンビニエンスストア店頭でのお支払いは現金のみとなります。</li>
@@ -74,18 +74,18 @@
             <div class="payment__item-text">
               <span>配達業者</span>
               <div class="payment__card-image industry__image">
-                <img src="../assets/img_industry.jpg" alt="">
+                <img src="{{ '../assets/img_industry.jpeg' | asset_url }}" alt="">
               </div>
               <p>※ただし大口のご注文の場合、他の運送会社に変更する場合がございます。</p>
               <div class="payment__card-image industry__image">
-                <img src="../assets/logo_yupake.png" alt="">
+                <img src="{{ '../assets/logo_yupake.png' | asset_url }}" alt="">
               </div>
               <p>※ゆうパケット対象商品は、ご自宅のポストに直接投函いたします。</p>
             </div>
             <div class="payment__item-text">
               <span>宅急便用配送時間帯</span>
               <div class="payment__card-image">
-                <img src="../assets/img_dashbroad.png" alt="">
+                <img src="{{ '../assets/img_dashbroad.png' | asset_url }}" alt="">
                 <p>上記の配送時間帯からお選びいただけます。</p>
                 <p>ご注文の際にご指定ください。</p>
               </div>
@@ -127,7 +127,7 @@
                 <p class="ship__address">■本州・九州・四国にお届け</p>
                 <p>お届け先１箇所につき商品代金5,000円(税込)以上のご注文で送料無料となります。</p>
                 <div class="payment__card-image ship_image">
-                  <img src="../assets/sou_honshux.png" alt="">
+                  <img src="{{ '../assets/sou_honshux.png' | asset_url }}" alt="">
                 </div>
               </div>
               <p style="font-size: 11px;">お届け先1箇所につき商品代金5,000円(税込)未満の場合は、以下の通り送料をご負担いただきます。</p>
@@ -156,7 +156,7 @@
                 <p class="ship__address">■北海道・沖縄にお届け</p>
                 <p>お届け先１箇所につき商品代金10,000円(税込)以上のご注文で送料無料となります。</p>
                 <div class="payment__card-image ship_image">
-                  <img src="../assets/2019.06sou_hokkaix.png" alt="">
+                  <img src="{{ '../assets/sou_hokkaix.png' | asset_url }}" alt="">
                 </div>
               </div>
               <p>お届け先1箇所につき商品代金10,000円(税込)未満の場合は、以下の通り送料をご負担いただきます。</p>
@@ -293,7 +293,7 @@
               </li>
             </ul>
           </li>
-          <li class="list__sp">
+          <li class="list__sp list__sp-red">
             <p>金額から選ぶ
               <i class="fa-solid fa-plus"></i>
             </p>
