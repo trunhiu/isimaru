@@ -144,7 +144,7 @@
         <div class="footer-block--newsletter">
           <div>
             <div class="footer__logo">
-              <img src="../assets/footer_logo.jpg" alt="">
+              <img src="{{ '../assets/footer_logo.jpg' | asset_url }}" alt="Footer logo">
             </div>
             <div class="footer__btn">
               <button>石丸製麺 会社HPへ</button>
@@ -157,13 +157,13 @@
   <div class="footer__contact">
     <div class="footer__image">
       <div class="footer__image-deliver">
-        <img id="image__deliver" src="../assets/img_deliver.png" alt="">
+        <img id="image__deliver" src="{{  '../assets/img_deliver.png' | asset_url }}" alt="Deliver">
       </div>
       <div class="footer__image-contact">
-        <img id="image__contact" src="../assets/footer_contact.png" alt="">
+        <img id="image__contact" src="{{ '../assets/footer_contact.png' | asset_url }}" alt="Contact">
       </div>
       <div class="footer__image-fax">
-        <img id="image__fax" class="" src="../assets/btn_fax.png" alt="">
+        <img id="image__fax" class="" src="{{ '../assets/btn_fax.png' | asset_url }}" alt="Fax">
       </div>
     </div>
     <div class="footer__button-sp">
