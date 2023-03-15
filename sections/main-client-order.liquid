@@ -1,0 +1,1025 @@
+{% assign hide_header_backToTop = true %}
+{{ 'client-order.css' | asset_url | stylesheet_tag }}
+<section id="client-order">
+    <div class="client__header">
+        <h2>石丸製麺オンラインストア</h2>
+        <ul>
+            <li>ようこそ！</li>
+            <li>
+                <i class="fa-solid fa-house"></i>トップページへ
+            </li>
+            <li>| <img src="{{ '../assets/icon_top_03.gif' | asset_url }}" alt="icon-top">買い物かごへ</li>
+        </ul>
+    </div>
+    <div class="container">
+        <div class="order__title-image">
+            <img src="{{ '../assets/order_title_image.png' | asset_url }}" alt="order-image">
+            <img src="{{ '../assets/step01.svg' | asset_url }}" alt="">
+        </div>
+        <table width="960"
+               border="0"
+               cellpadding="1"
+               cellspacing="1"
+               bgcolor="#666666"
+               style="margin-bottom:32px;"
+               id=info__detail>
+            <!-- 商品内訳ヘッダ -->
+            <tbody>
+            <tr height="25" class="title__order title__first">
+                <td width="58%" align="center" nowrap="">
+                    <b>商品名</b>
+                </td>
+                <td width="7%" align="center" nowrap="">
+                    <b>数量</b>
+                </td>
+                <td align="center" nowrap="">
+                    <b>小計（税込）</b>
+                </td>
+            </tr>
+            <tr bgcolor="#ffffff" height="25">
+                <td>
+                  <span class="brand_thumb">
+                  <img src="{{ '../assets/wishlist2.jpeg' | asset_url }}"
+                       class="responsiveDesignHide"
+                       style="vertical-align: middle; width: 40px; margin: 2px;"
+                       border="0"
+                       title="半生讃岐うどん（つゆ付）（6袋）">
+                  </span>
+                    &nbsp;半生讃岐うどん（つゆ付）（6袋）
+                    [0917]
+                    <span class="iconTax">(軽)</span>
+                </td>
+                <td align="center" nowrap="">
+                    1
+                </td>
+                <td align="right" nowrap="">
+                    1,920円
+                </td>
+            </tr>
+            <!-- 特徴・オプション項目 -->
+            <tr bgcolor="#ffffff" height="25">
+                <td colspan="3" valign="top">
+                    <span style="margin-left:50px;" class="responsiveDesignHide"></span>
+                    <img src="{{ '../assets/order_plus.gif' | asset_url }}" class="order__plus-icon" border="0">
+                    包装 : 1、包装なし, 表書 : 50、のしなし&nbsp;&nbsp;
+                    <table
+                            class="nameList"
+                            bgcolor="#666666"
+                            cellspacing="1"
+                            cellpadding="1">
+                        <tbody>
+                        <tr bgcolor="#ffffff">
+                            <td width="300">
+                                <p class="nameItem">
+                                    【名入れ】と【外のし希望】　(例→石丸　外のし）　完全包装でのしをつける場合、基本は「内のし」です
+                                </p>
+                                <p class="nameFix"></p>
+                            </td>
+                            <td class="nameAmount" rowspan="1" width="40" align="center">1</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </td>
+            </tr>
+            <tr bgcolor="#ffffff" height="25">
+                <td>
+                  <span class="brand_thumb">
+                  <img src="{{ '../assets/mainImg1.jpeg' | asset_url }}"
+                       class="responsiveDesignHide"
+                       style="vertical-align: middle; width: 40px; margin: 2px;"
+                       border="0"
+                       title="半生讃岐石丸うどん包丁切り（20袋">
+                  </span>
+                    &nbsp;半生讃岐石丸うどん包丁切り（20袋）
+                    [0963]
+                    <span class="iconTax">(軽)</span>
+                </td>
+                <td align="center" nowrap="">
+                    10
+                </td>
+                <td align="right" nowrap="">
+                    50,000円
+                </td>
+            </tr>
+            <!-- 特徴・オプション項目 -->
+            <tr bgcolor="#ffffff" height="25">
+                <td colspan="3" valign="top">
+                    <span style="margin-left:50px;" class="responsiveDesignHide"></span>
+                    <img src="{{ '../assets/order_plus.gif' | asset_url }}" class="order__plus-icon" border="0">
+                    包装 : 1、包装なし, 表書 : 50、のしなし&nbsp;&nbsp;
+                    <table class="nameList" bgcolor="#666666" >
+                        <tbody>
+                        <tr bgcolor="#ffffff">
+                            <td >
+                                <p class="nameItem">
+                                    【名入れ】と【外のし希望】　(例→石丸　外のし）　完全包装でのしをつける場合、基本は「内のし」です
+                                </p>
+                                <p class="nameFix"></p>
+                            </td>
+                            <td class="nameAmount" rowspan="1" width="40" align="center">10</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </td>
+            </tr>
+            <!-- 商品内訳 -->
+            <tr bgcolor="#ffffff" height="25">
+                <td>
+                  <span class="brand_thumb">
+                  <img
+                          src="https://makeshop-multi-images.akamaized.net/isimaruudon/itemimages/0000000005473_63F79LF.jpg"
+                          class="responsiveDesignHide"
+                          style="vertical-align: middle; width: 40px; margin: 2px;"
+                          border="0"
+                          title="SA-2 香り味わう桜うどん つゆ付きセット【送料込】">
+                  </span>
+                    &nbsp;SA-2 香り味わう桜うどん つゆ付きセット【送料込】
+                    [2842]
+                    <span class="iconTax">(軽)</span>
+                </td>
+                <td align="center" nowrap="">
+                    1
+                </td>
+                <td align="right" nowrap="">
+                    1,280円
+                </td>
+            </tr>
+            <tr bgcolor="#ffffff">
+                <td align="right" colspan="3">
+                    <table class="totalPriceItems">
+                        <tbody>
+                        <tr class="totalPriceItems-main">
+                            <td class="totalPriceItems-label">商品合計（税込）：</td>
+                            <td class="totalPriceItems-price" align="right">53,200円</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </td>
+            </tr>
+            <tr
+                    bgcolor="#ffffff"
+                    height="25"
+                    align="right"
+                    class="basketTotal">
+                <td colspan="2" class="totalBasketLabel">合計</td>
+                <td>
+                    <p class="basketTotalPrice">53,200<span>円</span>
+                    </p>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+        <table id="couponTable"
+               border="0"
+               width="960"
+               cellspacing="1"
+               cellpadding="4"
+               bgcolor="#666666"
+               style="margin-bottom:32px;"
+               class="responsiveDesignSectionInput">
+            <tbody>
+            <tr bgcolor="#000000" class="responsiveDesignSectionInputHeader title__order">
+                <td>
+                    <b>クーポンコードの入力</b>
+                </td>
+            </tr>
+            <tr>
+                <td bgcolor="#FFFFFF" class="discount__code">
+                    <input
+                            type="text"
+                            size="30"
+                            name="coupon_code"
+                            id="coupon_code"
+                            class="efo_real_check"
+                            value="">
+                    <p>※1回のご注文で使用できるクーポンは1つです。</p>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+        <table
+                id="loginTable"
+                border="0"
+                width="960"
+                cellspacing="1"
+                cellpadding="4"
+                bgcolor="#666666"
+                style="margin-bottom:32px;"
+                class="responsiveDesignSectionInput">
+            <tbody>
+            <tr bgcolor="#000000" class="responsiveDesignSectionInputHeader title__order">
+                <td colspan="2">
+                    <b>会員ログイン</b>
+                </td>
+            </tr>
+            <tr>
+                <td bgcolor="#FFFFFF" class="responsiveSpShow hide">
+                    <div class="open"><i class="fa-solid fa-lock"></i>ショップの会員としてログイン</div>
+                </td>
+                <td width="30%" align="center" class="member responsiveDesignHide">ショップ会員</td>
+                <td width="70%" bgcolor="#FFFFFF" class="responsiveDesignHide">
+                    <div class="point responsiveDesignHide" id="shopLg">
+                        <p class="pointText">今回のお買い物で獲得できるポイント：<span class="pointL">【531ポイント】</span>
+                        </p>
+                        <table class="e-mail">
+                            <tbody>
+                            <tr>
+                                <th class="email__adress">メールアドレス</th>
+                                <td>
+                                    <p class="efo_error_message user_login_msg"></p>
+                                    <input
+                                            type="text"
+                                            name="user_login_id"
+                                            id="user_login_id"
+                                            size="40"
+                                            maxlength="255"
+                                            style="ime-mode: disabled;"
+                                            value=""
+                                            class="inputLarge efo_real_check">
+                                </td>
+                            </tr>
+                            <tr>
+                                <th class="email__adress">パスワード</th>
+                                <td>
+                                    <p class="efo_error_message user_login_msg"></p>
+                                    <input
+                                            type="password"
+                                            name="user_login_passwd"
+                                            id="user_login_passwd"
+                                            size="40"
+                                            maxlength="20"
+                                            style="ime-mode:disabled;"
+                                            class="inputLarge efo_real_check">
+                                </td>
+                            </tr>
+                            </tbody>
+                        </table>
+                        <p class="passwdtxt"><input type="checkbox" id="passwd_display"><label for="passwd_display">パスワードを表示する</label>
+                        </p>
+                        <div class="loginButtonWrap">
+                            <button>ログイン</button>
+                        </div>
+                        <p class="keeptxt"><input
+                                    type="checkbox"
+                                    id="login_keep"
+                                    name="auto_login"
+                                    value="on"
+                                    checked=""><label for="login_keep">ログインしたままにする</label>
+                        </p>
+                        <p class="forget">
+                            <a href="#">パスワードをお忘れの方はこちら</a>
+                        </p>
+                    </div>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+        <table
+                width="960"
+                cellspacing="1"
+                cellpadding="4"
+                border="0"
+                bgcolor="#666666"
+                style="margin-bottom:32px;"
+                class="responsiveDesignSectionInput orderTable">
+            <tbody>
+            <tr bgcolor="#000000" class="responsiveDesignSectionInputHeader title__order">
+                <td colspan="2">
+                    <b>
+                        注文者情報の入力
+                    </b>
+                </td>
+            </tr>
+            <tr>
+                <td bgcolor="#FFFFFF" colspan="2">
+                    <p>
+                        <a href="javascript:shop_content('');">個人情報の取り扱いについて</a>に同意の上、以下の情報を入力し次へ進んでください。
+                    </p>
+                </td>
+            </tr>
+            <tr class="responsiveDesignShow hide">
+                <td><b>お名前</b><em class="required">必須</em></td>
+            </tr>
+            <tr class="amazon_login_hide_item">
+                <td width="25%" class="responsiveDesignHide">
+                    <em class="required">必須</em>
+                    <b>お名前</b>
+                </td>
+                <td width="75%" bgcolor="#FFFFFF">
+                    <p class="efo_error_message"></p>
+                    <input type="text"
+                           name="sender"
+                           size="20"
+                           maxlength="20"
+                           class="efo_real_check watch efocube-bgcolor name"
+                           value=""
+                           id="sender_name"
+                           placeholder="(例) 山田太郎">
+                </td>
+            </tr>
+            <tr class=" responsiveDesignShow hide">
+                <td><b>お名前フリガナ</b> <em class="required">必須</em></td>
+            </tr>
+            <tr class="amazon_login_hide_item">
+                <td width="25%" class="responsiveDesignHide">
+                    <em class="required">必須</em>
+                    <b>お名前フリガナ</b>
+                </td>
+                <td width="75%" bgcolor="#FFFFFF">
+                    <p class="efo_error_message"></p>
+                    <input
+                            type="text"
+                            name="sender_kana"
+                            size="20"
+                            maxlength="20"
+                            class="efo_real_check watch efocube-bgcolor name"
+                            value=""
+                            id="sender_kana"
+                            placeholder="(例) ヤマダタロウ">
+                </td>
+            </tr>
+            <tr class=" responsiveDesignShow hide">
+                <td><b>会社名</b></td>
+            </tr>
+            <tr class="amazon_login_hide_item">
+                <td width="25%" class="responsiveDesignHide">
+                    <b>会社名</b>
+                </td>
+                <td width="75%" bgcolor="#FFFFFF">
+                    <p class="efo_error_message"></p>
+                    <input
+                            type="text"
+                            name="office_name"
+                            size="20"
+                            maxlength="100"
+                            value=""
+                            id="sender_office_name"
+                            class="efo_real_check name">
+                </td>
+            </tr>
+            <tr class=" responsiveDesignShow hide">
+                <td><b>会社名フリガナ</b></td>
+            </tr>
+            <tr class="amazon_login_hide_item">
+                <td width="25%" class="responsiveDesignHide">
+                    <b>会社名フリガナ</b>
+                </td>
+                <td width="75%" bgcolor="#FFFFFF">
+                    <p class="efo_error_message"></p>
+                    <input
+                            type="text"
+                            name="office_name_kana"
+                            size="20"
+                            maxlength="100"
+                            value=""
+                            id="sender_office_name_kana"
+                            class="efo_real_check name">
+                </td>
+            </tr>
+            <tr class="responsiveDesignShow hide">
+                <td><b>部署名</b></td>
+            </tr>
+            <tr class="amazon_login_hide_item">
+                <td width="25%" class="responsiveDesignHide">
+                    <b>部署名</b>
+                </td>
+                <td width="75%" bgcolor="#FFFFFF">
+                    <p class="efo_error_message"></p>
+                    <input
+                            type="text"
+                            name="office_dept_name"
+                            size="20"
+                            maxlength="100"
+                            value=""
+                            class="efo_real_check name">
+                </td>
+            </tr>
+            <tr class=" responsiveDesignShow hide">
+                <td><b>電話番号</b> <em class="required">必須</em></td>
+            </tr>
+            <tr class="amazon_login_hide_item">
+                <td width="25%" class="responsiveDesignHide">
+                    <em class="required">必須</em>
+                    <b>電話番号</b>
+                </td>
+                <td width="75%" bgcolor="#FFFFFF">
+                    <p class="efo_error_message"></p>
+                    <input
+                            type="tel"
+                            class=" watch efocube-bgcolor"
+                            name="emergency_1"
+                            id="sender_tel1_1"
+                            value=""
+                            size="3"
+                            maxlength="5"
+                            pattern="[0-9]*">-
+                    <input
+                            type="tel"
+                            class="watch efocube-bgcolor"
+                            name="emergency_2"
+                            id="sender_tel1_2"
+                            value=""
+                            size="4"
+                            maxlength="4"
+                            pattern="[0-9]*">-
+                    <input
+                            type="tel"
+                            class="hankaku efo_real_check watch efocube-bgcolor"
+                            name="emergency_3"
+                            id="sender_tel1_3"
+                            value=""
+                            size="4"
+                            maxlength="4"
+                            pattern="[0-9]*">
+                </td>
+            </tr>
+            <tr class=" responsiveDesignShow hide">
+                <td><b>緊急時連絡先</b></td>
+            </tr>
+            <tr class="amazon_login_hide_item">
+                <td width="25%" class="responsiveDesignHide">
+                    <b>緊急時連絡先</b>
+                </td>
+                <td width="75%" bgcolor="#FFFFFF">
+                    <p class="efo_error_message"></p>
+                    <input type="tel"
+                            class=" efo_real_check"
+                            name="emergency3_1"
+                            id="sender_tel2_1"
+                            value=""
+                            size="3"
+                            maxlength="5"
+                            pattern="[0-9]*">-
+                    <input
+                            type="tel"
+                            class=" efo_real_check"
+                            name="emergency3_2"
+                            id="sender_tel2_2"
+                            value=""
+                            size="4"
+                            maxlength="5"
+                            pattern="[0-9]*">-
+                    <input
+                            type="tel"
+                            class=" efo_real_check"
+                            name="emergency3_3"
+                            id="sender_tel2_3"
+                            value=""
+                            size="4"
+                            maxlength="5"
+                            pattern="[0-9]*">
+                </td>
+            </tr>
+            <tr class=" responsiveDesignShow hide">
+                <td><b>メールアドレス</b><em class="required">必須</em></td>
+            </tr>
+            <tr class="amazon_login_hide_item">
+                <td width="25%" class="responsiveDesignHide">
+                    <em class="required">必須</em>
+                    <b>メールアドレス</b>
+                </td>
+                <td width="75%" bgcolor="#FFFFFF">
+                    <p class="efo_error_message"></p>
+                    <input type="email" name="email" id="sender_email" placeholder="info@example.com"><br>
+                </td>
+            </tr>
+            <tr class=" responsiveDesignShow hide">
+                <td><b>郵便番号</b><em class="required">必須</em></td>
+            </tr>
+            <tr class="amazon_login_hide_item">
+                <td width="25%" class="responsiveDesignHide">
+                    <em class="required">必須</em>
+                    <b>郵便番号</b>
+                </td>
+                <td width="75%" bgcolor="#FFFFFF">
+                    <p class="efo_error_message"></p>
+                    <input type="tel" name="sender_post" id="sender_post" size="7" maxlength="7" class="watch efocube-bgcolor" value="" pattern="[0-9]*" placeholder="1508512">
+                    <input type="button" name="sender_address_input_button" value="住所に反映">
+                    <span id="sendersearchmessage"></span>
+                    <span class="search_zipcode_link">
+                  <a href="https://www.post.japanpost.jp/zipcode/" target="_blank">郵便番号を調べる</a>
+                  </span>
+                </td>
+            </tr>
+            <tr class=" responsiveDesignShow hide">
+                <td><b>住所</b><em class="required">必須</em></td>
+            </tr>
+            <tr class="amazon_login_hide_item">
+                <td width="25%" class="responsiveDesignHide">
+                    <em class="required">必須</em>
+                    <b>住所</b>
+                </td>
+                <td width="75%" bgcolor="#FFFFFF">
+                    <div class="addressWrap">
+                        <div class="addressForm">
+                            <p class="efo_error_message"></p>
+                            <select name="sender_area" class="efocube-bgcolor">
+                                <option value="0">▼選択してください
+                                </option>
+                                <option value="1">北海道</option>
+                                <option value="2">青森県</option>
+                                <option value="3">岩手県</option>
+                                <option value="4">宮城県</option>
+                                <option value="5">秋田県</option>
+                                <option value="6">山形県</option>
+                                <option value="7">福島県</option>
+                                <option value="8">茨城県</option>
+                                <option value="9">栃木県</option>
+                                <option value="10">群馬県</option>
+                                <option value="11">埼玉県</option>
+                                <option value="12">千葉県</option>
+                                <option value="13">東京(23区内)</option>
+                                <option value="14">東京(23区外)</option>
+                                <option value="15">神奈川県</option>
+                                <option value="16">新潟県</option>
+                                <option value="17">富山県</option>
+                                <option value="18">石川県</option>
+                                <option value="19">福井県</option>
+                                <option value="20">山梨県</option>
+                                <option value="21">長野県</option>
+                                <option value="22">岐阜県</option>
+                                <option value="23">静岡県</option>
+                                <option value="24">愛知県</option>
+                                <option value="25">三重県</option>
+                                <option value="26">滋賀県</option>
+                                <option value="27">京都府</option>
+                                <option value="28">大阪府</option>
+                                <option value="29">兵庫県</option>
+                                <option value="30">奈良県</option>
+                                <option value="31">和歌山県</option>
+                                <option value="32">鳥取県</option>
+                                <option value="33">島根県</option>
+                                <option value="34">岡山県</option>
+                                <option value="35">広島県</option>
+                                <option value="36">山口県</option>
+                                <option value="37">徳島県</option>
+                                <option value="38">香川県</option>
+                                <option value="39">愛媛県</option>
+                                <option value="40">高知県</option>
+                                <option value="41">福岡県</option>
+                                <option value="42">佐賀県</option>
+                                <option value="43">長崎県</option>
+                                <option value="44">熊本県</option>
+                                <option value="45">大分県</option>
+                                <option value="46">宮崎県</option>
+                                <option value="47">鹿児島県</option>
+                                <option value="48">沖縄県</option>
+                                <option value="49">離島部</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="addressWrap">
+                        <div class="addressForm">
+                            <p class="efo_error_message"></p>
+                            <input
+                                    name="sender_addr"
+                                    id="sender_addr"
+                                    type="text"
+                                    class="inputLarge efo_real_check watch efocube-bgcolor address"
+                                    size="60"
+                                    maxlength="200"
+                                    value=""
+                                    placeholder="市区町村">
+                        </div>
+                    </div>
+                    <div class="addressWrap">
+                        <div class="addressForm">
+                            <p class="efo_error_message"></p>
+                            <input
+                                    name="sender_addr2"
+                                    id="sender_addr2"
+                                    type="text"
+                                    class="inputLarge efo_real_check watch efocube-bgcolor address"
+                                    size="60"
+                                    maxlength="120"
+                                    value=""
+                                    placeholder="それ以降の住所">
+                        </div>
+                    </div>
+                    <p class="note">※入力されている住所が勤務先の場合は「会社名・部署名」なども入力してください。</p>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+        <table border="0" width="960" cellspacing="1" cellpadding="4" bgcolor="#666666" style="margin-bottom:32px;"
+               class="responsiveDesignSectionInput" id="user_form_table">
+            <tbody>
+            <tr bgcolor="#000000" class="responsiveDesignSectionInputHeader title__order">
+                <td colspan="2"><b>新規会員登録</b></td>
+            </tr>
+            <tr>
+                <td bgcolor="#FFFFFF" colspan="2">
+                    <p>会員登録すると、次回以降のお買い物で使えるショップポイントが<span
+                                style="color:#f00;font-weight:bold;">731ポイント</span>もらえます。</p>
+                    <p><label><input type="radio" checked=""> <a href="#">会員規約、個人情報の取り扱いについて</a>に同意して会員登録する</label>
+                        <label><input type="radio"> 会員登録しない</label>
+                    </p>
+                    <p>会員規約、個人情報の取り扱いについてに同意して会員登録する、を選択されている場合、「次へ」を押すことで会員登録が完了します。
+                        <br>ログイン時のIDはメールアドレスをご利用ください。
+                    </p>
+                </td>
+            </tr>
+            <tr class="responsiveDesignShow hide">
+                <td><b>パスワード(8～16文字の半角英数字)</b><em class="required">必須</em></td>
+            </tr>
+            <tr>
+                <td width="25%" bgcolor="#6600FF" class="responsiveDesignHide"><em
+                            class="required">必須</em><b>パスワード</b><br>(8～16文字の半角英数字)
+                </td>
+                <td width="75%" bgcolor="#FFFFFF">
+                    <p class="efo_error_message"></p>
+                    <input type="password" name="user_pw" id="user_pw" size="20" maxlength="16" value=""
+                           class="efo_real_check efocube-bgcolor">
+                </td>
+            </tr>
+            <tr class="responsiveDesignShow hide">
+                <td><b>メールマガジン</b><em class="required">必須</em></td>
+            </tr>
+            <tr>
+                <td bgcolor="#6600FF" class="responsiveDesignHide"><em class="required">必須</em><b>メールマガジン</b></td>
+                <td bgcolor="#FFFFFF" style="border: 3px solid rgb(49, 175, 145);">
+                    <p class="efo_error_message"></p>
+                    <input type="radio" name="emailreceive" value="Y" class="efo_real_check" checked=""
+                           id="emailreceiveY"><label for="emailreceiveY">希望します</label>
+                    <input type="radio" name="emailreceive" value="N" class="efo_real_check" id="emailreceiveN"><label
+                            for="emailreceiveN">希望しません</label>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+        <table border="0" width="960" cellspacing="1" cellpadding="4" bgcolor="#666666" style="margin-bottom:32px;" class="responsiveDesignSectionInput address__ship hide">
+            <tbody>
+            <tr bgcolor="#000000" class="responsiveDesignSectionInputHeader title__order">
+                <td colspan="2"><b>お届け先の入力</b></td>
+            </tr>
+            <tr>
+                <td bgcolor="#FFFFFF" colspan="2">
+                    <input type="radio" name="receiver_user_type" id="receiver_user_type_X" >注文者の住所にお届けする</label><br>
+                    <input type="radio" name="receiver_user_type" id="receiver_user_type_E" > <label for="receiver_user_type_E">注文者の情報を元にお届け先を編集する</label><br>
+                    <input type="radio" name="receiver_user_type" id="receiver_user_type_N" > <label for="receiver_user_type_N">新しいお届け先を入力する</label><br>
+                </td>
+            </tr>
+            <tr class=" responsiveDesignSectionInputReceiver" style="display: none;">
+                <td><em class="required">必須</em><b>お名前</b></td>
+            </tr>
+            <tr class="receiver_address" style="display: none;">
+                <td width="25%" bgcolor="#6600FF" class="responsiveDesignHide">
+                    <em class="required">必須</em>
+                    <b>お名前</b>
+                </td>
+                <td width="75%" bgcolor="#FFFFFF">
+                    <p class="efo_error_message"></p>
+                    <input type="text" name="receiver" id="receiver_name" size="20" maxlength="20" class="efo_real_check" value="" placeholder="(例) 山田太郎">
+                </td>
+            </tr>
+            <tr class=" responsiveDesignSectionInputReceiver" style="display: none;">
+                <td><em class="required">必須</em><b>お名前フリガナ</b></td>
+            </tr>
+            <tr class="receiver_address" style="display: none;">
+                <td width="25%" bgcolor="#6600FF" class="responsiveDesignHide">
+                    <em class="required">必須</em>
+                    <b>お名前フリガナ</b>
+                </td>
+                <td width="75%" bgcolor="#FFFFFF">
+                    <p class="efo_error_message"></p>
+                    <input type="text" name="receiver_kana" id="receiver_kana" size="20" maxlength="20" class="efo_real_check" value="" placeholder="(例) ヤマダタロウ">
+                </td>
+            </tr>
+            <tr class=" responsiveDesignSectionInputReceiver" style="display: none;">
+                <td><b>会社名</b></td>
+            </tr>
+            <tr class="receiver_address" style="display: none;">
+                <td width="25%" bgcolor="#6600FF" class="responsiveDesignHide"><b>会社名</b></td>
+                <td width="75%" bgcolor="#FFFFFF">
+                    <p class="efo_error_message"></p>
+                    <input type="text" name="receiver_office_name" size="20" maxlength="100" value="" id="receiver_office_name" class="efo_real_check">
+                </td>
+            </tr>
+            <tr class=" responsiveDesignSectionInputReceiver" style="display: none;">
+                <td><b>会社名フリガナ</b></td>
+            </tr>
+            <tr class="receiver_address" style="display: none;">
+                <td width="25%" bgcolor="#6600FF" class="responsiveDesignHide"><b>会社名フリガナ</b></td>
+                <td width="75%" bgcolor="#FFFFFF">
+                    <p class="efo_error_message"></p>
+                    <input type="text" name="receiver_office_name_kana" size="20" maxlength="100" value="" id="receiver_office_name_kana" class="efo_real_check">
+                </td>
+            </tr>
+            <tr class=" responsiveDesignSectionInputReceiver" style="display: none;">
+                <td><b>部署名</b></td>
+            </tr>
+            <tr class="receiver_address" style="display: none;">
+                <td width="25%" bgcolor="#6600FF" class="responsiveDesignHide"><b>部署名</b></td>
+                <td width="75%" bgcolor="#FFFFFF">
+                    <p class="efo_error_message"></p>
+                    <input type="text" name="receiver_office_dept_name" size="20" maxlength="100" value="" class="efo_real_check">
+                </td>
+            </tr>
+            <tr class=" responsiveDesignSectionInputReceiver" style="display: none;">
+                <td><em class="required">必須</em><b>電話番号</b></td>
+            </tr>
+            <tr class="receiver_address" style="display: none;">
+                <td width="25%" bgcolor="#6600FF" class="responsiveDesignHide">
+                    <em class="required">必須</em>
+                    <b>電話番号</b>
+                </td>
+                <td width="75%" bgcolor="#FFFFFF">
+                    <p class="efo_error_message"></p>
+                    <input type="tel" name="emergency2_1" id="receiver_tel_1" class="hankaku efo_real_check" size="3" maxlength="5" value="" pattern="[0-9]*">-
+                    <input type="tel" name="emergency2_2" id="receiver_tel_2" class="hankaku efo_real_check" size="4" maxlength="5" value="" pattern="[0-9]*">-
+                    <input type="tel" name="emergency2_3" id="receiver_tel_3" class="hankaku efo_real_check" size="4" maxlength="5" value="" pattern="[0-9]*">
+                </td>
+            </tr>
+            <tr class=" responsiveDesignSectionInputReceiver" style="display: none;">
+                <td><em class="required">必須</em><b>郵便番号</b></td>
+            </tr>
+            <tr class="receiver_address" style="display: none;">
+                <td width="25%" bgcolor="#6600FF" class="responsiveDesignHide">
+                    <em class="required">必須</em>
+                    <b>郵便番号</b>
+                </td>
+                <td width="75%" bgcolor="#FFFFFF">
+                    <p class="efo_error_message"></p>
+                    <input type="tel" name="post" id="receiver_post" class="hankaku efo_real_check" size="7" maxlength="7" value="" pattern="[0-9]*" placeholder="1508512">
+                    <input type="button">
+                    <span id="receiversearchmessage"></span>
+                    <span class="search_zipcode_link"><a href="https://www.post.japanpost.jp/zipcode/" target="_blank">郵便番号を調べる</a></span>
+                </td>
+            </tr>
+            <tr class=" responsiveDesignSectionInputReceiver" style="display: none;">
+                <td><em class="required">必須</em><b>住所</b></td>
+            </tr>
+            <tr class="receiver_address" style="display: none;">
+                <td width="25%" bgcolor="#6600FF" class="responsiveDesignHide">
+                    <em class="required">必須</em>
+                    <b>住所</b>
+                </td>
+                <td width="75%" bgcolor="#FFFFFF">
+                    <div class="addressWrap">
+                        <div class="addressForm">
+                            <p class="efo_error_message"></p>
+                            <select name="area" id="receiver_area" class="efo_real_check" onchange="change_pref();" style="border: 3px solid rgb(49, 175, 145);">
+                                <option>▼選択してください </option>
+                                <option>北海道</option>
+                                <option>青森県</option>
+                                <option>岩手県</option>
+                                <option>宮城県</option>
+                                <option>秋田県</option>
+                                <option>山形県</option>
+                                <option>福島県</option>
+                                <option>茨城県</option>
+                                <option>栃木県</option>
+                                <option>群馬県</option>
+                                <option>埼玉県</option>
+                                <option>千葉県</option>
+                                <option>東京(23区内)</option>
+                                <option>東京(23区外)</option>
+                                <option>神奈川県</option>
+                                <option>新潟県</option>
+                                <option>富山県</option>
+                                <option>石川県</option>
+                                <option>福井県</option>
+                                <option>山梨県</option>
+                                <option>長野県</option>
+                                <option>岐阜県</option>
+                                <option>静岡県</option>
+                                <option>愛知県</option>
+                                <option>三重県</option>
+                                <option>滋賀県</option>
+                                <option>京都府</option>
+                                <option>大阪府</option>
+                                <option>兵庫県</option>
+                                <option>奈良県</option>
+                                <option>和歌山県</option>
+                                <option>鳥取県</option>
+                                <option>島根県</option>
+                                <option>岡山県</option>
+                                <option>広島県</option>
+                                <option>山口県</option>
+                                <option>徳島県</option>
+                                <option>香川県</option>
+                                <option>愛媛県</option>
+                                <option>高知県</option>
+                                <option>福岡県</option>
+                                <option>佐賀県</option>
+                                <option>長崎県</option>
+                                <option>熊本県</option>
+                                <option>大分県</option>
+                                <option>宮崎県</option>
+                                <option>鹿児島県</option>
+                                <option>沖縄県</option>
+                                <option>離島部</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="addressWrap">
+                        <div class="addressForm">
+                            <p class="efo_error_message"></p>
+                            <input name="address" id="receiver_addr" type="text" size="60" maxlength="150" class="efo_real_check" value="" placeholder="市区町村">
+                        </div>
+                    </div>
+                    <div class="addressWrap">
+                        <div class="addressForm">
+                            <p class="efo_error_message"></p>
+                            <input name="address2" id="receiver_addr2" type="text" size="60" maxlength="120" class="efo_real_check" value="" placeholder="それ以降の住所">
+                        </div>
+                    </div>
+                    <p class="note">※入力されている住所が勤務先の場合は「会社名・部署名」なども入力してください。</p>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+        <table style="margin-bottom:32px;" class="responsiveDesignSectionInput" width="960" cellspacing="1"
+               cellpadding="4" border="0" bgcolor="#666666">
+            <tbody>
+            <tr class="responsiveDesignSectionInputHeader title__order" bgcolor="#000000">
+                <td colspan="2"><b>お届け日時の選択</b></td>
+            </tr>
+            <tr class=" responsiveDesignShow hide">
+                <td><b>メールマガジン</b></td>
+            </tr>
+            <tr>
+                <td width="25%" bgcolor="#6600FF" class="responsiveDesignHide">
+                    <b>配送希望日</b>
+                </td>
+                <td width="75%" bgcolor="#FFFFFF">
+                    <p class="efo_error_message" id="deli_hope_date_error_message"></p>
+                    <select name="deli_ymd" id="deli_ymd"
+                            style="border: 3px solid rgb(49, 175, 145);">
+                        <option value="__" selected="">______年 __月 __日</option>
+                        <option>2023年03月22日(水)</option>
+                        <option>2023年03月23日(木)</option>
+                        <option>2023年03月24日(金)</option>
+                        <option>2023年03月25日(土)</option>
+                        <option>2023年03月26日(日)</option>
+                        <option>2023年03月27日(月)</option>
+                        <option>2023年03月28日(火)</option>
+                        <option>2023年03月29日(水)</option>
+                        <option>2023年03月30日(木)</option>
+                        <option>2023年03月31日(金)</option>
+                        <option>2023年04月01日(土)</option>
+                        <option>2023年04月02日(日)</option>
+                        <option>2023年04月03日(月)</option>
+                        <option>2023年04月04日(火)</option>
+                        <option>2023年04月05日(水)</option>
+                        <option>2023年04月06日(木)</option>
+                        <option>2023年04月07日(金)</option>
+                        <option>2023年04月08日(土)</option>
+                        <option>2023年04月09日(日)</option>
+                        <option>2023年04月10日(月)</option>
+                        <option>2023年04月11日(火)</option>
+                        <option>2023年04月12日(水)</option>
+                    </select>
+                    <input type="hidden" name="deli_year" id="deli_year" value="">
+                    <input type="hidden" name="deli_month" id="deli_month" value="">
+                    <input type="hidden" name="deli_day" id="deli_day" value="">
+                    <a href="#" class="calendar-month">
+                        <img src="{{ '../assets/calendar-month.png' | asset_url }}" alt="注文日付" border="0" align="absmiddle">
+                    </a>
+                    <br>
+                    <div id="deli_hope_date_container"></div>
+                    <div id="deli_hope_date_error_msg" style="display:none;color:#ff0000;">
+                        ご指定いただいた日付は選択することができません。
+                    </div>
+                    配達日を指定される場合、<span id="deli_range_from">2023年03月22日</span>～<span id="deli_range_to">2023年04月12日</span>までをご指定ください。<br>
+                    <hr>
+                    最短のお届けご希望の場合は、日付指定を設定せずご注文ください。最短発送日で発送します。
+                    <hr>
+                    ゆうﾊﾟｹｯﾄ配送商品は、指定できません。
+                    <hr>
+                    配送希望日より後のお届けをご希望の場合は備考欄にご入力ください。
+                </td>
+            </tr>
+            <tr class=" responsiveDesignShow hide">
+                <td><b>メールマガジン</b></td>
+            </tr>
+            <tr>
+                <td width="25%" bgcolor="#6600FF" class="responsiveDesignHide">
+                    <b>配送希望<br class="responsiveDesignHide">時間帯</b>
+                </td>
+                <td width="75%" bgcolor="#FFFFFF">
+                    <p class="efo_error_message"></p>
+                    <select name="deli_time" class="efo_real_check" style="border: 3px solid rgb(49, 175, 145);">
+                        <option>指定なし</option>
+                        <option>午前中</option>
+                        <option>14:00-16:00</option>
+                        <option>16:00-18:00</option>
+                        <option>18:00-20:00</option>
+                        <option>19:00-21:00</option>
+                    </select>
+                    <br>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+        <table border="0" width="960" cellspacing="1" cellpadding="4" bgcolor="#666666" style="margin-bottom:32px;"
+               class="responsiveDesignSectionInput" id="note">
+            <tbody>
+            <tr bgcolor="#000000" class="responsiveDesignSectionInputHeader title__order">
+                <td colspan="2"><b>注文備考</b></td>
+            </tr>
+            <tr bgcolor="#FFFFFF">
+                <td colspan="2" valign="top">
+                    ご注文に関して連絡事項がございましたらこちらにご入力ください。<br>
+                    <br>
+                    <span style="color:#FF0000;"><strong>※領収書</strong></span>に関しましては、商品発送後、お客様サービス窓口にアクセスし、お客様ご自身での印刷をお願いいたします。<br>
+                    <br>
+                    <span style="color:#FF0000;"><strong>※紙袋・ビニール袋は有料となりました。</strong></span>備考欄にご入力いただいてもお付けできません。ご入用の方は必要枚数を買い物かごにお入れください。
+                </td>
+            </tr>
+            <tr bgcolor="#FFFFFF">
+                <td colspan="2" valign="top">
+                    <table border="0" cellpadding="1" cellspacing="0" width="100%">
+                        <tbody>
+                        <tr height="28">
+                            <td bgcolor="#f2f2f2">&nbsp; 対面受け取りを希望されない方はチェックをお入れください。</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p class="efo_error_message"></p>
+                                <ul class="evaluate">
+                                    <li><input type="radio">不在時は宅配BOXへ配達</li>
+                                    <li><input type="radio">在宅確認をせずに宅配BOXへ配達</li>
+                                    <li><input type="radio">玄関前に置き配希望</li>
+                                    <li><input type="radio">ガスメーターBOXに置き配希望</li>
+                                    <li><input type="radio">自転車かごに置き配希望</li>
+                                    <li><input type="radio">倉庫・車庫に置き配希望</li>
+                                </ul>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td bgcolor="#FFFFFF">
+                    <textarea name="message1" rows="6" style="width:100%;" class="efo_real_check"></textarea>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+        <div class="error__btn">
+            <button><i class="fa-solid fa-triangle-exclamation"></i>! 入力が完了しておりません。</button>
+        </div>
+        <div class="scroll-message messagePc">
+            <span class="sC">必須項目</span>にご記入の上、<br>　次ページヘお進みください。<br>残り必須項目<span class="sC">11</span>個
+        </div>
+        <div class="order__footer-smartphone hide">
+            <img src="../assets/order_footer_image_smartphone.gif" alt="">
+        </div>
+    </div>
+</section>
+<script>
+    const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+    const isDesktop = !/Mobile|Tablet/i.test(navigator.userAgent);
+    const message = document.querySelector('.scroll-message');
+    const windowHeight = window.innerHeight;
+    const orderImageSp = document.querySelector(".order__title-image img:first-child");
+    const orderImageStepSp = document.querySelector(".order__title-image img:nth-child(2)");
+    const responsiveSpShow = document.querySelector(".responsiveSpShow");
+    const responsiveDesignShow = document.querySelectorAll(".responsiveDesignShow");
+    const addressShip = document.querySelector(".address__ship");
+    const orderfooterSmartphone = document.querySelector(".order__footer-smartphone")
+    let scrollPosition = window.scrollY;
+    let messagePosition = message.getBoundingClientRect().top;
+    window.addEventListener("DOMContentLoaded", function () {
+        const footer = document.querySelector(".footer");
+        if (window.location.href.indexOf("pages/client-order") > -1) {
+            footer.innerHTML = `<p class="footer__clientOrder">Copyright (c) 石丸製麺オンラインストア All Rights Reserved.</p>`
+        }
+        const paymentBox = document.getElementById("payment_box");
+        if(isMobile) {
+            message.classList.remove("messagePc");
+            message.classList.add("messageSp");
+            message.innerHTML = `残り必須項目<span class="sC">11</span>個`;
+            orderImageSp.src = `{{ '../assets/order_title_image_smartphone.gif' | asset_url }}`;
+            orderImageSp.style.maxWidth = `400px`
+            orderImageStepSp.src = `{{ '../assets/step1.svg' | asset_url }};`
+            orderImageStepSp.style.maxWidth = `300px`;
+            responsiveSpShow.classList.remove("hide");
+            responsiveDesignShow.forEach((item) => {
+                item.classList.remove("hide")
+            })
+            paymentBox.classList.add("hide");
+            addressShip.classList.remove("hide");
+            orderfooterSmartphone.classList.remove("hide")
+        }
+        if(isDesktop){
+            window.addEventListener('scroll', function () {
+                scrollPosition = window.scrollY;
+                messagePosition = message.getBoundingClientRect().top;
+                if (messagePosition <= windowHeight) {
+                    message.style.top = -windowHeight + 'px';
+                    setTimeout(function () {
+                        message.style.top = '30%';
+                    }, 1000);
+                } else {
+                    message.style.top = '-100%';
+                }
+            });
+        }
+    })
+
+
+
+</script>

@@ -1,0 +1,333 @@
+{%  if  hide_header_backToTop  %  }
+header,.back-to-top  {
+    display: none;
+}
+{%  endif  %}
+h2, span, p {
+    font-family: "游ゴシック", "Yu Gothic", YuGothic, "Hiragino Kaku Gothic ProN", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, "ＭＳ ゴシック", sans-serif;
+    margin: 0;
+}
+.client__header {
+    display: flex;
+    justify-content: space-between;
+    background: black;
+    align-items: center;
+    color: white;
+    font-size: 14px;
+    font-weight: bold;
+    height: 25px;
+    padding: 0 10px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+}
+
+.client__header h2 {
+    color: white;
+    font-size: 14px;
+    margin: 0;
+    font-weight: bold;
+}
+
+.client__header ul {
+    display: flex;
+    list-style-type: none;
+    padding: 0;
+    align-items: center;
+    gap: 10px;
+}
+
+.client__header ul li:not(:first-child):hover {
+    cursor: pointer;
+    text-decoration: underline;
+}
+.client__header img {
+    width: 10px;
+}
+.container {
+    max-width: 960px;
+    margin: 30px auto;
+}
+.order__title-image {
+    text-align: center;
+}
+.order__title-image img:first-child {
+    max-width: 850px;
+}
+.order__title-image img:nth-child(2) {
+    max-width: 720px;
+}
+#info__detail {
+    width: 100%;
+    margin: 30px auto;
+    border-collapse: collapse;
+}
+.title__order{
+    text-align: left;
+    color: white;
+}
+.title__first {
+    background-image: url("../assets/bgr-bio.png");
+    color: black;
+}
+tr img {
+    width: 40px;
+}
+#info__detail td,#info__detail th{
+    border: 1px solid #ccc;
+}
+table {
+    width: 100%;
+    color: black;
+}
+.nameList {
+    margin: 10px 30px 10px 60px;
+    padding: 0;
+    width: 80%;
+}
+.totalPriceItems-main .totalPriceItems-label,.totalPriceItems-main .totalPriceItems-price {
+    border: none !important;
+}
+.basketTotalPrice,.pointL {
+    color: #992927;
+    font-weight: bold;
+}
+td{
+    padding: 10px;
+}
+#info__detail p {
+    font-size: 14px;
+}
+.discount__code {
+    padding:10px;
+}
+.discount__code input {
+    width: 100%;
+    padding: 10px 0;
+}
+em.required {
+    background: none repeat scroll 0 0 #DC3333;
+    color: #FFFFFF;
+    float: right;
+    font-size: 11px;
+    font-weight: normal;
+    padding: 1px 3px 0;
+    font-style: normal;
+    margin-left: 2px;
+}
+table#loginTable table, table#loginTable table th, table#loginTable table td {
+    border: solid 1px #CCC;
+    border-collapse: collapse;
+}
+.e-mail {
+    width: 100%;
+}
+.point {
+    padding: 5px 10px;
+    font-size: 14px;
+}
+.responsiveDesignHide b{
+    margin-left: 10px;
+    font-weight: bold;
+}
+.email__adress {
+    padding: 15px;
+    background: #eee;
+}
+.e-mail input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+}
+.e-mail tbody td {
+    padding: 10px 20px;
+}
+.loginButtonWrap {
+    text-align: center;
+}
+.loginButtonWrap button {
+    background: #8c8c8c;
+    color: #fff;
+    border: none;
+    outline: none;
+    padding: 10px;
+    width: 40%;
+    border-radius: 2px;
+}
+.keeptxt,.forget {
+    text-align: center;
+}
+.amazon_login_hide_item,.responsiveDesignHide {
+    background-image: url("../assets/bgr-bio.png");
+}
+.efocube-bgcolor {
+    background-color: #f0dfdf;
+}
+.orderTable {
+    font-size: 14px;
+}
+.orderTable input {
+    padding: 8px;
+    margin: 10px;
+    border: 1px solid #ccc;
+}
+.name {
+    width: 50%;
+}
+.address {
+    width: 80%;
+}
+.addressForm select{
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+}
+.note {
+    font-size: 12px;
+    margin-left: 10px;
+}
+table tbody tr:first-child {
+    border-radius: 4px;
+}
+#user_form_table {
+    font-size: 14px;
+}
+#user_pw {
+    padding: 8px;
+    margin: 10px;
+    border: 1px solid #ccc;
+}
+hr {
+    margin: 0 !important;
+}
+.responsiveDesignSectionInput {
+    font-size: 14px;
+}
+.evaluate {
+    padding-left: 20px;
+    list-style-type: none;
+}
+.evaluate li{
+    margin-top: 10px;
+}
+.error__btn {
+    text-align: center;
+}
+.error__btn button{
+    background: #e2666f;
+    color: white;
+    cursor: pointer;
+    border-radius: 4px;
+    padding: 5px 10px;
+    font-size: 16px;
+}
+.error__btn button  i {
+    font-size: 24px;
+}
+.scroll-message {
+    position: fixed;
+    transition: top 0.5s ease-out;
+    border-style: solid;
+    border-color: #cd0a0a;
+    background-color: #c61616;
+    font-size: 12px;
+    text-align: center;
+    color: white;
+    font-weight: bold;
+}
+.messagePc {
+    top: 20%;
+    right: -3%;
+    transform: translate(-50%, -50%);
+    border-radius: 8px;
+}
+.messageSp {
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding-bottom: 15px;
+}
+.scroll-message .sC {
+    color: yellow;
+}
+.order__plus-icon {
+    width: 12px;
+    height: 17px;
+    margin-left:10px;
+}
+table {
+    border-radius: 8px 8px 0 0;
+}
+.hide {
+    display: none;
+}
+.open {
+    background: -webkit-gradient( linear, left top, left bottom, from(#ffffff), to(#ebe8eb));
+    border: 1px solid #c0c2c0;
+    text-align: center;
+    border-radius: 4px;
+    width: 80%;
+    padding: 10px;
+    margin: 5px auto;
+}
+.responsiveDesignShow {
+    color: black;
+    background-color: #efefef;
+}
+.row {
+    box-shadow: #ddd 0 3px 5px;
+    border-radius: 8px;
+}
+.footer {
+    border: none !important;
+    margin: 0 !important;
+}
+.footer__clientOrder {
+    text-align: center;
+    color: #999;
+    font-size: 11px;
+}
+.calendar-month {
+    padding: 6px;
+    background: #999;
+    margin-left: 10px;
+}
+.calendar-month img{
+    width: 20px;
+}
+@media screen and (max-width: 456px) {
+    .container {
+        padding: 0 10px;
+    }
+    table {
+        font-size: 14px;
+    }
+    .title__order, .member {
+        background: transparent;
+        text-align: left;
+    }
+    .title__order td b{
+        color: white;
+    }
+    .nameList {
+        width: auto;
+        border-collapse: collapse;
+        margin: 10px;
+    }
+    .nameAmount {
+        background: #eee;
+    }
+    .responsiveDesignHide {
+        display: none;
+    }
+    .responsiveDesignSectionUserHeaderSide {
+        background-color: #efefef;
+    }
+    em{
+        float: none !important;
+    }
+    .error__btn {
+        margin-bottom: 40px;
+    }
+}
