@@ -257,7 +257,9 @@ cart-remove-button .icon-remove {
 .cart-item__error-text + svg {
   margin-top: 0.4rem;
 }
-
+.btn-cart img:hover{
+  opacity: 0.8;
+}
 @media screen and (min-width: 750px) {
   .cart-items {
     border-spacing: 0;
