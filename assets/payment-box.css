@@ -213,3 +213,6 @@ img {
 .hide {
     display: none;
 }
+.list__sp-red p{
+    color: #8b1616 !important;
+}
