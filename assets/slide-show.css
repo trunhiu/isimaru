@@ -1,3 +1,6 @@
+.image-slider {
+  max-width: 1900px;
+}
 .image-mini .mini-item {
     display: none;
   }
