@@ -430,6 +430,9 @@
   text-align: center;
   font-weight: 700;
 }
+.noodle a img {
+  max-width: 236px;
+}
 
 .noodle-content {
   display: flex;
@@ -510,6 +513,9 @@
   background-image: url(../assets/pngtree-wood-grain-simple-background-image_768018.jpg);
   text-align: center;
   margin: 0;
+}
+.web_fb-content1 h3 img {
+  width: 253px;
 }
 
 .web_fb-content1 {
