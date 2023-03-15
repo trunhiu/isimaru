@@ -3,113 +3,60 @@
     "slide-show": {
       "type": "slide-show",
       "blocks": {
-        "9331fa92-c48d-445c-b4f1-94678d5617ca": {
+        "efe24638-1ec6-4b15-bc16-58e0f58a2faa": {
           "type": "slide",
           "settings": {
             "image": "shopify:\/\/shop_images\/slide1.jpg"
           }
         },
-        "151e8847-23f0-4c49-b5fd-78ce1604ece5": {
+        "097ae827-1a99-42dd-b28b-5bcffc871b5f": {
           "type": "slide",
           "settings": {
             "image": "shopify:\/\/shop_images\/slide2.jpg"
           }
         },
-        "e137dd36-776c-4150-b1e1-a2dd906d0e12": {
+        "d137af18-052c-4e78-a109-c286e9099d59": {
           "type": "slide",
           "settings": {
             "image": "shopify:\/\/shop_images\/slide3.png"
           }
         },
-        "4bfa3518-660e-4c33-b124-c68159069ade": {
+        "00d33627-36e0-4c5e-9bea-a13861cc00a5": {
           "type": "slide",
           "settings": {
             "image": "shopify:\/\/shop_images\/slide4.png"
           }
         },
-        "af7de422-989c-45ac-afbd-b1dfaa1cccec": {
+        "56db151a-8e6c-46ee-a505-bad5f7c578b4": {
           "type": "slide",
           "settings": {
             "image": "shopify:\/\/shop_images\/slide5.jpg"
           }
         },
-        "78443a17-099c-404f-b59a-0c14c0e0b079": {
+        "5d67ee8e-7046-4f25-aa95-fa500baf036f": {
           "type": "slide",
           "settings": {
             "image": "shopify:\/\/shop_images\/slide6.png"
           }
         },
-        "eefa6a1a-2263-45a8-9119-6ccf7ffef6ae": {
+        "94a71849-8b56-4799-82a6-99b57cc270b3": {
           "type": "slide",
           "settings": {
             "image": "shopify:\/\/shop_images\/slide7.png"
           }
-        },
-        "f43d105e-78c3-49c0-913c-78ac6a892016": {
-          "type": "slide",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/slide8.png"
-          }
         }
       },
       "block_order": [
-        "9331fa92-c48d-445c-b4f1-94678d5617ca",
-        "151e8847-23f0-4c49-b5fd-78ce1604ece5",
-        "e137dd36-776c-4150-b1e1-a2dd906d0e12",
-        "4bfa3518-660e-4c33-b124-c68159069ade",
-        "af7de422-989c-45ac-afbd-b1dfaa1cccec",
-        "78443a17-099c-404f-b59a-0c14c0e0b079",
-        "eefa6a1a-2263-45a8-9119-6ccf7ffef6ae",
-        "f43d105e-78c3-49c0-913c-78ac6a892016"
+        "efe24638-1ec6-4b15-bc16-58e0f58a2faa",
+        "097ae827-1a99-42dd-b28b-5bcffc871b5f",
+        "d137af18-052c-4e78-a109-c286e9099d59",
+        "00d33627-36e0-4c5e-9bea-a13861cc00a5",
+        "56db151a-8e6c-46ee-a505-bad5f7c578b4",
+        "5d67ee8e-7046-4f25-aa95-fa500baf036f",
+        "94a71849-8b56-4799-82a6-99b57cc270b3"
       ],
       "settings": {
         "title": ""
-      }
-    },
-    "image_banner": {
-      "type": "image-banner",
-      "blocks": {
-        "heading": {
-          "type": "heading",
-          "settings": {
-            "heading": "Image banner",
-            "heading_size": "h0"
-          }
-        },
-        "text": {
-          "type": "text",
-          "settings": {
-            "text": "Give customers details about the banner image(s) or content on the template.",
-            "text_style": "body"
-          }
-        },
-        "button": {
-          "type": "buttons",
-          "settings": {
-            "button_label_1": "Shop all",
-            "button_link_1": "shopify:\/\/collections\/all",
-            "button_style_secondary_1": true,
-            "button_label_2": "",
-            "button_link_2": "",
-            "button_style_secondary_2": false
-          }
-        }
-      },
-      "block_order": [
-        "heading",
-        "text",
-        "button"
-      ],
-      "settings": {
-        "image_overlay_opacity": 40,
-        "image_height": "large",
-        "desktop_content_position": "bottom-center",
-        "show_text_box": false,
-        "desktop_content_alignment": "center",
-        "color_scheme": "background-1",
-        "mobile_content_alignment": "center",
-        "stack_images_on_mobile": false,
-        "show_text_below": false
       }
     },
     "rich_text": {
@@ -222,82 +169,18 @@
         "padding_bottom": 36
       }
     },
-    "multicolumn": {
-      "type": "multicolumn",
-      "blocks": {
-        "column1": {
-          "type": "column",
-          "settings": {
-            "title": "Column",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
-            "link_label": "",
-            "link": ""
-          }
-        },
-        "column2": {
-          "type": "column",
-          "settings": {
-            "title": "Column",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
-            "link_label": "",
-            "link": ""
-          }
-        },
-        "column3": {
-          "type": "column",
-          "settings": {
-            "title": "Column",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
-            "link_label": "",
-            "link": ""
-          }
-        }
-      },
-      "block_order": [
-        "column1",
-        "column2",
-        "column3"
-      ],
-      "settings": {
-        "title": "",
-        "heading_size": "h1",
-        "image_width": "third",
-        "image_ratio": "adapt",
-        "columns_desktop": 3,
-        "column_alignment": "center",
-        "background_style": "none",
-        "button_label": "",
-        "button_link": "",
-        "color_scheme": "background-1",
-        "columns_mobile": "1",
-        "swipe_on_mobile": false,
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
-<<<<<<< HEAD
-    },
-    "payment_box" : {
+    "payment_box": {
       "type": "payment-box",
-    "slide-show":{
-      "type":"slide-show",
-      "settings": {}
-=======
->>>>>>> 1136b54 (Create setting slider)
+      "settings": {
+      }
     }
   },
   "order": [
     "slide-show",
-    "image_banner",
     "rich_text",
     "featured_collection",
     "collage",
     "video",
-    "multicolumn",
     "payment_box"
   ]
-<<<<<<< HEAD
-  } 
 }
-=======
-}
->>>>>>> 1136b54 (Create setting slider)

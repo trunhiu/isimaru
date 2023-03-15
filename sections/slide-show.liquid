@@ -1,5 +1,5 @@
 {{ 'slide-show.css' | asset_url | stylesheet_tag }}
-  <div class="image-slider container">
+  <div class="image-slider">
         {% for block in section.blocks %}
   {% case block.type %}
     {% when 'slide' %}
@@ -19,6 +19,7 @@ $(".image-slider").slick({
   autoplay: true,
   autoplaySpeed: 3000,
   arrows: false,
+  centerMode:true,
   slidesToShow: 3,
   slidesToScroll: 1,
   responsive: [
