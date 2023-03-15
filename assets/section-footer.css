@@ -299,6 +299,7 @@ img {
   display: flex;
   justify-content: center;
   align-items: center;
+  gap: 15px;
 }
 
 .footer__image .footer__image-deliver{
