@@ -221,3 +221,251 @@ cart-items {
     gap: 1rem;
   }
 }
+.cart__shopping {
+  width: 920px;
+}
+.table__cart {
+  width: 100%;
+  border-collapse:collapse;
+  white-space:nowrap;
+}
+.cart__shopping > h2 {
+  border-bottom: 1px solid rgb(160, 111, 48);
+}
+.cart__shopping > h2 > span {
+  color: rgb(160, 111, 48);
+}
+.title__table-cart {
+  background-image: url("../assets/bg_footer_li.gif");
+}
+.cart__image {
+  width: 80px;
+  padding: 0 6px;
+}
+.cart__select {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.cart__select p {
+  font-weight: bold;
+  margin: 0;
+  cursor: pointer;
+}
+.cart__select p:hover {
+  color: #f78500;
+}
+.select-item {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+.select-item select:nth-child(1) {
+  width: 70%;
+}
+.select-item select:nth-child(2) {
+  width: 25%;
+}
+.col-2 {
+  text-align: center;
+}
+.btn__item {
+  padding: 20px;
+}
+.btn__item img {
+  width: 50px;
+}
+.btn__item img:nth-child(2) {
+  display: block;
+}
+.table__cart th,.table__cart td{
+  border-bottom: 1px solid #e8e4df;
+}
+.number__capacitors {
+  padding-right: 20px;
+}
+.name__item {
+  font-size: 15px;
+  white-space: nowrap;
+}
+.name__item p {
+  margin: 0;
+}
+.name__item p:nth-child(2) {
+  width: 84%;
+  padding: 2px 4px;
+  background: #e8e8e8;
+  border: 1px dotted #c9c9c9;
+}
+.quantity {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  margin-top: 40px;
+}
+.quantity p {
+  background: black;
+  color: white;
+  padding: 0 4px;
+  font-weight: bold;
+  font-size: 11px;
+  cursor: pointer;
+}
+.quantity input {
+  width: 10%;
+}
+.quantity__btn {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+.quantity__btn img{
+  width: 20px;
+
+}
+.action {
+  border-bottom: 1px dashed #e8e4df;
+}
+.action td,th {
+  border: none !important;
+}
+.price__cart {
+  text-align: right;
+}
+.price__cart span{
+  color: #cc0000;
+  font-size: 20px;
+  font-weight: bold;
+  margin-right: 10px;
+}
+.cart__shopping .btnWrap {
+  padding:10px;
+  display: flex;
+  justify-content: space-between;
+}
+.clear__back button {
+  background: black;
+  padding: 5px;
+  border: none;
+  outline: none;
+  color: white;
+  width: 190px;
+}
+.btnWrap > img {
+  width: 205px;
+  cursor: pointer;
+}
+hr {
+  margin: 0;
+}
+.name__engraved h2{
+  font-weight: bold;
+  color:#CC0000;
+  margin-bottom: 0;
+}
+.name__engraved span {
+  font-weight: bold;
+  color:#CC0000;
+}
+.name__engraved p{
+  margin: 0;
+  font-size: 15px;
+}
+.name__engraved-sp{
+  max-width: 410px;
+}
+.hide{
+  display: none;
+}
+.show {
+  display: block;
+}
+
+/*Sp*/
+
+.cart__sp {
+  max-width: 450px;
+}
+.cart__sp > h2 {
+  border-bottom: 1px solid rgb(160, 111, 48);
+}
+.cart__sp > h2 > span {
+  color: rgb(160, 111, 48);
+}
+.cart__sp .btnWrap {
+  text-align: center;
+}
+.cart__sp .btnWrap > button {
+  background: #bea669;
+  border: none;
+  outline: none;
+  color: white;
+  width: 60%;
+  padding: 10px 0;
+  font-size: 17px;
+  font-weight: bold;
+  margin: 20px 0;
+}
+.cart__item-image img{
+  width: 70px;
+  margin: 0 10px;
+}
+.cart__item-sp {
+  display: flex;
+  border-top: 1px solid #ccc;
+  padding: 10px;
+  margin: 10px 0;
+}
+.cart__item-sp p{
+  margin: 0;
+  font-size: 11px;
+}
+.cart__item-sp p:first-child {
+  color: black;
+}
+.cart__item-sp p:nth-child(3){
+  font-weight: bold;
+  color: #992927;
+}
+.cart__item-sp select {
+  width: 100%;
+  padding: 5px 0;
+}
+.cart__item-info select:nth-child(4){
+  margin: 10px 0;
+}
+.amount {
+  display: flex;
+  justify-content: space-between;
+}
+.amount p {
+  width: 20px;
+  height: 20px;
+  background: gray;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  cursor: pointer;
+}
+.amount input {
+  width: 20%;
+}
+.price__sp {
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+  display: flex;
+  padding: 0 15px;
+  justify-content: space-between;
+  align-items: center;
+}
+.price__sp p {
+  font-size: 11px;
+}
+.price__sp span {
+  font-weight: bold;
+  font-size: 20px;
+  color: #992927;
+}
