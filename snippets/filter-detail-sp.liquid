@@ -1,0 +1,144 @@
+<style>
+    .filter__detail-Sp {
+        background: #fafafa;
+        padding: 5px 0;
+    }
+    .filter__detial-title h2 {
+        font-weight: bold;
+        font-size: 16px;
+        border-bottom: 1px dotted #ccc;
+        padding: 10px;
+    }
+    .filter__detail-form {
+        padding: 5px 10px;
+    }
+    .keyword label{
+        margin: 10px 0;
+        line-height: 38px;
+        display: flex;
+        justify-content: space-between;
+    }
+    .keyword label input,select {
+        width: 68%;
+    }
+    .tooltip {
+        text-align: center;
+        margin: 10px 0;
+    }
+    .tooltip__message {
+        position: relative;
+        padding: 5px 20px;
+        color: #fff;
+        background-color: #282828;
+        margin: auto;
+        text-align: center;
+        font-size: 12px;
+    }
+    .tooltip__message::after {
+        content: "";
+        position: absolute;
+        opacity: 1;
+        pointer-events: none;
+        left: 45%;
+        width: 0;
+        bottom: -9px;
+        height: 0;
+        border-style: solid;
+        border-width: 10px 10px 0 10px;
+        border-color: #282828 transparent transparent transparent;
+    }
+    .note {
+        display: flex;
+        justify-content: center;
+    }
+    .note p:nth-child(2) {
+        font-size: 12px;
+        padding: 0 20px;
+    }
+    .note span {
+        font-size: 13px;
+    }
+    .price__range {
+        display: flex;
+        justify-content: space-between;
+    }
+    .price__range-form {
+        width: 68%;
+    }
+    .price__range .price__range-form input{
+        width: 30%;
+        height: 38px;
+    }
+    .search {
+        margin-top: 20px;
+        border-bottom: 1px solid #ccc;
+        text-align: center;
+    }
+    .search span{
+        background: #0e293a;
+        color: white;
+        text-align: center;
+    }
+</style>
+
+<div class="filter__detail-Sp hide">
+    <div class="filter__detial-title">
+        <h2>詳細検索</h2>
+    </div>
+    <div class="filter__detail-form">
+        <div class="keyword">
+            <label for=""> キーワード
+                <input type="text">
+            </label>
+        </div>
+        <div class="tooltip">
+        <span class="tooltip__message">
+          よく検索されるキーワード
+        </span>
+        </div>
+        <div class="note">
+            <p>「茶うどん」</p>
+            <p>「半生うどん」</p>
+        </div>
+        <div class="note">
+            <p>「芳純シリーズ」</p>
+            <p>「カレーうどん」</p>
+        </div>
+        <div class="note">
+            <span>※商品番号「0961」「0200」などでも検索いただけます</span>
+        </div>
+        <div class="keyword">
+            <label for=""> カテゴリー
+                <select>
+                    <option value="">すべてのカテゴリー</option>
+                    <option value="">お試し商品【送料無料】</option>
+                    <option value="">半生うどん</option>
+                    <option value="">乾めん</option>
+                    <option value="">全粒粉うどん・パスタ</option>
+                    <option value="">低糖質うどん</option>
+                    <option value="">送料込商品</option>
+                    <option value="">ギフト・詰合せ</option>
+                    <option value="">お土産・ご挨拶</option>
+                    <option value="">めんつゆ・うどんだし</option>
+                    <option value="">国産小麦</option>
+                    <option value="">1袋単品</option>
+                    <option value="">金額から選ぶ</option>
+                    <option value="">麺の太さから選ぶ</option>
+                    <option value="">紙袋・ビニール袋</option>
+                </select>
+            </label>
+        </div>
+        <div class="price__range">
+            <span>価格帯</span>
+            <div class="price__range-form">
+                <input type="text">
+                円～
+                <input type="text">
+                円
+            </div>
+        </div>
+        <div class="search">
+            <span>検索</span>
+        </div>
+    </div>
+</div>

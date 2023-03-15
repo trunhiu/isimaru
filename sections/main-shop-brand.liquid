@@ -1,0 +1,154 @@
+{{ 'main-shop-brand.css' | asset_url | stylesheet_tag }}
+{{ 'product-list.css' | asset_url | stylesheet_tag }}
+<section id="shop-brand">
+    <div>{% render 'left-content' %}</div>
+    <div class="category">
+        <ul class="breadcrumb-shop">
+            <li><a href="#">ホーム</a></li>
+            <li>商品一覧 / 検索</li>
+        </ul>
+        <p class="resultCount"><span id="item_number">1件～30件</span>（全125件）</p>
+        <div class="category__pc">
+            <h2><span>商</span>品一覧 / 検索</h2>
+            <div class="final__search">
+                <p><strong>全体検索結果</strong>で検索した結果</p>
+                <table>
+                    <tbody>
+                    <tr>
+                        <th>カテゴリー</th>
+                        <td id="searchCategory">
+                            <select id="allcategory">
+                                <option value="" label="すべてのカテゴリー">すべてのカテゴリー</option>
+                                <option value="000" label="お試し商品【送料無料】">お試し商品【送料無料】</option>
+                                <option value="2" label="半生うどん">半生うどん</option>
+                                <option value="3" label="乾めん">乾めん</option>
+                                <option value="ct74" label="全粒粉うどん・パスタ">全粒粉うどん・パスタ</option>
+                                <option value="ct81" label="低糖質うどん">低糖質うどん</option>
+                                <option value="ct75" label="送料込商品">送料込商品</option>
+                                <option value="ct11" label="ギフト・詰合せ">ギフト・詰合せ</option>
+                                <option value="ct12" label="お土産・ご挨拶">お土産・ご挨拶</option>
+                                <option value="ct13" label="めんつゆ・うどんだし">めんつゆ・うどんだし</option>
+                                <option value="ct21" label="国産小麦">国産小麦</option>
+                                <option value="ct34" label="1袋単品">1袋単品</option>
+                                <option value="ct22" label="金額から選ぶ">金額から選ぶ</option>
+                                <option value="ct40" label="麺の太さから選ぶ">麺の太さから選ぶ</option>
+                                <option value="ct79" label="紙袋・ビニール袋">紙袋・ビニール袋</option>
+                            </select></td>
+                        <th>キーワード</th>
+                        <td id="searchBrand"><input type="text" size="16">
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>価格帯</th>
+                        <td id="searchPrice"><input type="text" name="money1" size="8"> ～
+                            <input type="text" name="money2" size="8"></td>
+                        <th>商品コード</th>
+                        <td id="searchCode"><input type="text" name="originalcode1" size="16"></td>
+                    </tr>
+                    </tbody>
+                </table>
+                <div class="final__search-btn">
+                    <button><i class="fa-solid fa-magnifying-glass"></i> 検索する</button>
+                </div>
+            </div>
+            <div class="filter__tag">
+                <p>全125件</p>
+                <ul>
+                    <li>並び替え：</li>
+                    <li>価格</li>
+                    <li>商品名</li>
+                </ul>
+            </div>
+        </div>
+        {% render "filter-action" %}
+        <div class="product__list">
+            {% for block in section.blocks %}
+                {% if block.type == 'product-list' %}
+                    <div class="product__item">
+                        <div class="product__image">
+                            <a href="#">
+                                <img src="{{ block.settings.image | img_url: "original" }}"
+                                     alt="{{ block.settings.title }}">
+                            </a>
+                            <p>{{ block.settings.title }}</p>
+                        </div>
+                        <div class="product__info">
+                            <div class="product__price">
+                                {{ block.settings.price }}円
+                            </div>
+                            <div class="button__cart">
+                                <button>商品詳細はこちら</button>
+                            </div>
+                        </div>
+                    </div>
+                {% endif %}
+            {% endfor %}
+        </div>
+        <div class="paginate-brand">
+            <ul>
+                <li>1</li>
+                <li>2</li>
+                <li>3</li>
+                <li>次の50件 »</li>
+            </ul>
+        </div>
+        <div class="more-btn hide">
+            <button>もっと見る</button>
+        </div>
+        {% render "filter-detail-sp" %}
+    </div>
+</section>
+{% schema %}
+{
+  "name": "main-shop-brand",
+  "settings": [],
+  "blocks": [
+    {
+      "name": "product-list",
+      "type": "product-list",
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Name"
+        },
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        },
+        {
+          "type": "number",
+          "id": "price",
+          "label": "Price"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}
+<script>
+    const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+    const producItem = document.querySelectorAll(".product__item")
+    const buttonCart = document.querySelectorAll(".product__item .button__cart")
+    const categoryPc = document.querySelector(".category__pc");
+    const filterAction = document.querySelector(".filter__action");
+    const filterDetailSp = document.querySelector(".filter__detail-Sp")
+    const leftContent = document.querySelector(".left-content")
+    const moreBtn = document.querySelector(".more-btn")
+    const paginateBrand = document.querySelector(".paginate-brand")
+    if (isMobile) {
+        producItem.forEach((item) => {
+            item.style.width = "30%"
+        })
+        buttonCart.forEach((item) => {
+            item.classList.add("hide")
+        })
+        categoryPc.classList.add("hide");
+        filterAction.classList.remove("hide");
+        filterDetailSp.classList.remove("hide");
+        leftContent.classList.add("hide");
+        paginateBrand.classList.add("hide");
+        moreBtn.classList.remove("hide");
+    }
+</script>
