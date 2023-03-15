@@ -6,7 +6,11 @@ h2 {
 img {
     width: 100%;
 }
-
+.page__about {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
 .about__slogan {
     width: 920px;
 }
