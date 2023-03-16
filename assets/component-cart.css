@@ -222,7 +222,9 @@ cart-items {
   }
 }
 .cart__shopping {
-  width: 920px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
 }
 .table__cart {
   width: 100%;

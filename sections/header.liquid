@@ -143,7 +143,9 @@
   <div class="header-container">
     <div class="header-menu-top">
       <div class="header-logo">
-      <img src="../assets/logo.jpg" alt="">
+        <a href="/">
+          <img src="{{ '../assets/logo.jpg' | asset_url }}" alt="">
+        </a>
     </div>
     <div class="header-right">
       <div class="header-right-top">
@@ -157,9 +159,9 @@
       </div>
       <div class="header-right-bottom">
         <ul>
-          <li><a href="#"><img src="../assets/img_deliver2019x.png" alt=""></a></li>
-          <li><a href="#"><img src="../assets/img_tel.png" alt=""></a></li>
-          <li><a href="#"><img src="../assets/logo1.png" alt=""></a></li>
+          <li><a href="#"><img src="{{ '../assets/img_deliver2019x.png' | asset_url }}" alt=""></a></li>
+          <li><a href="#"><img src="{{ '../assets/img_tel.png' | asset_url }}" alt=""></a></li>
+          <li><a href="#"><img src="{{ '../assets/logo1.png' | asset_url }}" alt=""></a></li>
         </ul>
       </div>
     </div>
@@ -169,15 +171,15 @@
     <div class="header-container">
       <div class="header-menu-bottom">
         <ul>
-        <li><a href="#">石丸製麺について</a></li>
-        <li><a href="#">商品一覧</a></li>
-        <li><a href="#">ご利用ガイド</a></li>
+        <li><a href="/pages/about">石丸製麺について</a></li>
+        <li><a href="/pages/shop-brand">商品一覧</a></li>
+        <li><a href="/collections/all">ご利用ガイド</a></li>
         <li><a href="#">よくあるご質問</a></li>
         <li><a href="#">会員特典について</a></li>
         <li><a href="#">お問い合わせ</a></li>
         <li>
-          <a href="#">
-            <img src="../assets/btn_cart.png" alt="">
+          <a href="/cart">
+            <img src="{{ '../assets/btn_cart.png' | asset_url }}" alt="">
           </a>
           <p class="header-menu-bottom-cart">
             現在の中身：
