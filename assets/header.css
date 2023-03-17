@@ -15,9 +15,9 @@ header a {
 
 .header-menu-top {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
-    max-height: 126px;
+
 }
 
 .header-logo {
@@ -143,4 +143,149 @@ header a {
     color: #ff0000;
     font-weight: bold;
     font-style: normal;
+}
+.responsiveSpShow {
+    display: none
+}
+.spLogo {
+    max-width: 400px;
+}
+.header__sp-icon {
+    display: none;
+}
+.header__sp-icon img{
+    max-width: 30px;
+    margin: 0 5px;
+}
+.spLogo .icon-menu {
+    width: 30px;
+    height: 30px;
+    z-index: 6;
+    cursor: pointer;
+}
+.spLogo img:nth-child(2) {
+    max-width: 300px;
+}
+.spLogo {
+    display: none;
+}
+.delivery__date {
+    display: none;
+}
+.delivery__date p {
+    margin: 0;
+    font-size: 11px;
+}
+.delivery__date span {
+    color: #CC0000;
+}
+.toggled {
+    left: 0px !important;
+}
+#overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: #111;
+    opacity: 0;
+    overflow: hidden;
+    z-index: 6;
+    display: none;
+}
+@media screen and (max-width: 992px) {
+    .responsiveSpHide {
+        display: none !important;
+    }
+    .responsiveSpShow {
+        display: block;
+    }
+    .header__sp-icon {
+        display: flex;
+    }
+    .spLogo {
+        display: flex;
+        align-items: center;
+    }
+    .header-menu-top {
+        padding: 0 10px;
+        justify-content: space-between;
+        max-height: 80px;
+        width: 100%;
+        background: white;
+        position: fixed;
+        top:0;
+        left: 0;
+        right: 0;
+    }
+    .delivery__date {
+        display: block;
+        text-align: center;
+    }
+    .header-menu-bottom {
+        position: fixed;
+        top: 11%;
+        width: 270px;
+        left: -300px;
+        z-index: 8;
+        transition: all 0.3s ease-in-out;
+    }
+    .header-menu-bottom ul{
+        flex-direction: column;
+        background: black;
+        max-height: 100vh !important;
+        z-index: 99;
+        padding: 0;
+        align-items: flex-start;
+    }
+    .header-menu-bottom ul li {
+        border-top: 1px solid #ccc;
+        width: 100%;
+        padding:10px;
+    }
+    .sub__menu-Type {
+        text-align: center;
+        color: white;
+        font-size: 11px;
+    }
+    .sub__menu-Type i {
+        color: white;
+        font-size: 24px;
+    }
+    .subInput {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 15px;
+        margin-bottom: 10px;
+    }
+    .subInput input {
+        padding: 5px 10px;
+    }
+    .subInput input::placeholder{
+        font-size: 11px;
+    }
+    .subText {
+        display: flex;
+        justify-content: center;
+    }
+    .subText p {
+        margin: 0;
+    }
+    .header-menu-bottom ul li:first-child {
+        background: #0e293a;
+    }
+    .header-nav {
+        margin-top: 0;
+    }
+    .paypay {
+        margin-top: 82px;
+    }
+
+}
+@media screen and (max-width: 456px){
+    .spLogo img:nth-child(2) {
+        max-width: 200px;
+    }
 }

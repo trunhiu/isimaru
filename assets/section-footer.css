@@ -737,4 +737,16 @@ noscript .localization-selector.link {
     background: white ;
     color: #333;
   }
+  .footer__contact .footer__button-sp {
+    display: block;
+  }
+  .footer__image #image__deliver {
+    display: none;
+  }
+  .footer__image #image__fax {
+    display: none;
+  }
+  .footer__nav {
+    display: none;
+  }
 }

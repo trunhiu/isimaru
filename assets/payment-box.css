@@ -213,3 +213,11 @@ img {
 .list__sp-red p{
     color: #8b1616 !important;
 }
+@media screen and (max-width: 756px) {
+    .sp {
+        display: block;
+    }
+    .row{
+        display: none;
+    }
+}

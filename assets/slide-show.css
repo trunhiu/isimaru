@@ -89,3 +89,16 @@ img {
 .slick-dotted.slick-slider {
     margin: 40px 0;
 }
+@media screen and (max-width: 756px) {
+    .slick-dots li button:before{
+        top: -5px;
+        font-size: 10px;
+    }
+    .slick-dots li button {
+        width: 10px;
+        height: 10px;
+    }
+    .slick-dotted.slick-slider {
+        margin-top: 0;
+    }
+}

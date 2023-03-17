@@ -534,7 +534,7 @@
 }
 
 .web_fb-content2 a img {
-  width: 446px;
+  max-width: 446px;
   object-fit: cover;
 }
 
@@ -565,4 +565,55 @@
 
 .top-banner-item img:hover {
   opacity: 0.6;
+}
+
+@media screen and (max-width: 756px) {
+  .ranking-item-image img:first-child {
+    border: none;
+    width: 50px;
+  }
+  .ranking-container {
+    display: flex;
+    padding: 0 10px;
+    flex-direction: column-reverse;
+  }
+  .ranking-all-item {
+    grid-template-columns: repeat(3, 1fr);
+    padding-left: 10px;
+  }
+  .ranking-item-image {
+    text-align: center;
+  }
+  .recommend-all-item {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .ranking-content-bottom,
+  .ranking-content-bottom a,
+  .ranking-item-detail p,
+  .ranking-item-detail .ranking-item-name a,
+  .top-review-comment-top a,
+  .review-table-comment,
+  .web_fb-content1 p{
+    font-size: 11px;
+  }
+  .noodle-content {
+      flex-wrap: wrap;
+  }
+  .noodle-item {
+      width: 35%;
+  }
+    .instagram-area {
+        column-gap:5px;
+        row-gap: 5px;
+    }
+    .web_fb{
+        flex-direction: column;
+        padding: 0 10px;
+    }
+    .web_fb-content1 {
+        margin: 0;
+    }
+    .web_fb-content2 {
+        margin: 20px auto;
+    }
 }
