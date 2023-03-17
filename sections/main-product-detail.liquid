@@ -1,26 +1,50 @@
 {{ 'product-detail.css' | asset_url | stylesheet_tag }}
 {{ 'product-detail.js' | asset_url | script_tag }}
 <section id="product-detail">
+    {% render 'left-content' %}
     <div class="container">
-      <div class="directional">
-          <ul class="breadcrumb">
-              <li><a href="">トップ</a></li>
-              <li><a href="">ギフト・詰合せ</a></li>
-              <li>UG-5 国産 半生讃岐うどん「うどん丸」</li>
-          </ul>
-          <div class="prev-next">
+        <div class="directional">
+            <ul class="breadcrumb">
+                <li><a href="">トップ</a></li>
+                <li><a href="">ギフト・詰合せ</a></li>
+                <li>UG-5 国産 半生讃岐うどん「うどん丸」</li>
+            </ul>
+            <div class="prev-next">
             <span>
                 <i class="fa-solid fa-chevron-left"></i>
                 前の商品</span>
-              <span>次の商品
+                <span>次の商品
             <i class="fa-solid fa-chevron-right"></i></span>
-          </div>
-      </div>
+            </div>
+        </div>
         <div class="detail">
             <div class="image-gallery">
                 <div class="image-container">
                     <img src="" id="main-image">
                     <div class="thumbnails">
+                        {% for block in section.blocks %}
+                            <img src="{{ block.settings.image | img_url: "original" }}"
+                                 alt="{{ block.settings.title }}">
+                        {% endfor %}
+                    </div>
+                </div>
+                <div class="maintain__product">
+                    <div class="maintain__item">
+                        <img src="{{ '../assets/imgDetailSp.jpeg' | asset_url }}" alt="Img Detail">
+                        <p>1箱に20袋入っております。</p>
+                    </div>
+                    <div class="maintain__item">
+                        <img src="{{ '../assets/imgDetailSp2.jpeg' | asset_url }}" alt="Make shop">
+                        <div>
+                            <p><span style="font-size:20px;">こちらの箱でお届けいたします。<br>
+                        箱にのし・包装ができます。<br>
+                        紙袋：最適サイズ<img alt="Icon Cart" src="{{ '../assets/icon-cart.png' | asset_url }}" style="width: 30px"><br></span>
+                            <div class="maintain__note">
+                                <p>→<span>紙袋（大サイズ）はこちら</span></p>
+                                <p>→<span>ビニール袋はこちら</span></p>
+                            </div>
+                        </div>
+                        </p>
                     </div>
                 </div>
             </div>
@@ -30,29 +54,32 @@
                     <span>包丁切り</span>
                     <ul>
                         <li>★保存料不使用,賞味期限1か月</li>
-                        <li>★テストするモノ批評誌 <span>「MONOQLO」</span> 2023年3月号で「感動の安くて良いモノ」<span>ベストバリュー</span>に選ばれました！</li>
+                        <li>★テストするモノ批評誌 <span>「MONOQLO」</span> 2023年3月号で「感動の安くて良いモノ」<span>ベストバリュー</span>に選ばれました！
+                        </li>
                     </ul>
-                    <p>厳選した小麦粉を使用し、保存料不使用でつくりました。 うどん本来の味を楽しめる、素材勝負の自信作。讃岐伝統の手打式製法で打ち上げた半生麺です。</p>
+                    <p>厳選した小麦粉を使用し、保存料不使用でつくりました。
+                        うどん本来の味を楽しめる、素材勝負の自信作。讃岐伝統の手打式製法で打ち上げた半生麺です。</p>
                     <ul class="detail__description">
-                        <li>60人前 </li>
+                        <li>60人前</li>
                         <li>内容量：300g（3人前）×20袋</li>
                         <li>賞味期限：製造より1か月（保存料不使用</li>
                         <li>ゆで時間：15分（ざる）</li>
                     </ul>
                     <p>※めんつゆは付いておりません。</p>
                     <div class="detail__image">
-                        <img src="../assets/detail1.png" alt="">
-                        <img src="../assets/detail2.png" alt="">
+                        <img src="{{ '../assets/detail1.png' | asset_url }}" alt="">
+                        <img src="{{ '../assets/detail2.png' | asset_url }}" alt="">
                     </div>
-                    <img src="../assets/detail3.png" alt="">
-                    <img src="../assets/detail4.png" alt="">
+                    <img src="{{ '../assets/detail3.png' | asset_url }}" alt="">
+                    <img src="{{ '../assets/detail4.png' | asset_url }}" alt="">
                 </div>
                 <div class="detail__money">
                     <ul class="count__price">
                         <li>商品コード : 0963</li>
                         <li><span>価格:</span>
                             5,000
-                            円（税込）</li>
+                            円（税込）
+                        </li>
                         <li>ポイント : 50</li>
                         <li style="display: flex; gap: 20px; align-items: center">数量
                             <input type="text" value="1">
@@ -100,20 +127,18 @@
                                 <option>66、粗供養[蓮のし]</option>
                                 <option>67、志[黄のし]</option>
                                 <option>68、志[蓮のし]</option>
-                                <option>99、その他</option></select>
+                                <option>99、その他</option>
+                            </select>
                         </li>
                         <li><span>【名入れ】と【外のし希望】(例→石丸　外のし）完全包装でのしをつける場合、基本は「内のし」です</span></li>
                         <li><input type="text" style="width: 100%"></li>
                         <li class="count__word">入力できる文字数：全角22文字</li>
                         <li class="button__cart">
-                            <button>
-                                <i class="fa-solid fa-cart-shopping"></i>
-                                買い物カゴに入れる
-                            </button>
+                            <img src="{{ '../assets/btn_cart.png' | asset_url }}" alt="button cart">
                         </li>
                         <li>
                             <a href="">
-                                <img src="../assets/shopping.png" alt="">
+                                <img src="{{ '../assets/shopping.png' | asset_url }}" alt="">
                             </a>
                         </li>
                         <li>
@@ -125,8 +150,8 @@
                             </ul>
                         </li>
                         <li class="letter">
-                              <p>  <i class="fa-regular fa-envelope"></i>
-                                  商品についての問い合わせ</p>
+                            <p><i class="fa-regular fa-envelope"></i>
+                                商品についての問い合わせ</p>
                         </li>
                         <li class="twitter">
                             <p><i class="fa-brands fa-twitter"></i>
@@ -143,22 +168,22 @@
                 </div>
             </div>
         </div>
-      <div class="trick">
-          <h2>おいしさの秘密　～手打ち式製法 包丁切り～</h2>
-          <p>讃岐伝統の手打式製法で打ち上げ、麺生地を包丁切りカッターで一本一本丁寧に切ることで、角の立った麺に仕上がりました。</p>
-          <h2>おいしいゆで方</h2>
-          <ul>
-              <li>基準は100グラムのうどん（約1人前）に対して、水は約1リットル以上のたっぷりの水を使います。</li>
-              <li>必ず沸騰したお湯に麺を投入してください。その後うどん同士がくっつかないよう箸で軽く麺をほぐしてください。</li>
-              <li>うどんが軽く対流するぐらいの沸騰が続くように、火加減を調節し、食べ方に応じたゆで時間でゆであげてください。</li>
-          </ul>
-          <p>※このとき差し水は絶対しないでください。（火を弱めると吹き零れは収まります）</p>
-      </div>
+        <div class="trick">
+            <h2>おいしさの秘密　～手打ち式製法 包丁切り～</h2>
+            <p>讃岐伝統の手打式製法で打ち上げ、麺生地を包丁切りカッターで一本一本丁寧に切ることで、角の立った麺に仕上がりました。</p>
+            <h2>おいしいゆで方</h2>
+            <ul>
+                <li>基準は100グラムのうどん（約1人前）に対して、水は約1リットル以上のたっぷりの水を使います。</li>
+                <li>必ず沸騰したお湯に麺を投入してください。その後うどん同士がくっつかないよう箸で軽く麺をほぐしてください。</li>
+                <li>うどんが軽く対流するぐらいの沸騰が続くように、火加減を調節し、食べ方に応じたゆで時間でゆであげてください。</li>
+            </ul>
+            <p>※このとき差し水は絶対しないでください。（火を弱めると吹き零れは収まります）</p>
+        </div>
         <div class="comment">
             <h2><span>こ</span>の商品についてのレビュー</h2>
-             <div class="rate__item">
+            <div class="rate__item">
                 <div class="rate__info">
-                    <div class="rate__user" >
+                    <div class="rate__user">
                         <label for="">
                             ニックネーム :
                             <input type="text">
@@ -168,46 +193,46 @@
                         <p>評点 : </p>
                         <div>
                             <input type="radio" checked>
-                            <img class="star__icon" src="../assets/starIcon.png" alt="startIcon">
+                            <img class="star__icon" src="{{ '../assets/starIcon.png' | asset_url }}" alt="startIcon">
                         </div>
                         <div>
                             <input type="radio">
-                            <img class="star__icon" src="../assets/starIcon.png" alt="startIcon">
-                            <img class="star__icon" src="../assets/starIcon.png" alt="startIcon">
+                            <img class="star__icon" src="{{ '../assets/starIcon.png' | asset_url }}" alt="startIcon">
+                            <img class="star__icon" src="{{ '../assets/starIcon.png' | asset_url }}" alt="startIcon">
                         </div>
                         <div>
                             <input type="radio">
-                            <img class="star__icon" src="../assets/starIcon.png" alt="startIcon">
-                            <img class="star__icon" src="../assets/starIcon.png" alt="startIcon">
-                            <img class="star__icon" src="../assets/starIcon.png" alt="startIcon">
+                            <img class="star__icon" src="{{ '../assets/starIcon.png' | asset_url }}" alt="startIcon">
+                            <img class="star__icon" src="{{ '../assets/starIcon.png' | asset_url }}" alt="startIcon">
+                            <img class="star__icon" src="{{ '../assets/starIcon.png' | asset_url }}" alt="startIcon">
                         </div>
                         <div>
                             <input type="radio">
-                            <img class="star__icon" src="../assets/starIcon.png" alt="startIcon">
-                            <img class="star__icon" src="../assets/starIcon.png" alt="startIcon">
-                            <img class="star__icon" src="../assets/starIcon.png" alt="startIcon">
-                            <img class="star__icon" src="../assets/starIcon.png" alt="startIcon">
+                            <img class="star__icon" src="{{ '../assets/starIcon.png' | asset_url }}" alt="startIcon">
+                            <img class="star__icon" src="{{ '../assets/starIcon.png' | asset_url }}" alt="startIcon">
+                            <img class="star__icon" src="{{ '../assets/starIcon.png' | asset_url }}" alt="startIcon">
+                            <img class="star__icon" src="{{ '../assets/starIcon.png' | asset_url }}" alt="startIcon">
                         </div>
                         <div>
                             <input type="radio">
-                            <img class="star__icon" src="../assets/starIcon.png" alt="startIcon">
-                            <img class="star__icon" src="../assets/starIcon.png" alt="startIcon">
-                            <img class="star__icon" src="../assets/starIcon.png" alt="startIcon">
-                            <img class="star__icon" src="../assets/starIcon.png" alt="startIcon">
-                            <img class="star__icon" src="../assets/starIcon.png" alt="startIcon">
+                            <img class="star__icon" src="{{ '../assets/starIcon.png' | asset_url }}" alt="startIcon">
+                            <img class="star__icon" src="{{ '../assets/starIcon.png' | asset_url }}" alt="startIcon">
+                            <img class="star__icon" src="{{ '../assets/starIcon.png' | asset_url }}" alt="startIcon">
+                            <img class="star__icon" src="{{ '../assets/starIcon.png' | asset_url }}" alt="startIcon">
+                            <img class="star__icon" src="{{ '../assets/starIcon.png' | asset_url }}" alt="startIcon">
                         </div>
                     </div>
                 </div>
-                 <div class="rate__content">
-                     <label for="">
-                         内容 :
-                         <input type="text">
-                     </label>
-                 </div>
-                 <div class="assessment__form">
-                     <button><i class="fa-solid fa-pencil"></i>レビューを書く</button>
-                 </div>
-             </div>
+                <div class="rate__content">
+                    <label for="">
+                        内容 :
+                        <input type="text">
+                    </label>
+                </div>
+                <div class="assessment__form">
+                    <button><i class="fa-solid fa-pencil"></i>レビューを書く</button>
+                </div>
+            </div>
         </div>
         <div class="review__list">
             <p>レビュー件数：9件</p>
@@ -216,11 +241,11 @@
                     <div class="review__title">
                         <p>評価</p>
                         <div>
-                            <img class="star__icon" src="../assets/starIcon.png" alt="startIcon">
-                            <img class="star__icon" src="../assets/starIcon.png" alt="startIcon">
-                            <img class="star__icon" src="../assets/starIcon.png" alt="startIcon">
-                            <img class="star__icon" src="../assets/starIcon.png" alt="startIcon">
-                            <img class="star__icon" src="../assets/starIcon.png" alt="startIcon">
+                            <img class="star__icon" src="{{ '../assets/starIcon.png' | asset_url }}" alt="startIcon">
+                            <img class="star__icon" src="{{ '../assets/starIcon.png' | asset_url }}" alt="startIcon">
+                            <img class="star__icon" src="{{ '../assets/starIcon.png' | asset_url }}" alt="startIcon">
+                            <img class="star__icon" src="{{ '../assets/starIcon.png' | asset_url }}" alt="startIcon">
+                            <img class="star__icon" src="{{ '../assets/starIcon.png' | asset_url }}" alt="startIcon">
                         </div>
                     </div>
                     <div>
@@ -239,11 +264,12 @@
                     <div class="review__title">
                         <p>評価</p>
                         <div>
-                            <img class="star__icon" src="../assets/starIcon.png" alt="startIcon">
-                            <img class="star__icon" src="../assets/starIcon.png" alt="startIcon">
-                            <img class="star__icon" src="../assets/starIcon.png" alt="startIcon">
-                            <img class="star__icon" src="../assets/starIcon.png" alt="startIcon">
-                            <img class="star__icon" src="../assets/starIcon1_off.png" alt="startIcon">
+                            <img class="star__icon" src="{{ '../assets/starIcon.png' | asset_url }}" alt="startIcon">
+                            <img class="star__icon" src="{{ '../assets/starIcon.png' | asset_url }}" alt="startIcon">
+                            <img class="star__icon" src="{{ '../assets/starIcon.png' | asset_url }}" alt="startIcon">
+                            <img class="star__icon" src="{{ '../assets/starIcon.png' | asset_url }}" alt="startIcon">
+                            <img class="star__icon" src="{{ '../assets/starIcon1_off.png' | asset_url }}"
+                                 alt="startIcon">
                         </div>
                     </div>
                     <div>
@@ -259,11 +285,11 @@
                     <div class="review__title">
                         <p>評価</p>
                         <div>
-                            <img class="star__icon" src="../assets/starIcon.png" alt="startIcon">
-                            <img class="star__icon" src="../assets/starIcon.png" alt="startIcon">
-                            <img class="star__icon" src="../assets/starIcon.png" alt="startIcon">
-                            <img class="star__icon" src="../assets/starIcon.png" alt="startIcon">
-                            <img class="star__icon" src="../assets/starIcon.png" alt="startIcon">
+                            <img class="star__icon" src="{{ '../assets/starIcon.png' | asset_url }}" alt="startIcon">
+                            <img class="star__icon" src="{{ '../assets/starIcon.png' | asset_url }}" alt="startIcon">
+                            <img class="star__icon" src="{{ '../assets/starIcon.png' | asset_url }}" alt="startIcon">
+                            <img class="star__icon" src="{{ '../assets/starIcon.png' | asset_url }}" alt="startIcon">
+                            <img class="star__icon" src="{{ '../assets/starIcon.png' | asset_url }}" alt="startIcon">
                         </div>
                     </div>
                     <div>
@@ -279,11 +305,11 @@
                     <div class="review__title">
                         <p>評価</p>
                         <div>
-                            <img class="star__icon" src="../assets/starIcon.png" alt="startIcon">
-                            <img class="star__icon" src="../assets/starIcon.png" alt="startIcon">
-                            <img class="star__icon" src="../assets/starIcon.png" alt="startIcon">
-                            <img class="star__icon" src="../assets/starIcon.png" alt="startIcon">
-                            <img class="star__icon" src="../assets/starIcon.png" alt="startIcon">
+                            <img class="star__icon" src="{{ '../assets/starIcon.png' | asset_url }}" alt="startIcon">
+                            <img class="star__icon" src="{{ '../assets/starIcon.png' | asset_url }}" alt="startIcon">
+                            <img class="star__icon" src="{{ '../assets/starIcon.png' | asset_url }}" alt="startIcon">
+                            <img class="star__icon" src="{{ '../assets/starIcon.png' | asset_url }}" alt="startIcon">
+                            <img class="star__icon" src="{{ '../assets/starIcon.png' | asset_url }}" alt="startIcon">
                         </div>
                     </div>
                     <div>
@@ -299,11 +325,11 @@
                     <div class="review__title">
                         <p>評価</p>
                         <div>
-                            <img class="star__icon" src="../assets/starIcon.png" alt="startIcon">
-                            <img class="star__icon" src="../assets/starIcon.png" alt="startIcon">
-                            <img class="star__icon" src="../assets/starIcon.png" alt="startIcon">
-                            <img class="star__icon" src="../assets/starIcon.png" alt="startIcon">
-                            <img class="star__icon" src="../assets/starIcon.png" alt="startIcon">
+                            <img class="star__icon" src="{{ '../assets/starIcon.png' | asset_url }}" alt="startIcon">
+                            <img class="star__icon" src="{{ '../assets/starIcon.png' | asset_url }}" alt="startIcon">
+                            <img class="star__icon" src="{{ '../assets/starIcon.png' | asset_url }}" alt="startIcon">
+                            <img class="star__icon" src="{{ '../assets/starIcon.png' | asset_url }}" alt="startIcon">
+                            <img class="star__icon" src="{{ '../assets/starIcon.png' | asset_url }}" alt="startIcon">
                         </div>
                     </div>
                     <div>
@@ -311,7 +337,8 @@
                     </div>
                 </div>
                 <div class="review__content">
-                    <p>先日高松の友人から石丸うどんを頂いた。久しぶりに美味しかったので、自分用に初めて注文した。半生でこれだけの味であれば、東京では中々味わえない本格的なうどんでした。また注文します。</p>
+                    <p>
+                        先日高松の友人から石丸うどんを頂いた。久しぶりに美味しかったので、自分用に初めて注文した。半生でこれだけの味であれば、東京では中々味わえない本格的なうどんでした。また注文します。</p>
                 </div>
             </div>
             <div class="review__item">
@@ -319,11 +346,14 @@
                     <div class="review__title">
                         <p>評価</p>
                         <div>
-                            <img class="star__icon" src="../assets/starIcon.png" alt="startIcon">
-                            <img class="star__icon" src="../assets/starIcon.png" alt="startIcon">
-                            <img class="star__icon" src="../assets/starIcon1_off.png" alt="startIcon">
-                            <img class="star__icon" src="../assets/starIcon1_off.png" alt="startIcon">
-                            <img class="star__icon" src="../assets/starIcon1_off.png" alt="startIcon">
+                            <img class="star__icon" src="{{ '../assets/starIcon.png' | asset_url }}" alt="startIcon">
+                            <img class="star__icon" src="{{ '../assets/starIcon.png' | asset_url }}" alt="startIcon">
+                            <img class="star__icon" src="{{ '../assets/starIcon1_off.png' | asset_url }}"
+                                 alt="startIcon">
+                            <img class="star__icon" src="{{ '../assets/starIcon1_off.png' | asset_url }}"
+                                 alt="startIcon">
+                            <img class="star__icon" src="{{ '../assets/starIcon1_off.png' | asset_url }}"
+                                 alt="startIcon">
                         </div>
                     </div>
                     <div>
@@ -341,11 +371,11 @@
                     <div class="review__title">
                         <p>評価</p>
                         <div>
-                            <img class="star__icon" src="../assets/starIcon.png" alt="startIcon">
-                            <img class="star__icon" src="../assets/starIcon.png" alt="startIcon">
-                            <img class="star__icon" src="../assets/starIcon.png" alt="startIcon">
-                            <img class="star__icon" src="../assets/starIcon.png" alt="startIcon">
-                            <img class="star__icon" src="../assets/starIcon.png" alt="startIcon">
+                            <img class="star__icon" src="{{ '../assets/starIcon.png' | asset_url }}" alt="startIcon">
+                            <img class="star__icon" src="{{ '../assets/starIcon.png' | asset_url }}" alt="startIcon">
+                            <img class="star__icon" src="{{ '../assets/starIcon.png' | asset_url }}" alt="startIcon">
+                            <img class="star__icon" src="{{ '../assets/starIcon.png' | asset_url }}" alt="startIcon">
+                            <img class="star__icon" src="{{ '../assets/starIcon.png' | asset_url }}" alt="startIcon">
                         </div>
                     </div>
                     <div>
@@ -361,11 +391,11 @@
                     <div class="review__title">
                         <p>評価</p>
                         <div>
-                            <img class="star__icon" src="../assets/starIcon.png" alt="startIcon">
-                            <img class="star__icon" src="../assets/starIcon.png" alt="startIcon">
-                            <img class="star__icon" src="../assets/starIcon.png" alt="startIcon">
-                            <img class="star__icon" src="../assets/starIcon.png" alt="startIcon">
-                            <img class="star__icon" src="../assets/starIcon.png" alt="startIcon">
+                            <img class="star__icon" src="{{ '../assets/starIcon.png' | asset_url }}" alt="startIcon">
+                            <img class="star__icon" src="{{ '../assets/starIcon.png' | asset_url }}" alt="startIcon">
+                            <img class="star__icon" src="{{ '../assets/starIcon.png' | asset_url }}" alt="startIcon">
+                            <img class="star__icon" src="{{ '../assets/starIcon.png' | asset_url }}" alt="startIcon">
+                            <img class="star__icon" src="{{ '../assets/starIcon.png' | asset_url }}" alt="startIcon">
                         </div>
                     </div>
                     <div>
@@ -381,11 +411,11 @@
                     <div class="review__title">
                         <p>評価</p>
                         <div>
-                            <img class="star__icon" src="../assets/starIcon.png" alt="startIcon">
-                            <img class="star__icon" src="../assets/starIcon.png" alt="startIcon">
-                            <img class="star__icon" src="../assets/starIcon.png" alt="startIcon">
-                            <img class="star__icon" src="../assets/starIcon.png" alt="startIcon">
-                            <img class="star__icon" src="../assets/starIcon.png" alt="startIcon">
+                            <img class="star__icon" src="{{ '../assets/starIcon.png' | asset_url }}" alt="startIcon">
+                            <img class="star__icon" src="{{ '../assets/starIcon.png' | asset_url }}" alt="startIcon">
+                            <img class="star__icon" src="{{ '../assets/starIcon.png' | asset_url }}" alt="startIcon">
+                            <img class="star__icon" src="{{ '../assets/starIcon.png' | asset_url }}" alt="startIcon">
+                            <img class="star__icon" src="{{ '../assets/starIcon.png' | asset_url }}" alt="startIcon">
                         </div>
                     </div>
                     <div>
@@ -404,28 +434,28 @@
                 <div class="wishlist">
                     <div class="wishlist__item">
                         <a href="">
-                            <img src="../assets/wishlist1.jpeg" alt="Wish List">
+                            <img src="{{ '../assets/wishlist1.jpeg' | asset_url }}" alt="Wish List">
                         </a>
                         <span>半生讃岐石丸うどん包丁切り（1袋）</span>
                         <p>1,450円(税込)</p>
                     </div>
                     <div class="wishlist__item">
                         <a href="">
-                            <img src="../assets/wishlist2.jpeg" alt="Wish List">
+                            <img src="{{ '../assets/wishlist2.jpeg' | asset_url }}" alt="Wish List">
                         </a>
                         <span>半生讃岐うどん（つゆ付）（6袋）</span>
                         <p>1,920円(税込)</p>
                     </div>
                     <div class="wishlist__item">
                         <a href="">
-                            <img src="../assets/wishlist3.jpeg" alt="Wish List">
+                            <img src="{{ '../assets/wishlist3.jpeg' | asset_url }}" alt="Wish List">
                         </a>
                         <span>HP-24 半生讃岐石丸うどん24人前セット つ...</span>
                         <p>3,500円(税込)</p>
                     </div>
                     <div class="wishlist__item">
                         <a href="">
-                            <img src="../assets/wishlist4.jpeg" alt="Wish List">
+                            <img src="{{ '../assets/wishlist4.jpeg' | asset_url }}" alt="Wish List">
                         </a>
                         <span>W-20A 厳選 半生めんセット</span>
                         <p>2,600円(税込)</p>
@@ -435,38 +465,38 @@
             <div class="ranking">
                 <h2><span>人</span>気商品 週間アクセスランキング</h2>
                 <div class="wishlist">
-                    <img src="../assets/ranking.png" alt="ranking">
+                    <img src="{{ '../assets/ranking.png' | asset_url }}" alt="ranking">
                     <div class="wishlist__item">
                         <a href="#">
-                            <img src="../assets/wishlist5.jpeg" alt="Wish List">
+                            <img src="{{ '../assets/wishlist5.jpeg' | asset_url }}" alt="Wish List">
                         </a>
                         <span>HP-15A 半生讃岐石丸うどん15人前セット（...</span>
                         <p>1,450円(税込)</p>
                     </div>
                     <div class="wishlist__item">
                         <a href="#">
-                            <img src="../assets/wishlist6.jpeg" alt="Wish List">
+                            <img src="{{ '../assets/wishlist6.jpeg' | asset_url }}" alt="Wish List">
                         </a>
                         <span>HP-15B 半生讃岐石丸うどん15人前セット（...</span>
                         <p>1,900円(税込)</p>
                     </div>
                     <div class="wishlist__item">
                         <a href="#">
-                            <img src="../assets/wishlist7.jpeg" alt="Wish List">
+                            <img src="{{ '../assets/wishlist7.jpeg' | asset_url }}" alt="Wish List">
                         </a>
                         <span>半生讃岐うどん（つゆ付）（6袋）</span>
                         <p>1,920円(税込)</p>
                     </div>
                     <div class="wishlist__item">
                         <a href="#">
-                            <img src="../assets/wishlist8.jpeg" alt="Wish List">
+                            <img src="{{ '../assets/wishlist8.jpeg' | asset_url }}" alt="Wish List">
                         </a>
                         <span>HP-24 半生讃岐石丸うどん24人前セット つ...</span>
                         <p>3,500円(税込)</p>
                     </div>
                     <div class="wishlist__item">
                         <a href="#">
-                            <img src="../assets/wishlist9.jpeg" alt="Wish List">
+                            <img src="{{ '../assets/wishlist9.jpeg' | asset_url }}" alt="Wish List">
                         </a>
                         <span>W-20A 厳選 半生めんセット</span>
                         <p>2,600円(税込)</p>
@@ -478,14 +508,14 @@
                 <div class="wishlist">
                     <div class="wishlist__item">
                         <a href="#">
-                            <img src="../assets/wishlist10.jpeg" alt="">
+                            <img src="{{ '../assets/wishlist10.jpeg' | asset_url }}" alt="">
                         </a>
                         <span>UG-5 国産 半生讃岐うどん「うどん丸」</span>
                         <p>5,400円(税込)</p>
                     </div>
                     <div class="wishlist__item">
                         <a href="#">
-                            <img src="../assets/wishlist11.jpeg" alt="">
+                            <img src="{{ '../assets/wishlist11.jpeg' | asset_url }}" alt="">
                         </a>
                         <span>HP-7A 半生讃岐石丸うどん9人前セット つゆ...</span>
                         <p>1,890円(税込)</p>
@@ -518,11 +548,11 @@
         <div class="buy__often">
             <h2><span>通</span>常購入</h2>
             <div class="reviewRateStar">
-                <img src="../assets/starIcon.png" alt="">
-                <img src="../assets/starIcon.png" alt="">
-                <img src="../assets/starIcon.png" alt="">
-                <img src="../assets/starIcon.png" alt="">
-                <img src="../assets/starIcon.png" alt="">
+                <img src="{{ '../assets/starIcon.png' | asset_url }}" alt="">
+                <img src="{{ '../assets/starIcon.png' | asset_url }}" alt="">
+                <img src="{{ '../assets/starIcon.png' | asset_url }}" alt="">
+                <img src="{{ '../assets/starIcon.png' | asset_url }}" alt="">
+                <img src="{{ '../assets/starIcon.png' | asset_url }}" alt="">
                 <p>(9件) 【　商品番号　0963 】</p>
             </div>
             <div class="into__money">
@@ -531,13 +561,14 @@
             </div>
             <div class="option">
                 <select>
-                   <option >--- 包装(必須) ---</option>
+                    <option>--- 包装(必須) ---</option>
                     <option selected>1、包装なし</option>
                     <option>2、簡易包装のみ [表書・名入れ不可]</option>
                     <option>6、新デザインかけ紙【い】[あさの葉]</option>
                     <option>7、新デザインかけ紙【ろ】[ベーシック]</option>
                     <option>8、新デザインかけ紙【は】[うどんシルエット]</option>
-                    <option> : 3、完全包装[有料](+50円)</option>\
+                    <option> : 3、完全包装[有料](+50円)</option>
+                    \
                 </select>
                 <select>
                     <option>--- 表書(必須) ---</option>
@@ -557,10 +588,15 @@
                     <option value="37、寿[蝶結]/長寿祝いなど|0" disabled="">37、寿[蝶結]/長寿祝いなど</option>
                     <option value="38、寿[結切10本]/結婚などのお返し|0" disabled="">38、寿[結切10本]/結婚などのお返し</option>
                     <option value="42、御挨拶|0" disabled="">42、御挨拶</option>
-                    <option value="56、御祝[蝶結]/出産・入学・新築祝いなど|0" disabled="">56、御祝[蝶結]/出産・入学・新築祝いなど</option>
+                    <option value="56、御祝[蝶結]/出産・入学・新築祝いなど|0" disabled="">56、御祝[蝶結]/出産・入学・新築祝いなど
+                    </option>
                     <option value="57、御祝[結切10本]/結婚など|0" disabled="">57、御祝[結切10本]/結婚など</option>
-                    <option value="58、内祝[蝶結]/出産・入学・新築祝いのお返し|0" disabled="">58、内祝[蝶結]/出産・入学・新築祝いのお返し</option>
-                    <option value="59、内祝[結切5本]/病気などの御見舞いのお返し|0" disabled="">59、内祝[結切5本]/病気などの御見舞いのお返し</option>
+                    <option value="58、内祝[蝶結]/出産・入学・新築祝いのお返し|0" disabled="">
+                        58、内祝[蝶結]/出産・入学・新築祝いのお返し
+                    </option>
+                    <option value="59、内祝[結切5本]/病気などの御見舞いのお返し|0" disabled="">
+                        59、内祝[結切5本]/病気などの御見舞いのお返し
+                    </option>
                     <option value="60、内祝[結切10本]/結婚などのお返し|0" disabled="">60、内祝[結切10本]/結婚などのお返し</option>
                     <option value="61、御供[黄のし]|0" disabled="">61、御供[黄のし]</option>
                     <option value="62、御供[蓮のし]|0" disabled="">62、御供[蓮のし]</option>
@@ -589,30 +625,32 @@
                 <span>包丁切り</span>
                 <ul>
                     <li>★保存料不使用,賞味期限1か月</li>
-                    <li>★テストするモノ批評誌 <span>「MONOQLO」</span> 2023年3月号で「感動の安くて良いモノ」<span>ベストバリュー</span>に選ばれました！</li>
+                    <li>★テストするモノ批評誌 <span>「MONOQLO」</span> 2023年3月号で「感動の安くて良いモノ」<span>ベストバリュー</span>に選ばれました！
+                    </li>
                 </ul>
-                <p>厳選した小麦粉を使用し、保存料不使用でつくりました。 うどん本来の味を楽しめる、素材勝負の自信作。讃岐伝統の手打式製法で打ち上げた半生麺です。</p>
+                <p>厳選した小麦粉を使用し、保存料不使用でつくりました。
+                    うどん本来の味を楽しめる、素材勝負の自信作。讃岐伝統の手打式製法で打ち上げた半生麺です。</p>
                 <ul class="detail__description">
-                    <li>60人前 </li>
+                    <li>60人前</li>
                     <li>内容量：300g（3人前）×20袋</li>
                     <li>賞味期限：製造より1か月（保存料不使用</li>
                     <li>ゆで時間：15分（ざる）</li>
                 </ul>
                 <p>※めんつゆは付いておりません。</p>
-                <div class="detail__image-sp" >
-                    <img src="../assets/detail1.png" alt="">
-                    <img src="../assets/detail2.png" alt="">
+                <div class="detail__image-sp">
+                    <img src="{{ '../assets/detail1.png' | asset_url }}" alt="">
+                    <img src="{{ '../assets/detail2.png' | asset_url }}" alt="">
                 </div>
-                <img src="../assets/detail3.png" alt="">
-                <img src="../assets/detail4.png" alt="">
-                <img src="../assets/imgDetailSp.jpeg" alt="">
+                <img src="{{ '../assets/detail3.png' | asset_url }}" alt="">
+                <img src="{{ '../assets/detail4.png' | asset_url }}" alt="">
+                <img src="{{ '../assets/imgDetailSp.jpeg' | asset_url }}" alt="">
                 <p style="font-size: 11px">1箱に20袋入っております。</p>
-                <img src="../assets/imgDetailSp2.jpeg" alt="">
+                <img src="{{ '../assets/imgDetailSp2.jpeg' | asset_url }}" alt="">
                 <p>こちらの箱でお届けいたします。</p>
                 <p>箱にのし・包装ができます。</p>
                 <div class="cart__shopping-sp">
                     <span>紙袋：最適サイズ</span>
-                <img src="../assets/icon-cart.png" alt="shopping cart">
+                    <img src="{{ '../assets/icon-cart.png' | asset_url }}" alt="shopping cart">
                 </div>
                 <div class="see__more">
                     <p>→紙袋（大サイズ）はこちら</p>
@@ -628,43 +666,43 @@
                 </ul>
                 <p>※このとき差し水は絶対しないでください。（火を弱めると吹き零れは収まります）</p>
             </div>
-            <img src="../assets/banner-ads.png" alt="banner" class="banner__ads">
+            <img src="{{ '../assets/banner-ads.png' | asset_url }}" alt="banner" class="banner__ads">
             <div>
                 <h2><span>最</span>近チェックした商品はこちら</h2>
                 <div class="wishlist ">
                     <div class="wishlist__item wishlist__item-sp">
                         <a href="#">
-                            <img src="../assets/wishlist11.jpeg" alt="">
+                            <img src="{{ '../assets/wishlist11.jpeg' | asset_url }}" alt="">
                         </a>
                         <p>HP-24 半生讃岐石丸うどん24人前セット つゆ付【送料込※】</p>
                     </div>
                     <div class="wishlist__item wishlist__item-sp">
                         <a href="#">
-                            <img src="../assets/wishlist6.jpeg" alt="">
+                            <img src="{{ '../assets/wishlist6.jpeg' | asset_url }}" alt="">
                         </a>
                         <p>HP-15B 半生讃岐石丸うどん15人前セット（つゆ付）</p>
                     </div>
                     <div class="wishlist__item wishlist__item-sp">
                         <a href="#">
-                            <img src="../assets/wishlist1.jpeg" alt="">
+                            <img src="{{ '../assets/wishlist1.jpeg' | asset_url }}" alt="">
                         </a>
                         <p>HP-15A 半生讃岐石丸うどん15人前セット（麺のみ）</p>
                     </div>
                     <div class="wishlist__item wishlist__item-sp">
                         <a href="#">
-                            <img src="../assets/wishlist4.jpeg" alt="">
+                            <img src="{{ '../assets/wishlist4.jpeg' | asset_url }}" alt="">
                         </a>
                         <p>HP-15A 半生讃岐石丸うどん15人前セット（麺のみ）</p>
                     </div>
                     <div class="wishlist__item wishlist__item-sp">
                         <a href="#">
-                            <img src="../assets/wishlist8.jpeg" alt="">
+                            <img src="{{ '../assets/wishlist8.jpeg' | asset_url }}" alt="">
                         </a>
                         <p>HP-15A 半生讃岐石丸うどん15人前セット（麺のみ）</p>
                     </div>
                     <div class="wishlist__item wishlist__item-sp">
                         <a href="#">
-                            <img src="../assets/wishlist10.jpeg" alt="">
+                            <img src="{{ '../assets/wishlist10.jpeg' | asset_url }}" alt="">
                         </a>
                         <p>HP-15A 半生讃岐石丸うどん15人前セット（麺のみ）</p>
                     </div>
@@ -678,11 +716,16 @@
                         <div class="review__title-Sp">
                             <p>クロちゃんママ</p>
                             <div>
-                                <img class="star__icon" src="../assets/starIcon.png" alt="startIcon">
-                                <img class="star__icon" src="../assets/starIcon.png" alt="startIcon">
-                                <img class="star__icon" src="../assets/starIcon.png" alt="startIcon">
-                                <img class="star__icon" src="../assets/starIcon.png" alt="startIcon">
-                                <img class="star__icon" src="../assets/starIcon.png" alt="startIcon">
+                                <img class="star__icon" src="{{ '../assets/starIcon.png' | asset_url }}"
+                                     alt="startIcon">
+                                <img class="star__icon" src="{{ '../assets/starIcon.png' | asset_url }}"
+                                     alt="startIcon">
+                                <img class="star__icon" src="{{ '../assets/starIcon.png' | asset_url }}"
+                                     alt="startIcon">
+                                <img class="star__icon" src="{{ '../assets/starIcon.png' | asset_url }}"
+                                     alt="startIcon">
+                                <img class="star__icon" src="{{ '../assets/starIcon.png' | asset_url }}"
+                                     alt="startIcon">
                             </div>
                         </div>
                         <div>
@@ -701,11 +744,16 @@
                         <div class="review__title-Sp">
                             <p>クロちゃんママ</p>
                             <div>
-                                <img class="star__icon" src="../assets/starIcon.png" alt="startIcon">
-                                <img class="star__icon" src="../assets/starIcon.png" alt="startIcon">
-                                <img class="star__icon" src="../assets/starIcon.png" alt="startIcon">
-                                <img class="star__icon" src="../assets/starIcon.png" alt="startIcon">
-                                <img class="star__icon" src="../assets/starIcon1_off.png" alt="startIcon">
+                                <img class="star__icon" src="{{ '../assets/starIcon.png' | asset_url }}"
+                                     alt="startIcon">
+                                <img class="star__icon" src="{{ '../assets/starIcon.png' | asset_url }}"
+                                     alt="startIcon">
+                                <img class="star__icon" src="{{ '../assets/starIcon.png' | asset_url }}"
+                                     alt="startIcon">
+                                <img class="star__icon" src="{{ '../assets/starIcon.png' | asset_url }}"
+                                     alt="startIcon">
+                                <img class="star__icon" src="{{ '../assets/starIcon1_off.png' | asset_url }}"
+                                     alt="startIcon">
                             </div>
                         </div>
                         <div>
@@ -721,11 +769,16 @@
                         <div class="review__title-Sp">
                             <p>クロちゃんママ</p>
                             <div>
-                                <img class="star__icon" src="../assets/starIcon.png" alt="startIcon">
-                                <img class="star__icon" src="../assets/starIcon.png" alt="startIcon">
-                                <img class="star__icon" src="../assets/starIcon.png" alt="startIcon">
-                                <img class="star__icon" src="../assets/starIcon.png" alt="startIcon">
-                                <img class="star__icon" src="../assets/starIcon.png" alt="startIcon">
+                                <img class="star__icon" src="{{ '../assets/starIcon.png' | asset_url }}"
+                                     alt="startIcon">
+                                <img class="star__icon" src="{{ '../assets/starIcon.png' | asset_url }}"
+                                     alt="startIcon">
+                                <img class="star__icon" src="{{ '../assets/starIcon.png' | asset_url }}"
+                                     alt="startIcon">
+                                <img class="star__icon" src="{{ '../assets/starIcon.png' | asset_url }}"
+                                     alt="startIcon">
+                                <img class="star__icon" src="{{ '../assets/starIcon.png' | asset_url }}"
+                                     alt="startIcon">
                             </div>
                         </div>
                         <div>
@@ -733,7 +786,8 @@
                         </div>
                     </div>
                     <div class="review__content">
-                        <p>乾麺とはひと味違った食感。釜揚げ、出汁、ザル何れでも美味しく食べています。1袋3人前ですが、我が家では2人で食べるのに丁度良い量です。</p>
+                        <p>
+                            乾麺とはひと味違った食感。釜揚げ、出汁、ザル何れでも美味しく食べています。1袋3人前ですが、我が家では2人で食べるのに丁度良い量です。</p>
                     </div>
                 </div>
                 <div class="review__item">
@@ -741,11 +795,16 @@
                         <div class="review__title-Sp">
                             <p>クロちゃんママ</p>
                             <div>
-                                <img class="star__icon" src="../assets/starIcon.png" alt="startIcon">
-                                <img class="star__icon" src="../assets/starIcon.png" alt="startIcon">
-                                <img class="star__icon" src="../assets/starIcon.png" alt="startIcon">
-                                <img class="star__icon" src="../assets/starIcon.png" alt="startIcon">
-                                <img class="star__icon" src="../assets/starIcon.png" alt="startIcon">
+                                <img class="star__icon" src="{{ '../assets/starIcon.png' | asset_url }}"
+                                     alt="startIcon">
+                                <img class="star__icon" src="{{ '../assets/starIcon.png' | asset_url }}"
+                                     alt="startIcon">
+                                <img class="star__icon" src="{{ '../assets/starIcon.png' | asset_url }}"
+                                     alt="startIcon">
+                                <img class="star__icon" src="{{ '../assets/starIcon.png' | asset_url }}"
+                                     alt="startIcon">
+                                <img class="star__icon" src="{{ '../assets/starIcon.png' | asset_url }}"
+                                     alt="startIcon">
                             </div>
                         </div>
                         <div>
@@ -761,11 +820,16 @@
                         <div class="review__title-Sp">
                             <p>クロちゃんママ</p>
                             <div>
-                                <img class="star__icon" src="../assets/starIcon.png" alt="startIcon">
-                                <img class="star__icon" src="../assets/starIcon.png" alt="startIcon">
-                                <img class="star__icon" src="../assets/starIcon.png" alt="startIcon">
-                                <img class="star__icon" src="../assets/starIcon.png" alt="startIcon">
-                                <img class="star__icon" src="../assets/starIcon.png" alt="startIcon">
+                                <img class="star__icon" src="{{ '../assets/starIcon.png' | asset_url }}"
+                                     alt="startIcon">
+                                <img class="star__icon" src="{{ '../assets/starIcon.png' | asset_url }}"
+                                     alt="startIcon">
+                                <img class="star__icon" src="{{ '../assets/starIcon.png' | asset_url }}"
+                                     alt="startIcon">
+                                <img class="star__icon" src="{{ '../assets/starIcon.png' | asset_url }}"
+                                     alt="startIcon">
+                                <img class="star__icon" src="{{ '../assets/starIcon.png' | asset_url }}"
+                                     alt="startIcon">
                             </div>
                         </div>
                         <div>
@@ -773,7 +837,8 @@
                         </div>
                     </div>
                     <div class="review__content">
-                        <p>先日高松の友人から石丸うどんを頂いた。久しぶりに美味しかったので、自分用に初めて注文した。半生でこれだけの味であれば、東京では中々味わえない本格的なうどんでした。また注文します。</p>
+                        <p>
+                            先日高松の友人から石丸うどんを頂いた。久しぶりに美味しかったので、自分用に初めて注文した。半生でこれだけの味であれば、東京では中々味わえない本格的なうどんでした。また注文します。</p>
                     </div>
                 </div>
                 <div class="review__item">
@@ -781,11 +846,16 @@
                         <div class="review__title-Sp">
                             <p>クロちゃんママ</p>
                             <div>
-                                <img class="star__icon" src="../assets/starIcon.png" alt="startIcon">
-                                <img class="star__icon" src="../assets/starIcon.png" alt="startIcon">
-                                <img class="star__icon" src="../assets/starIcon1_off.png" alt="startIcon">
-                                <img class="star__icon" src="../assets/starIcon1_off.png" alt="startIcon">
-                                <img class="star__icon" src="../assets/starIcon1_off.png" alt="startIcon">
+                                <img class="star__icon" src="{{ '../assets/starIcon.png' | asset_url }}"
+                                     alt="startIcon">
+                                <img class="star__icon" src="{{ '../assets/starIcon.png' | asset_url }}"
+                                     alt="startIcon">
+                                <img class="star__icon" src="{{ '../assets/starIcon1_off.png' | asset_url }}"
+                                     alt="startIcon">
+                                <img class="star__icon" src="{{ '../assets/starIcon1_off.png' | asset_url }}"
+                                     alt="startIcon">
+                                <img class="star__icon" src="{{ '../assets/starIcon1_off.png' | asset_url }}"
+                                     alt="startIcon">
                             </div>
                         </div>
                         <div>
@@ -805,20 +875,20 @@
                         <button>レビューを書く</button>
                     </div>
                     <h2><span>こ</span>の商品をシェア</h2>
-                   <div class="media__contact-sp">
-                       <div class="twitter">
-                           <p><i class="fa-brands fa-twitter"></i>
-                               ツイート</p>
-                       </div>
-                       <div class="like">
-                           <p>
-                               <i class="fa-solid fa-thumbs-up"></i>
-                               Like
-                           </p>
-                       </div>
-                   </div>
+                    <div class="media__contact-sp">
+                        <div class="twitter">
+                            <p><i class="fa-brands fa-twitter"></i>
+                                ツイート</p>
+                        </div>
+                        <div class="like">
+                            <p>
+                                <i class="fa-solid fa-thumbs-up"></i>
+                                Like
+                            </p>
+                        </div>
+                    </div>
                 </div>
-                <div  class="trend__sp">
+                <div class="trend__sp">
                     <h2>あなたにおすすめの商品はこちら</h2>
                     <div class="wishlist ">
                         <div class="wishlist__item wishlist__item-sp">
@@ -908,3 +978,22 @@
         </div>
     </div>
 </section>
+{% schema %}
+{
+  "name": "main-product-detail",
+  "settings": [],
+  "blocks": [
+    {
+      "name": "thumbnails-image",
+      "type": "thumbnails-image",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

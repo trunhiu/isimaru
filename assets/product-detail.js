@@ -23,25 +23,20 @@ document.addEventListener("DOMContentLoaded",function (){
         { src: '../assets/mainImg21.jpeg', alt: 'Image 21' },
         { src: '../assets/mainImg22.jpeg', alt: 'Image 22' },
     ];
-    function handleImage(mainImage, thumbnails) {
-        const mainImg = document.getElementById(mainImage);
-        const thumbnailContainer = document.querySelector(thumbnails);
+    const handleImage = () => {
+        const mainImg = document.getElementById("main-image");
+        console.log(mainImg)
+        const thumbnail = document.querySelectorAll(".thumbnails img");
 
-        console.log(images[0].src)
-        mainImg.src = images[0].src;
-
-        images.slice(1).forEach((image) => {
-            const thumbnailEl = document.createElement('img');
-            thumbnailEl.classList.add('thumbnail');
-            thumbnailEl.dataset.src = image.src;
-            thumbnailEl.src = image.src;
-            thumbnailContainer.appendChild(thumbnailEl);
-
-            thumbnailEl.addEventListener('mouseover', () => {
-                mainImg.src = thumbnailEl.dataset.src;
+        thumbnail.forEach((image) => {
+            image.addEventListener('mouseover', () => {
+                mainImg.src = image.src;
             });
         });
+        mainImg.src = thumbnail[0].src;
     }
+    handleImage();
+
 
 
 
@@ -100,7 +95,6 @@ document.addEventListener("DOMContentLoaded",function (){
 
     // intervalId = setInterval(showNextSlide, 3000);
 
-    handleImage('main-image', '.thumbnails');
     const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
     const containerPc = document.querySelector(".container")
     const containerSp = document.querySelector(".container-Sp")
