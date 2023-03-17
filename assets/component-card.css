@@ -443,7 +443,7 @@ h2,p,span {
   color: #992927;
   font-weight: bold;
 }
-@media screen and (max-width: 756px){
+@media screen and (max-width: 992px){
   .featured-main {
     grid-template-columns: repeat(2, 1fr);
     gap: 0;

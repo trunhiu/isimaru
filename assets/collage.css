@@ -567,10 +567,11 @@
   opacity: 0.6;
 }
 
-@media screen and (max-width: 756px) {
+@media screen and (max-width: 992px) {
   .ranking-item-image img:first-child {
     border: none;
     width: 50px;
+    margin: 0 auto;
   }
   .ranking-container {
     display: flex;
