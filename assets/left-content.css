@@ -793,7 +793,7 @@
     }
 }
 
-@media screen and (max-width: 756px) {
+@media screen and (max-width: 992px) {
     .left-content-side_link {
         display: flex;
         flex-wrap: wrap;

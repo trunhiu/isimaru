@@ -78,7 +78,7 @@ ul.breadcrumb li a:hover {
     width: 23%;
 }
 .product__item .product__image {
-    width: 207px;
+    max-width: 207px;
 }
 .product__item .product__image a img {
     border: 1px solid #ddd;

@@ -970,7 +970,8 @@
     </div>
 </section>
 <script>
-    const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+    const isTablet = window.innerWidth <= 992;
+    console.log(isTablet)
     const isDesktop = !/Mobile|Tablet/i.test(navigator.userAgent);
     const message = document.querySelector('.scroll-message');
     const windowHeight = window.innerHeight;
@@ -982,13 +983,13 @@
     const orderfooterSmartphone = document.querySelector(".order__footer-smartphone")
     let scrollPosition = window.scrollY;
     let messagePosition = message.getBoundingClientRect().top;
-    window.addEventListener("DOMContentLoaded", function () {
+    const responsive = () => {
         const footer = document.querySelector(".footer");
         if (window.location.href.indexOf("pages/client-order") > -1) {
             footer.innerHTML = `<p class="footer__clientOrder">Copyright (c) 石丸製麺オンラインストア All Rights Reserved.</p>`
         }
         const paymentBox = document.getElementById("payment_box");
-        if(isMobile) {
+        if(isTablet) {
             message.classList.remove("messagePc");
             message.classList.add("messageSp");
             message.innerHTML = `残り必須項目<span class="sC">11</span>個`;
@@ -1003,8 +1004,7 @@
             paymentBox.classList.add("hide");
             addressShip.classList.remove("hide");
             orderfooterSmartphone.classList.remove("hide")
-        }
-        if(isDesktop){
+        }else {
             window.addEventListener('scroll', function () {
                 scrollPosition = window.scrollY;
                 messagePosition = message.getBoundingClientRect().top;
@@ -1018,6 +1018,9 @@
                 }
             });
         }
+    }
+    window.addEventListener("resize",responsive)
+    window.addEventListener("DOMContentLoaded", function () {
     })
 
 

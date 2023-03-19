@@ -26,7 +26,7 @@
 <cart-items class="{% if cart == empty %} is-empty{% else %} section-{{ section.id }}-padding{% endif %}">
     <div class="cart__shopping">
         {% render "left-content" %}
-        <div>
+        <div class="cart__pc">
             <h2><span>買</span>い物カゴ</h2>
             <table class="table__cart">
                 <tr class="title__table-cart">
@@ -160,22 +160,9 @@
         </div>
         <hr>
     </div>
-    <div class="cart__sp hide">
+    <div class="cart__sp">
         <img src="{{ '../assets/btn_member.jpeg' | asset_url }}" alt="">
         <h2><span>カ</span>ートに入っている商品</h2>
-        <div class="btnWrap">
-            <button>　ご購入手続きへ進む >>　</button>
-            <div class="clear__back">
-                <button>
-                    <i class="fa-solid fa-house"></i>
-                    買い物に戻る
-                </button>
-                <button>
-                    <i class="fa-solid fa-trash-can"></i>
-                    かごの中身を空にする
-                </button>
-            </div>
-        </div>
         <div class="cart__list">
             <div class="cart__item-sp">
                 <div class="cart__item-image">
@@ -242,6 +229,19 @@
             <div class="price__sp">
                 <p>合計金額（税込）：</p>
                 <span>53,200円</span>
+            </div>
+            <div class="btnWrap">
+                <button>　ご購入手続きへ進む >>　</button>
+                <div class="clear__back">
+                    <button>
+                        <i class="fa-solid fa-house"></i>
+                        買い物に戻る
+                    </button>
+                    <button>
+                        <i class="fa-solid fa-trash-can"></i>
+                        かごの中身を空にする
+                    </button>
+                </div>
             </div>
         </div>
     </div>

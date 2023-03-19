@@ -61,11 +61,11 @@
             </div>
         </div>
         {% render "filter-action" %}
-        <div class="product__list">
+        <div class="product__list-shopbrand">
             {% for block in section.blocks %}
                 {% if block.type == 'product-list' %}
-                    <div class="product__item">
-                        <div class="product__image">
+                    <div class="product__item-shopbrand">
+                        <div class="product__image-shopbrand">
                             <a href="#">
                                 <img src="{{ block.settings.image | img_url: "original" }}"
                                      alt="{{ block.settings.title }}">
@@ -134,7 +134,6 @@
     const categoryPc = document.querySelector(".category__pc");
     const filterAction = document.querySelector(".filter__action");
     const filterDetailSp = document.querySelector(".filter__detail-Sp")
-    const leftContent = document.querySelector(".left-content")
     const moreBtn = document.querySelector(".more-btn")
     const paginateBrand = document.querySelector(".paginate-brand")
     if (isMobile) {
