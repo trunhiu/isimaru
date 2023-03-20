@@ -48,9 +48,11 @@ h2, span, p {
 .container {
     max-width: 960px;
     margin: 30px auto;
+    padding: 0 10px;
 }
 .order__title-image {
     text-align: center;
+    margin: 40px 0;
 }
 .order__title-image img:first-child {
     max-width: 850px;
@@ -221,9 +223,13 @@ hr {
     border-radius: 4px;
     padding: 5px 10px;
     font-size: 16px;
+    margin: 20px 0;
 }
 .error__btn button  i {
     font-size: 24px;
+}
+.error__btn button:hover {
+    opacity: 0.8;
 }
 .scroll-message {
     position: fixed;
@@ -245,6 +251,7 @@ hr {
 .messageSp {
     bottom: 0;
     left: 0;
+    top: auto !important;
     right: 0;
     padding-bottom: 15px;
 }
@@ -296,10 +303,14 @@ table {
 .calendar-month img{
     width: 20px;
 }
-@media screen and (max-width: 456px) {
-    .container {
-        padding: 0 10px;
+.responsiveSpShowClient {
+    display: none;
+}
+@media screen and (max-width: 765px) {
+    .responsiveSpShowClient {
+        display: block;
     }
+
     table {
         font-size: 14px;
     }
@@ -329,5 +340,8 @@ table {
     }
     .error__btn {
         margin-bottom: 40px;
+    }
+    .messagePc {
+
     }
 }

@@ -636,6 +636,7 @@
     }
     .web_fb-content1 {
         margin: 0;
+      width: auto;
     }
     .web_fb-content2 {
         margin: 20px auto;

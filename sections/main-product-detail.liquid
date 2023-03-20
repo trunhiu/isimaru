@@ -10,11 +10,10 @@
                 <li>UG-5 国産 半生讃岐うどん「うどん丸」</li>
             </ul>
             <div class="prev-next">
-            <span>
-                <i class="fa-solid fa-chevron-left"></i>
-                前の商品</span>
-                <span>次の商品
-            <i class="fa-solid fa-chevron-right"></i></span>
+                <a href="#"><span><i class="fa-solid fa-chevron-left"></i>
+                前の商品</span></a>
+                <a href="/cart"><span>次の商品
+            <i class="fa-solid fa-chevron-right"></i></span></a>
             </div>
         </div>
         <div class="detail">
@@ -527,23 +526,18 @@
     <div class="container-Sp">
         <div class="directional">
             <ul class="breadcrumb">
-                <li><a href="">トップ</a></li>
-                <li><a href="">ギフト・詰合せ</a></li>
-                <li>UG-5 国産 半生讃岐うどん「うどん丸」</li>
+                <li>半生うどん</li>
+                <li>半生讃岐石丸うどん包丁切り（20袋）</li>
             </ul>
-            <div class="prev-next">
-            <span>
-                <i class="fa-solid fa-chevron-left"></i>
-                前の商品</span>
-                <span>次の商品
-            <i class="fa-solid fa-chevron-right"></i></span>
-            </div>
+            <h2>半生讃岐石丸うどん包丁切り（20袋）</h2>
         </div>
         <div class="slider">
-            <div class="slider-container"></div>
-            <div class="dots-container"></div>
-            <button class="prev-btn">&lt;</button>
-            <button class="next-btn">&gt;</button>
+            <div class="slider-container">
+                {% for block in section.blocks %}
+                    <img src="{{ block.settings.image | img_url: "original" }}"
+                         alt="{{ block.settings.title }}">
+                {% endfor %}
+            </div>
         </div>
         <div class="buy__often">
             <h2><span>通</span>常購入</h2>

@@ -552,3 +552,11 @@ hr {
         width: 60%;
     }
 }
+@media screen and (max-width: 400px) {
+    .clear__back {
+        flex-direction: column;
+    }
+    .cart__sp .btnWrap > button {
+        font-size: 13px;
+    }
+}

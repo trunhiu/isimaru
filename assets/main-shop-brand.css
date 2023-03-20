@@ -181,7 +181,9 @@ table th {
     background: none;
     padding: 10px;
 }
-
+.filter__action {
+    display: none;
+}
 @media screen and (max-width: 992px) {
     #shop-brand {
         flex-direction: column-reverse;

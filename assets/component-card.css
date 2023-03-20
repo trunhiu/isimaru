@@ -449,9 +449,18 @@ h2,p,span {
     gap: 0;
     column-gap: 10px;
   }
+  .featured-item {
+    margin-left: 6%;
+  }
+}
+@media screen and (max-width: 756px) {
+  .featured-item {
+    margin-left: 0;
+  }
 }
 @media screen and (max-width: 456px) {
   .feature__list-product {
     display: none;
   }
+
 }
