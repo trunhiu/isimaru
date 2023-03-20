@@ -60,6 +60,10 @@ ul.breadcrumb li a:hover {
 .image-container {
     position: relative;
 }
+.image-container img:hover {
+    opacity: 0.8;
+    cursor: pointer;
+}
 #main-image {
     max-width: 480px;
     height: 480px;
@@ -116,6 +120,10 @@ ul.breadcrumb li a:hover {
     border-bottom: 1px dotted #ccc;
     border-top: 1px dotted #ccc;
 }
+.detail__info-note img:hover {
+    opacity: 0.8;
+    cursor: pointer;
+}
 .detail__info-note > span {
     background:#092679;
     color: white;
@@ -145,6 +153,10 @@ ul.breadcrumb li a:hover {
 }
 .detail__image img{
     width: 210px;
+    cursor: pointer;
+}
+.detail__image img:hover {
+    opacity: 0.8;
 }
 .count__price input{
     width: 20px;
@@ -414,7 +426,7 @@ ul.breadcrumb li a:hover {
     right: 10px;
 }
 .buy__often {
-    padding: 0 10px;
+    padding: 40px 10px;
 }
 .buy__often h2{
     text-align: center;
@@ -692,4 +704,7 @@ slick-prev {
 .slick-prev:before, .slick-next:before {
     color: gray;
     font-size: 25px;
+}
+.slick-initialized .slick-slide {
+    height: 400px;
 }
