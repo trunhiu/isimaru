@@ -147,7 +147,6 @@
   },
   "order": [
     "slide-show",
-    "image_banner",
     "featured_collection",
     "collage",
     "video",

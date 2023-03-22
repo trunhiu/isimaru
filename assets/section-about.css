@@ -12,7 +12,7 @@ img {
     justify-content: center;
 }
 .about__slogan {
-    width: 920px;
+    max-width: 920px;
 }
 
 ul.breadcrumb {
@@ -303,4 +303,9 @@ ul.breadcrumb li a:hover {
 .important__item-textSp {
     background: rgba(255, 255, 255, 0.7);
     margin: 45px 30px;
+}
+@media screen and (max-width: 992px){
+    .page__about {
+        flex-direction: column-reverse;
+    }
 }

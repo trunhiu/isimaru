@@ -1,9 +1,6 @@
 .container {
     max-width: 1200px;
-    margin-right: auto;
-    margin-left: auto;
-    padding-right: 15px;
-    padding-left: 15px;
+    margin: auto;
     width: 100%;
 }
 ul {
@@ -215,4 +212,12 @@ img {
 }
 .list__sp-red p{
     color: #8b1616 !important;
+}
+@media screen and (max-width: 992px) {
+    .sp {
+        display: block;
+    }
+    .row{
+        display: none;
+    }
 }

@@ -210,17 +210,12 @@ if (!customElements.get('cart-note')) {
       }
   });
 };
-const cartShopping = document.querySelector(".cart__shopping")
 const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
 const btnWrap = document.querySelector(".btnWrap")
 const contentForLayout = document.querySelector(".content-for-layout")
 const feature = document.querySelector(".feature__list-product")
-const cartItemSp = document.querySelector(".cart__sp")
 if(isMobile){
-  cartShopping.classList.add("hide");
   btnWrap.classList.add("hide");
   contentForLayout.classList.remove("page-width")
   feature.classList.add("hide")
-  cartItemSp.classList.remove("hide")
-  cartItemSp.classList.add("show")
 }

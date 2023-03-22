@@ -519,6 +519,7 @@
 }
 
 .web_fb-content1 {
+  width: 50%;
   max-height: 310px;
   border: 5px solid #ece3d5;
   margin-right: 40px;
@@ -532,8 +533,11 @@
   font-family: Avenir, "Open Sans", "Helvetica Neue", Helvetica, Arial, Verdana, Roboto, 游ゴシック, "Yu Gothic", 游ゴシック体, YuGothic, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", メイリオ, Meiryo, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
   line-height: 1.6;
 }
-
+.web_fb-content2 {
+  width: 50%;
+}
 .web_fb-content2 a img {
+  max-width: 446px;
   object-fit: cover;
 }
 
@@ -564,4 +568,80 @@
 
 .top-banner-item img:hover {
   opacity: 0.6;
+}
+/*Responsive*/
+.responsiveShowBody {
+  display: none;
+}
+.responsiveHideBody {
+  display: block;
+}
+@media  screen and (max-width: 992px) {
+  .ranking-container {
+    display: flex;
+    padding: 0 10px;
+    flex-direction: column-reverse;
+  }
+  .ranking-item-detail p {
+    height: 80px;
+  }
+}
+@media screen and (max-width: 756px) {
+  .responsiveShowBody {
+    display: block;
+  }
+  .responsiveHideBody {
+    display: none;
+  }
+  .ranking-item-image img:first-child {
+    border: none;
+    width: 50px;
+    margin: 0 auto;
+  }
+  .ranking-all-item {
+    grid-template-columns: repeat(3, 1fr);
+    padding-left: 10px;
+  }
+  .ranking-item-image {
+    text-align: center;
+  }
+  .recommend-all-item {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .ranking-content-bottom,
+  .ranking-content-bottom a,
+  .ranking-item-detail p,
+  .ranking-item-detail .ranking-item-name a,
+  .top-review-comment-top a,
+  .review-table-comment,
+  .web_fb-content1 p{
+    font-size: 11px;
+  }
+  .ranking-item-detail p {
+    height: 40px;
+  }
+  .noodle-content {
+      flex-wrap: wrap;
+  }
+  .noodle-item {
+      width: 35%;
+  }
+    .instagram-area {
+        column-gap:5px;
+        row-gap: 5px;
+    }
+    .web_fb{
+        flex-direction: column;
+        padding: 0 10px;
+    }
+    .web_fb-content1 {
+        margin: 0;
+      width: auto;
+    }
+    .web_fb-content2 {
+        margin: 20px auto;
+    }
+}
+@media screen and (max-width: 456px){
+
 }

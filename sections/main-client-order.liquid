@@ -69,7 +69,7 @@
                             cellpadding="1">
                         <tbody>
                         <tr bgcolor="#ffffff">
-                            <td width="300">
+                            <td>
                                 <p class="nameItem">
                                     【名入れ】と【外のし希望】　(例→石丸　外のし）　完全包装でのしをつける場合、基本は「内のし」です
                                 </p>
@@ -213,7 +213,7 @@
                 </td>
             </tr>
             <tr>
-                <td bgcolor="#FFFFFF" class="responsiveSpShow hide">
+                <td bgcolor="#FFFFFF" class="responsiveSpShowClient">
                     <div class="open"><i class="fa-solid fa-lock"></i>ショップの会員としてログイン</div>
                 </td>
                 <td width="30%" align="center" class="member responsiveDesignHide">ショップ会員</td>
@@ -970,7 +970,7 @@
     </div>
 </section>
 <script>
-    const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+    const isMobile = window.innerWidth <= 456;
     const isDesktop = !/Mobile|Tablet/i.test(navigator.userAgent);
     const message = document.querySelector('.scroll-message');
     const windowHeight = window.innerHeight;
@@ -988,38 +988,39 @@
             footer.innerHTML = `<p class="footer__clientOrder">Copyright (c) 石丸製麺オンラインストア All Rights Reserved.</p>`
         }
         const paymentBox = document.getElementById("payment_box");
-        if(isMobile) {
-            message.classList.remove("messagePc");
-            message.classList.add("messageSp");
-            message.innerHTML = `残り必須項目<span class="sC">11</span>個`;
-            orderImageSp.src = `{{ '../assets/order_title_image_smartphone.gif' | asset_url }}`;
-            orderImageSp.style.maxWidth = `400px`
-            orderImageStepSp.src = `{{ '../assets/step1.svg' | asset_url }};`
-            orderImageStepSp.style.maxWidth = `300px`;
-            responsiveSpShow.classList.remove("hide");
-            responsiveDesignShow.forEach((item) => {
-                item.classList.remove("hide")
-            })
-            paymentBox.classList.add("hide");
-            addressShip.classList.remove("hide");
-            orderfooterSmartphone.classList.remove("hide")
-        }
-        if(isDesktop){
-            window.addEventListener('scroll', function () {
-                scrollPosition = window.scrollY;
-                messagePosition = message.getBoundingClientRect().top;
-                if (messagePosition <= windowHeight) {
-                    message.style.top = -windowHeight + 'px';
-                    setTimeout(function () {
-                        message.style.top = '30%';
-                    }, 1000);
-                } else {
-                    message.style.top = '-100%';
-                }
-            });
-        }
+        window.addEventListener('resize', function() {
+            if (window.innerWidth <= 756) {
+                message.classList.remove("messagePc");
+                message.classList.add("messageSp");
+                message.innerHTML = `残り必須項目<span class="sC">11</span>個`;
+                orderImageSp.src = `{{ '../assets/order_title_image_smartphone.gif' | asset_url }}`;
+                orderImageSp.style.maxWidth = `400px`
+                orderImageStepSp.src = `{{ '../assets/step1.svg' | asset_url }};`
+                orderImageStepSp.style.maxWidth = `300px`;
+                responsiveSpShow.classList.remove("hide");
+                responsiveDesignShow.forEach((item) => {
+                    item.classList.remove("hide")
+                })
+                paymentBox.classList.add("hide");
+                addressShip.classList.remove("hide");
+                orderfooterSmartphone.classList.remove("hide")
+            } else {
+                message.classList.add("messagePc");
+                message.classList.remove("messageSp");
+                message.innerHTML = `<span class="sC">必須項目</span>にご記入の上、<br>　次ページヘお進みください。<br>残り必須項目<span class="sC">11</span>個`
+                window.addEventListener('scroll', function () {
+                    scrollPosition = window.scrollY;
+                    messagePosition = message.getBoundingClientRect().top;
+                    if (messagePosition <= windowHeight) {
+                        message.style.top = -windowHeight + 'px';
+                        setTimeout(function () {
+                            message.style.top = '30%';
+                        }, 1000);
+                    } else {
+                        message.style.top = '-100%';
+                    }
+                });
+            }
+        });
     })
-
-
-
 </script>

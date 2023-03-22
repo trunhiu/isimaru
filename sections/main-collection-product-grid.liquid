@@ -18,701 +18,704 @@
 {%- endstyle -%}
 <div id="product">
   <div class="container">
-    <div class="product__title">
-      <ul class="breadcrumb">
-        <li>
-          <a href="#">トップ</a>
-        </li>
-        <li>
-          <a href="#">お土産・ご挨拶</a>
-        </li>
-      </ul>
-      <div class="product__title-heading">
-        <p>
-          <span>お</span>土産・ご挨拶</p>
-      </div>
-      <div class="product__bannar">
-        <img src="../assets/brigde.jpeg" alt="">
-      </div>
-    </div>
-    <div class="product__filter">
-      <div class="product__count">
-        <p>全14件</p>
-      </div>
-      <div class="product__filter-list">
-        <span>並び替え：</span>
-        <p>新着</p>
-        <p>価格</p>
-        <p>商品名</p>
-      </div>
-    </div>
-    <div class="product__list">
-      <div class="product__item">
-        <div class="product__image">
-          <a href="#">
-            <img src="../assets/item1.jpeg" alt="">
-          </a>
-          <p>KS-1 半なま讃岐しょうゆうどん</p>
+    {% render 'left-content' %}
+    <div>
+      <div class="product__title">
+        <ul class="breadcrumb">
+          <li>
+            <a href="#">トップ</a>
+          </li>
+          <li>
+            <a href="#">お土産・ご挨拶</a>
+          </li>
+        </ul>
+        <div class="product__title-heading">
+          <p>
+            <span>お</span>土産・ご挨拶</p>
         </div>
-        <div class="product__info">
-          <div class="product__price">
-            1,000円（税込）
-          </div>
-          <div class="product__info-detail">
-            <div>
-              <p>★ぶっかけうどん醤油付き</p>
-              <p>★お土産にも最適</p>
-            </div>
-            <div>
-              <p>細づくりに仕上げた半生うどんと、香川の老舗醤油屋「鎌田醤油」のうどん醤油をセットにしました。</p>
-            </div>
-            <div>
-              <p>
-                <span class="dot">●</span>4人前</p>
-              <p>
-                <span class="dot">●</span>内容量：</p>
-              <p>・半生うどん220g（2人前）×2</p>
-              <p>・ぶっかけうどん醤油20ml×4</p>
-              <p>
-                <span class="dot">●</span>賞味期限：半生うどん 製造より3か月</p>
-            </div>
-          </div>
-          <div class="button__cart">
-            <button>商品詳細はこちら</button>
-            <a href="">
-              <img src="../assets/wishlistBtn.png" alt="">
+        <div class="product__bannar">
+          <img src="{{ '../assets/brigde.jpeg' | asset_url }}" alt="">
+        </div>
+      </div>
+      <div class="product__filter">
+        <div class="product__count">
+          <p>全14件</p>
+        </div>
+        <div class="product__filter-list">
+          <span>並び替え：</span>
+          <p>新着</p>
+          <p>価格</p>
+          <p>商品名</p>
+        </div>
+      </div>
+      <div class="product__list">
+        <div class="product__item">
+          <div class="product__image">
+            <a href="#">
+              <img src="{{ '../assets/item1.jpeg' | asset_url }}" alt="">
             </a>
+            <p>KS-1 半なま讃岐しょうゆうどん</p>
+          </div>
+          <div class="product__info">
+            <div class="product__price">
+              1,000円（税込）
+            </div>
+            <div class="product__info-detail">
+              <div>
+                <p>★ぶっかけうどん醤油付き</p>
+                <p>★お土産にも最適</p>
+              </div>
+              <div>
+                <p>細づくりに仕上げた半生うどんと、香川の老舗醤油屋「鎌田醤油」のうどん醤油をセットにしました。</p>
+              </div>
+              <div>
+                <p>
+                  <span class="dot">●</span>4人前</p>
+                <p>
+                  <span class="dot">●</span>内容量：</p>
+                <p>・半生うどん220g（2人前）×2</p>
+                <p>・ぶっかけうどん醤油20ml×4</p>
+                <p>
+                  <span class="dot">●</span>賞味期限：半生うどん 製造より3か月</p>
+              </div>
+            </div>
+            <div class="button__cart">
+              <button>商品詳細はこちら</button>
+              <a href="">
+                <img src="../assets/wishlistBtn.png" alt="">
+              </a>
+            </div>
           </div>
         </div>
-      </div>
-      <div class="product__item">
-        <div class="product__image">
-          <a href="#">
-            <img src="../assets/item2.jpeg" alt="">
-          </a>
-          <p>KS-6 煮込カレーうどん</p>
-        </div>
-        <div class="product__info">
-          <div class="product__price">
-            1,000円（税込）
-          </div>
-          <div class="product__info-detail">
-            <div>
-              <p>★特製カレーの素付き</p>
-              <p>★お土産にも最適</p>
-            </div>
-            <div>
-              <p>大人から子どもまで親しまれる煮込カレーうどん。</p>
-              <p>煮込専用の半生うどんに、だしが香る煮込カレーの素付き。</p>
-              <p>お鍋ひとつで簡単に調理ができます。</p>
-            </div>
-            <div>
-              <p>
-                <span class="dot">●</span>4人前</p>
-              <p>
-                <span class="dot">●</span>内容量：</p>
-              <p>・半生うどん160g（2人前）×2</p>
-              <p>・ぶっかけうどん醤油20ml×4</p>
-              <p>
-                <span class="dot">●</span>賞味期限：半生うどん 製造より3か月</p>
-            </div>
-          </div>
-          <div class="button__cart">
-            <button>商品詳細はこちら</button>
-            <a href="">
-              <img src="../assets/wishlistBtn.png" alt="">
+        <div class="product__item">
+          <div class="product__image">
+            <a href="#">
+              <img src="{{ '../assets/item2.jpeg' | asset_url }}" alt="">
             </a>
+            <p>KS-6 煮込カレーうどん</p>
+          </div>
+          <div class="product__info">
+            <div class="product__price">
+              1,000円（税込）
+            </div>
+            <div class="product__info-detail">
+              <div>
+                <p>★特製カレーの素付き</p>
+                <p>★お土産にも最適</p>
+              </div>
+              <div>
+                <p>大人から子どもまで親しまれる煮込カレーうどん。</p>
+                <p>煮込専用の半生うどんに、だしが香る煮込カレーの素付き。</p>
+                <p>お鍋ひとつで簡単に調理ができます。</p>
+              </div>
+              <div>
+                <p>
+                  <span class="dot">●</span>4人前</p>
+                <p>
+                  <span class="dot">●</span>内容量：</p>
+                <p>・半生うどん160g（2人前）×2</p>
+                <p>・ぶっかけうどん醤油20ml×4</p>
+                <p>
+                  <span class="dot">●</span>賞味期限：半生うどん 製造より3か月</p>
+              </div>
+            </div>
+            <div class="button__cart">
+              <button>商品詳細はこちら</button>
+              <a href="">
+                <img src="{{ '../assets/wishlistBtn.png' | asset_url }}" alt="">
+              </a>
+            </div>
           </div>
         </div>
-      </div>
-      <div class="product__item">
-        <div class="product__image">
-          <a href="#">
-            <img src="../assets/item3.jpeg" alt="">
-          </a>
-          <p>B-3 讃岐ぶっかけうどんセット</p>
-        </div>
-        <div class="product__info">
-          <div class="product__price">
-            1,120円（税込）
-          </div>
-          <div class="product__info-detail">
-            <div>
-              <p>★讃岐の定番メニュー｢ぶっかけうどん｣</p>
-              <p>★お土産にも最適</p>
-            </div>
-            <div>
-              <p>包丁切り半生うどんにめんつゆと当社おすすめのかつお節、天かす、すだち果汁をセットしました。 お手軽にご自宅でぶっかけうどんをお楽しみいただけます。</p>
-            </div>
-            <div>
-              <p>
-                <span class="dot">●</span>4人前</p>
-              <p>
-                <span class="dot">●</span>内容量：</p>
-              <p>・半生うどん220g（2人前）×2</p>
-              <p>・ぶっかけうどん醤油20ml×4</p>
-              <p>・かつおぶし、天かす、すだち果汁</p>
-              <p>
-                <span class="dot">●</span>賞味期限：半生うどん 製造より3か月</p>
-            </div>
-          </div>
-          <div class="button__cart">
-            <button>商品詳細はこちら</button>
-            <a href="">
-              <img src="../assets/wishlistBtn.png" alt="">
+        <div class="product__item">
+          <div class="product__image">
+            <a href="#">
+              <img src="{{ '../assets/item3.jpeg' | asset_url }}" alt="">
             </a>
+            <p>B-3 讃岐ぶっかけうどんセット</p>
+          </div>
+          <div class="product__info">
+            <div class="product__price">
+              1,120円（税込）
+            </div>
+            <div class="product__info-detail">
+              <div>
+                <p>★讃岐の定番メニュー｢ぶっかけうどん｣</p>
+                <p>★お土産にも最適</p>
+              </div>
+              <div>
+                <p>包丁切り半生うどんにめんつゆと当社おすすめのかつお節、天かす、すだち果汁をセットしました。 お手軽にご自宅でぶっかけうどんをお楽しみいただけます。</p>
+              </div>
+              <div>
+                <p>
+                  <span class="dot">●</span>4人前</p>
+                <p>
+                  <span class="dot">●</span>内容量：</p>
+                <p>・半生うどん220g（2人前）×2</p>
+                <p>・ぶっかけうどん醤油20ml×4</p>
+                <p>・かつおぶし、天かす、すだち果汁</p>
+                <p>
+                  <span class="dot">●</span>賞味期限：半生うどん 製造より3か月</p>
+              </div>
+            </div>
+            <div class="button__cart">
+              <button>商品詳細はこちら</button>
+              <a href="">
+                <img src="{{ '../assets/wishlistBtn.png' | asset_url }}" alt="">
+              </a>
+            </div>
           </div>
         </div>
-      </div>
-      <div class="product__item">
-        <div class="product__image">
-          <a href="#">
-            <img src="../assets/item4.jpeg" alt="">
-          </a>
-          <p>S-1 しょうゆ豆</p>
-        </div>
-        <div class="product__info">
-          <div class="product__price">
-            660円（税込）
-          </div>
-          <div class="product__info-detail">
-            <div>
-              <p>★ぶっかけうどん醤油付き</p>
-              <p>★お土産にも最適</p>
-            </div>
-            <div>
-              <p>細づくりに仕上げた半生うどんと、香川の老舗醤油屋「鎌田醤油」のうどん醤油をセットにしました。</p>
-            </div>
-            <div>
-              <p>
-                <span class="dot">●</span>内容量：300g</p>
-              <p>
-                <span class="dot">●</span>賞味期限：製造より6か月</p>
-            </div>
-          </div>
-          <div class="button__cart">
-            <button>商品詳細はこちら</button>
-            <a href="">
-              <img src="../assets/wishlistBtn.png" alt="">
+        <div class="product__item">
+          <div class="product__image">
+            <a href="#">
+              <img src="{{ '../assets/item4.jpeg' | asset_url }}" alt="">
             </a>
+            <p>S-1 しょうゆ豆</p>
+          </div>
+          <div class="product__info">
+            <div class="product__price">
+              660円（税込）
+            </div>
+            <div class="product__info-detail">
+              <div>
+                <p>★ぶっかけうどん醤油付き</p>
+                <p>★お土産にも最適</p>
+              </div>
+              <div>
+                <p>細づくりに仕上げた半生うどんと、香川の老舗醤油屋「鎌田醤油」のうどん醤油をセットにしました。</p>
+              </div>
+              <div>
+                <p>
+                  <span class="dot">●</span>内容量：300g</p>
+                <p>
+                  <span class="dot">●</span>賞味期限：製造より6か月</p>
+              </div>
+            </div>
+            <div class="button__cart">
+              <button>商品詳細はこちら</button>
+              <a href="">
+                <img src="{{ '../assets/wishlistBtn.png' | asset_url }}" alt="">
+              </a>
+            </div>
           </div>
         </div>
-      </div>
-      <div class="product__item">
-        <div class="product__image">
-          <a href="#">
-            <img src="../assets/item5.jpeg" alt="">
-          </a>
-          <p>F-1 半生讃岐うどん 包丁切り</p>
-        </div>
-        <div class="product__info">
-          <div class="product__price">
-            1,080円（税込）
-          </div>
-          <div class="product__info-detail">
-            <div>
-              <p>★手土産や贈答品としても最適</p>
-              <p>★Fシリーズ専用包装紙</p>
-            </div>
-            <div>
-              <p>包丁切りの半生うどんにめんつゆ、かつお節をセット。</p>
-              <p>上品なパッケージに入っているのでご贈答だけでなく</p>
-              <p>ご婚礼用としてもお使いいただける人気の商品です。</p>
-            </div>
-            <div>
-              <p>
-                <span class="dot">●</span>内容量：300g</p>
-              <p>・半生うどん220g（2人前）×2</p>
-              <p>・めんつゆ（20mL×4）</p>
-              <p>・かつお節（2g×2）</p>
-              <p>
-                <span class="dot">●</span>賞味期限：製造より6か月</p>
-              <p>・半生うどん：製造より3か月</p>
-              <p>・めんつゆ：製造より1年2か月</p>
-              <p>・かつお節：製造より1年</p>
-            </div>
-          </div>
-          <div class="button__cart">
-            <button>商品詳細はこちら</button>
-            <a href="">
-              <img src="../assets/wishlistBtn.png" alt="">
+        <div class="product__item">
+          <div class="product__image">
+            <a href="#">
+              <img src="{{ '../assets/item5.jpeg' | asset_url }}" alt="">
             </a>
+            <p>F-1 半生讃岐うどん 包丁切り</p>
+          </div>
+          <div class="product__info">
+            <div class="product__price">
+              1,080円（税込）
+            </div>
+            <div class="product__info-detail">
+              <div>
+                <p>★手土産や贈答品としても最適</p>
+                <p>★Fシリーズ専用包装紙</p>
+              </div>
+              <div>
+                <p>包丁切りの半生うどんにめんつゆ、かつお節をセット。</p>
+                <p>上品なパッケージに入っているのでご贈答だけでなく</p>
+                <p>ご婚礼用としてもお使いいただける人気の商品です。</p>
+              </div>
+              <div>
+                <p>
+                  <span class="dot">●</span>内容量：300g</p>
+                <p>・半生うどん220g（2人前）×2</p>
+                <p>・めんつゆ（20mL×4）</p>
+                <p>・かつお節（2g×2）</p>
+                <p>
+                  <span class="dot">●</span>賞味期限：製造より6か月</p>
+                <p>・半生うどん：製造より3か月</p>
+                <p>・めんつゆ：製造より1年2か月</p>
+                <p>・かつお節：製造より1年</p>
+              </div>
+            </div>
+            <div class="button__cart">
+              <button>商品詳細はこちら</button>
+              <a href="">
+                <img src="{{ '../assets/wishlistBtn.png' | asset_url }}" alt="">
+              </a>
+            </div>
           </div>
         </div>
-      </div>
-      <div class="product__item">
-        <div class="product__image">
-          <a href="#">
-            <img src="../assets/item6.jpeg" alt="">
-          </a>
-          <p>F-2 半生讃岐うどん 包丁切り</p>
-        </div>
-        <div class="product__info">
-          <div class="product__price">
-            660円（税込）
-          </div>
-          <div class="product__info-detail">
-            <div>
-              <p>★ぶっかけうどん醤油付き</p>
-              <p>★お土産にも最適</p>
-            </div>
-            <div>
-              <p>包丁切りの半生うどんにめんつゆ、かつお節をセット。</p>
-              <p>上品なパッケージに入っているのでご贈答だけでなく</p>
-              <p>ご婚礼用としてもお使いいただける人気の商品です。</p>
-            </div>
-            <div>
-              <p>
-                <span class="dot">●</span>8人前</p>
-              <p>・半生うどん220g（2人前）×2</p>
-              <p>・めんつゆ（20mL×4）</p>
-              <p>・かつお節（2g×2）</p>
-              <p>
-                <span class="dot">●</span>賞味期限：製造より6か月</p>
-              <p>・半生うどん：製造より3か月</p>
-              <p>・めんつゆ：製造より1年2か月</p>
-              <p>・かつお節：製造より1年</p>
-            </div>
-          </div>
-          <div class="button__cart">
-            <button>商品詳細はこちら</button>
-            <a href="">
-              <img src="../assets/wishlistBtn.png" alt="">
+        <div class="product__item">
+          <div class="product__image">
+            <a href="#">
+              <img src="{{ '../assets/item6.jpeg' | asset_url }}" alt="">
             </a>
+            <p>F-2 半生讃岐うどん 包丁切り</p>
+          </div>
+          <div class="product__info">
+            <div class="product__price">
+              660円（税込）
+            </div>
+            <div class="product__info-detail">
+              <div>
+                <p>★ぶっかけうどん醤油付き</p>
+                <p>★お土産にも最適</p>
+              </div>
+              <div>
+                <p>包丁切りの半生うどんにめんつゆ、かつお節をセット。</p>
+                <p>上品なパッケージに入っているのでご贈答だけでなく</p>
+                <p>ご婚礼用としてもお使いいただける人気の商品です。</p>
+              </div>
+              <div>
+                <p>
+                  <span class="dot">●</span>8人前</p>
+                <p>・半生うどん220g（2人前）×2</p>
+                <p>・めんつゆ（20mL×4）</p>
+                <p>・かつお節（2g×2）</p>
+                <p>
+                  <span class="dot">●</span>賞味期限：製造より6か月</p>
+                <p>・半生うどん：製造より3か月</p>
+                <p>・めんつゆ：製造より1年2か月</p>
+                <p>・かつお節：製造より1年</p>
+              </div>
+            </div>
+            <div class="button__cart">
+              <button>商品詳細はこちら</button>
+              <a href="">
+                <img src="{{ '../assets/wishlistBtn.png' | asset_url }}" alt="">
+              </a>
+            </div>
           </div>
         </div>
-      </div>
-      <div class="product__item">
-        <div class="product__image">
-          <a href="#">
-            <img src="../assets/item7.jpeg" alt="">
-          </a>
-          <p>KJ-5 日本小麦倶楽部 半生讃岐うどん</p>
-        </div>
-        <div class="product__info">
-          <div class="product__price">
-            540円（税込）
-          </div>
-          <div class="product__info-detail">
-            <div>
-              <p>★ぶっかけうどん醤油付き</p>
-              <p>★お土産にも最適</p>
-            </div>
-            <div>
-              <p>小麦の風味を大切に打ち上げた、モチモチと粘りあるコシが</p>
-              <p>自慢の逸品。3人前、つゆ付で便利な手提げタイプなので、</p>
-              <p>お土産やちょっとしたご挨拶に最適です。</p>
-            </div>
-            <div>
-              <p>
-                <span class="dot">●</span>3人前</p>
-              <p>
-                <span class="dot">●</span>内容量：</p>
-              <p>・半生うどん300g（3人前）</p>
-              <p>・めんつゆ20ml×3</p>
-              <p>
-                <span class="dot">●</span>賞味期限：半生うどん 製造より3か月</p>
-            </div>
-          </div>
-          <div class="button__cart">
-            <button>商品詳細はこちら</button>
-            <a href="">
-              <img src="../assets/wishlistBtn.png" alt="">
+        <div class="product__item">
+          <div class="product__image">
+            <a href="#">
+              <img src="{{ '../assets/item7.jpeg' | asset_url }}" alt="">
             </a>
+            <p>KJ-5 日本小麦倶楽部 半生讃岐うどん</p>
+          </div>
+          <div class="product__info">
+            <div class="product__price">
+              540円（税込）
+            </div>
+            <div class="product__info-detail">
+              <div>
+                <p>★ぶっかけうどん醤油付き</p>
+                <p>★お土産にも最適</p>
+              </div>
+              <div>
+                <p>小麦の風味を大切に打ち上げた、モチモチと粘りあるコシが</p>
+                <p>自慢の逸品。3人前、つゆ付で便利な手提げタイプなので、</p>
+                <p>お土産やちょっとしたご挨拶に最適です。</p>
+              </div>
+              <div>
+                <p>
+                  <span class="dot">●</span>3人前</p>
+                <p>
+                  <span class="dot">●</span>内容量：</p>
+                <p>・半生うどん300g（3人前）</p>
+                <p>・めんつゆ20ml×3</p>
+                <p>
+                  <span class="dot">●</span>賞味期限：半生うどん 製造より3か月</p>
+              </div>
+            </div>
+            <div class="button__cart">
+              <button>商品詳細はこちら</button>
+              <a href="">
+                <img src="{{ '../assets/wishlistBtn.png' | asset_url }}" alt="">
+              </a>
+            </div>
           </div>
         </div>
-      </div>
-      <div class="product__item">
-        <div class="product__image">
-          <a href="#">
-            <img src="../assets/item8.jpeg" alt="">
-          </a>
-          <p>麺結び　讃岐うどん</p>
-        </div>
-        <div class="product__info">
-          <div class="product__price">
-            324円（税込）
-          </div>
-          <div class="product__info-detail">
-            <div>
-              <p>★ぶっかけうどん醤油付き</p>
-              <p>★お土産にも最適</p>
-            </div>
-            <div>
-              <p>常温保管ができる讃岐うどん(乾めん)とめんつゆをご挨拶品、ノベルティ、粗品として最適な小箱に詰合せました。</p>
-              <p>名刺やメッセージカードが挿せる切り込みが入っております。</p>
-            </div>
-            <div>
-              <p>
-                <span class="dot">●</span>2人前</p>
-              <p>
-                <span class="dot">●</span>内容量：</p>
-              <p>・讃岐うどん180g（2人前）</p>
-              <p>・めんつゆ20ml×2</p>
-              <p>
-                <span class="dot">●</span>賞味期限：</p>
-              <p>・うどん製造より1年半</p>
-              <p>・めんつゆ製造より1年2か月</p>
-              <p>
-                <span class="dot">●</span>ゆで時間：13分</p>
-            </div>
-            <div>
-              小箱サイズ：縦8.5cm×横26cm×高2.5cm
-            </div>
-          </div>
-          <div class="notice">
-            <h2>ご注文の前に必ずお読みください
-            </h2>
-            <ul>
-              <li>最低発注単位：１個より承ります</li>
-              <li>メッセージカードをご希望の場合はカードのデザインをお選びください</li>
-              <li>メッセージカードは絵文字には対応しておりません。入力いただいても印刷には表示されませんのでご注意ください</li>
-              <li>お選びいただくメッセージカードは１種類のみとなります</li>
-              <li>メッセージカードは商品と一緒にお届けしますので、お客様ご自身で商品に挿し込んでください</li>
-              <li>包装、のし対応、紙袋のサービスは含まれておりませんのでご了承ください。</li>
-            </ul>
-          </div>
-          <div class="button__cart">
-            <button>商品詳細はこちら</button>
-            <a href="">
-              <img src="../assets/wishlistBtn.png" alt="">
+        <div class="product__item">
+          <div class="product__image">
+            <a href="#">
+              <img src="{{ '../assets/item8.jpeg' | asset_url }}" alt="">
             </a>
+            <p>麺結び　讃岐うどん</p>
+          </div>
+          <div class="product__info">
+            <div class="product__price">
+              324円（税込）
+            </div>
+            <div class="product__info-detail">
+              <div>
+                <p>★ぶっかけうどん醤油付き</p>
+                <p>★お土産にも最適</p>
+              </div>
+              <div>
+                <p>常温保管ができる讃岐うどん(乾めん)とめんつゆをご挨拶品、ノベルティ、粗品として最適な小箱に詰合せました。</p>
+                <p>名刺やメッセージカードが挿せる切り込みが入っております。</p>
+              </div>
+              <div>
+                <p>
+                  <span class="dot">●</span>2人前</p>
+                <p>
+                  <span class="dot">●</span>内容量：</p>
+                <p>・讃岐うどん180g（2人前）</p>
+                <p>・めんつゆ20ml×2</p>
+                <p>
+                  <span class="dot">●</span>賞味期限：</p>
+                <p>・うどん製造より1年半</p>
+                <p>・めんつゆ製造より1年2か月</p>
+                <p>
+                  <span class="dot">●</span>ゆで時間：13分</p>
+              </div>
+              <div>
+                小箱サイズ：縦8.5cm×横26cm×高2.5cm
+              </div>
+            </div>
+            <div class="notice">
+              <h2>ご注文の前に必ずお読みください
+              </h2>
+              <ul>
+                <li>最低発注単位：１個より承ります</li>
+                <li>メッセージカードをご希望の場合はカードのデザインをお選びください</li>
+                <li>メッセージカードは絵文字には対応しておりません。入力いただいても印刷には表示されませんのでご注意ください</li>
+                <li>お選びいただくメッセージカードは１種類のみとなります</li>
+                <li>メッセージカードは商品と一緒にお届けしますので、お客様ご自身で商品に挿し込んでください</li>
+                <li>包装、のし対応、紙袋のサービスは含まれておりませんのでご了承ください。</li>
+              </ul>
+            </div>
+            <div class="button__cart">
+              <button>商品詳細はこちら</button>
+              <a href="">
+                <img src="{{ '../assets/wishlistBtn.png' | asset_url }}" alt="">
+              </a>
+            </div>
           </div>
         </div>
-      </div>
-      <div class="product__item">
-        <div class="product__image">
-          <a href="#">
-            <img src="../assets/item9.jpeg" alt="">
-          </a>
-          <p>【ありがとうございましたカード】麺結び　讃岐うどん</p>
-        </div>
-        <div class="product__info">
-          <div class="product__price">
-            324円（税込）
-          </div>
-          <div class="product__info-detail">
-            <div>
-              <p>★ぶっかけうどん醤油付き</p>
-              <p>★お土産にも最適</p>
-            </div>
-            <div>
-              <p>常温保管ができる讃岐うどん(乾めん)とめんつゆをご挨拶品、ノベルティ、粗品として最適な小箱に詰合せました。</p>
-              <p>名刺やメッセージカード挿せる切り込みが入っております。</p>
-            </div>
-            <div class="product__thank">
-              <span>★限定のメッセージカードを同封</span>
-              <img src="../assets/1741_thank.jpeg" alt="">
-              <span>※メッセージカードは商品と一緒にお届けしますので、</span>
-              <span>お客さまご自身で商品に挿し込んでください。</span>
-            </div>
-            <div>
-              <p>
-                <span class="dot">●</span>2人前</p>
-              <p>
-                <span class="dot">●</span>内容量：</p>
-              <p>・讃岐うどん180g（2人前）</p>
-              <p>・めんつゆ20ml×2</p>
-              <p>
-                <span class="dot">●</span>賞味期限：</p>
-              <p>・うどん製造より1年半</p>
-              <p>・めんつゆ製造より1年2か月</p>
-              <p>
-                <span class="dot">●</span>ゆで時間：13分</p>
-            </div>
-            <div>
-              小箱サイズ：縦8.5cm×横26cm×高2.5cm
-            </div>
-          </div>
-          <div class="notice">
-            <h2>ご注文の前に必ずお読みください
-            </h2>
-            <ul>
-              <li>最低発注単位：１個より承ります</li>
-              <li>メッセージカードをご希望の場合はカードのデザインをお選びください</li>
-              <li>メッセージカードは絵文字には対応しておりません。入力いただいても印刷には表示されませんのでご注意ください</li>
-              <li>お選びいただくメッセージカードは１種類のみとなります</li>
-              <li>メッセージカードは商品と一緒にお届けしますので、お客様ご自身で商品に挿し込んでください</li>
-              <li>包装、のし対応、紙袋のサービスは含まれておりませんのでご了承ください。</li>
-            </ul>
-          </div>
-          <div class="button__cart">
-            <button>商品詳細はこちら</button>
-            <a href="">
-              <img src="../assets/wishlistBtn.png" alt="">
+        <div class="product__item">
+          <div class="product__image">
+            <a href="#">
+              <img src="{{ '../assets/item9.jpeg' | asset_url }}" alt="">
             </a>
+            <p>【ありがとうございましたカード】麺結び　讃岐うどん</p>
+          </div>
+          <div class="product__info">
+            <div class="product__price">
+              324円（税込）
+            </div>
+            <div class="product__info-detail">
+              <div>
+                <p>★ぶっかけうどん醤油付き</p>
+                <p>★お土産にも最適</p>
+              </div>
+              <div>
+                <p>常温保管ができる讃岐うどん(乾めん)とめんつゆをご挨拶品、ノベルティ、粗品として最適な小箱に詰合せました。</p>
+                <p>名刺やメッセージカード挿せる切り込みが入っております。</p>
+              </div>
+              <div class="product__thank">
+                <span>★限定のメッセージカードを同封</span>
+                <img src="{{ '../assets/1741_thank.jpeg' | asset_url }}" alt="">
+                <span>※メッセージカードは商品と一緒にお届けしますので、</span>
+                <span>お客さまご自身で商品に挿し込んでください。</span>
+              </div>
+              <div>
+                <p>
+                  <span class="dot">●</span>2人前</p>
+                <p>
+                  <span class="dot">●</span>内容量：</p>
+                <p>・讃岐うどん180g（2人前）</p>
+                <p>・めんつゆ20ml×2</p>
+                <p>
+                  <span class="dot">●</span>賞味期限：</p>
+                <p>・うどん製造より1年半</p>
+                <p>・めんつゆ製造より1年2か月</p>
+                <p>
+                  <span class="dot">●</span>ゆで時間：13分</p>
+              </div>
+              <div>
+                小箱サイズ：縦8.5cm×横26cm×高2.5cm
+              </div>
+            </div>
+            <div class="notice">
+              <h2>ご注文の前に必ずお読みください
+              </h2>
+              <ul>
+                <li>最低発注単位：１個より承ります</li>
+                <li>メッセージカードをご希望の場合はカードのデザインをお選びください</li>
+                <li>メッセージカードは絵文字には対応しておりません。入力いただいても印刷には表示されませんのでご注意ください</li>
+                <li>お選びいただくメッセージカードは１種類のみとなります</li>
+                <li>メッセージカードは商品と一緒にお届けしますので、お客様ご自身で商品に挿し込んでください</li>
+                <li>包装、のし対応、紙袋のサービスは含まれておりませんのでご了承ください。</li>
+              </ul>
+            </div>
+            <div class="button__cart">
+              <button>商品詳細はこちら</button>
+              <a href="">
+                <img src="{{ '../assets/wishlistBtn.png' | asset_url }}" alt="">
+              </a>
+            </div>
           </div>
         </div>
-      </div>
-      <div class="product__item">
-        <div class="product__image">
-          <a href="#">
-            <img src="../assets/item10.jpeg" alt="">
-          </a>
-          <p>麺結び　讃岐うどん</p>
-        </div>
-        <div class="product__info">
-          <div class="product__price">
-            324円（税込）
-          </div>
-          <div class="product__info-detail">
-            <div>
-              <p>★ぶっかけうどん醤油付き</p>
-              <p>★お土産にも最適</p>
-            </div>
-            <div>
-              <p>常温保管ができる讃岐うどん(乾めん)とめんつゆをご挨拶品、ノベルティ、粗品として最適な小箱に詰合せました。</p>
-              <p>名刺やメッセージカードが挿せる切り込みが入っております。</p>
-            </div>
-            <div class="product__thank">
-              <span>★限定のメッセージカードを同封</span>
-              <img src="../assets/1741_thank.jpeg" alt="">
-              <span>※メッセージカードは商品と一緒にお届けしますので、</span>
-              <span>お客さまご自身で商品に挿し込んでください。</span>
-            </div>
-            <div>
-              <p>
-                <span class="dot">●</span>2人前</p>
-              <p>
-                <span class="dot">●</span>内容量：</p>
-              <p>・讃岐うどん180g（2人前）</p>
-              <p>・めんつゆ20ml×2</p>
-              <p>
-                <span class="dot">●</span>賞味期限：</p>
-              <p>・うどん製造より1年半</p>
-              <p>・めんつゆ製造より1年2か月</p>
-              <p>
-                <span class="dot">●</span>ゆで時間：13分</p>
-            </div>
-            <div>
-              小箱サイズ：縦8.5cm×横26cm×高2.5cm
-            </div>
-          </div>
-          <div class="notice">
-            <h2>ご注文の前に必ずお読みください
-            </h2>
-            <ul>
-              <li>最低発注単位：１個より承ります</li>
-              <li>メッセージカードをご希望の場合はカードのデザインをお選びください</li>
-              <li>メッセージカードは絵文字には対応しておりません。入力いただいても印刷には表示されませんのでご注意ください</li>
-              <li>お選びいただくメッセージカードは１種類のみとなります</li>
-              <li>メッセージカードは商品と一緒にお届けしますので、お客様ご自身で商品に挿し込んでください</li>
-              <li>包装、のし対応、紙袋のサービスは含まれておりませんのでご了承ください。</li>
-            </ul>
-          </div>
-          <div class="button__cart">
-            <button>商品詳細はこちら</button>
-            <a href="">
-              <img src="../assets/wishlistBtn.png" alt="">
+        <div class="product__item">
+          <div class="product__image">
+            <a href="#">
+              <img src="{{ '../assets/item10.jpeg' | asset_url }}" alt="">
             </a>
+            <p>麺結び　讃岐うどん</p>
+          </div>
+          <div class="product__info">
+            <div class="product__price">
+              324円（税込）
+            </div>
+            <div class="product__info-detail">
+              <div>
+                <p>★ぶっかけうどん醤油付き</p>
+                <p>★お土産にも最適</p>
+              </div>
+              <div>
+                <p>常温保管ができる讃岐うどん(乾めん)とめんつゆをご挨拶品、ノベルティ、粗品として最適な小箱に詰合せました。</p>
+                <p>名刺やメッセージカードが挿せる切り込みが入っております。</p>
+              </div>
+              <div class="product__thank">
+                <span>★限定のメッセージカードを同封</span>
+                <img src="{{ '../assets/1741_thank.jpeg' | asset_url }}" alt="">
+                <span>※メッセージカードは商品と一緒にお届けしますので、</span>
+                <span>お客さまご自身で商品に挿し込んでください。</span>
+              </div>
+              <div>
+                <p>
+                  <span class="dot">●</span>2人前</p>
+                <p>
+                  <span class="dot">●</span>内容量：</p>
+                <p>・讃岐うどん180g（2人前）</p>
+                <p>・めんつゆ20ml×2</p>
+                <p>
+                  <span class="dot">●</span>賞味期限：</p>
+                <p>・うどん製造より1年半</p>
+                <p>・めんつゆ製造より1年2か月</p>
+                <p>
+                  <span class="dot">●</span>ゆで時間：13分</p>
+              </div>
+              <div>
+                小箱サイズ：縦8.5cm×横26cm×高2.5cm
+              </div>
+            </div>
+            <div class="notice">
+              <h2>ご注文の前に必ずお読みください
+              </h2>
+              <ul>
+                <li>最低発注単位：１個より承ります</li>
+                <li>メッセージカードをご希望の場合はカードのデザインをお選びください</li>
+                <li>メッセージカードは絵文字には対応しておりません。入力いただいても印刷には表示されませんのでご注意ください</li>
+                <li>お選びいただくメッセージカードは１種類のみとなります</li>
+                <li>メッセージカードは商品と一緒にお届けしますので、お客様ご自身で商品に挿し込んでください</li>
+                <li>包装、のし対応、紙袋のサービスは含まれておりませんのでご了承ください。</li>
+              </ul>
+            </div>
+            <div class="button__cart">
+              <button>商品詳細はこちら</button>
+              <a href="">
+                <img src="{{ '../assets/wishlistBtn.png' | asset_url }}" alt="">
+              </a>
+            </div>
           </div>
         </div>
-      </div>
-      <div class="product__item">
-        <div class="product__image">
-          <a href="#">
-            <img src="../assets/item11.jpeg" alt="">
-          </a>
-          <p>麺結び　讃岐うどん</p>
-        </div>
-        <div class="product__info">
-          <div class="product__price">
-            324円（税込）
-          </div>
-          <div class="product__info-detail">
-            <div>
-              <p>★ぶっかけうどん醤油付き</p>
-              <p>★お土産にも最適</p>
-            </div>
-            <div>
-              <p>常温保管ができる讃岐うどん(乾めん)とめんつゆをご挨拶品、ノベルティ、粗品として最適な小箱に詰合せました。</p>
-              <p>名刺やメッセージカードが挿せる切り込みが入っております。</p>
-            </div>
-            <div>
-              <p>
-                <span class="dot">●</span>2人前</p>
-              <p>
-                <span class="dot">●</span>内容量：</p>
-              <p>・讃岐うどん180g（2人前）</p>
-              <p>・めんつゆ20ml×2</p>
-              <p>
-                <span class="dot">●</span>賞味期限：</p>
-              <p>・うどん製造より1年半</p>
-              <p>・めんつゆ製造より1年2か月</p>
-              <p>
-                <span class="dot">●</span>ゆで時間：13分</p>
-            </div>
-            <div class="specify__location">
-              <span>※北海道・沖縄にお届けの場合のみ、お届け先1箇所の商品代金が10,000円(税込)未満の際は別途500円(税込)を頂戴いたします。</span>
-            </div>
-          </div>
-          <div class="notice">
-            <h2>ご注文の前に必ずお読みください
-            </h2>
-            <ul>
-              <li>最低発注単位：１個より承ります</li>
-              <li>メッセージカードをご希望の場合はカードのデザインをお選びください</li>
-              <li>メッセージカードは絵文字には対応しておりません。入力いただいても印刷には表示されませんのでご注意ください</li>
-              <li>お選びいただくメッセージカードは１種類のみとなります</li>
-              <li>メッセージカードは商品と一緒にお届けしますので、お客様ご自身で商品に挿し込んでください</li>
-              <li>包装、のし対応、紙袋のサービスは含まれておりませんのでご了承ください。</li>
-            </ul>
-          </div>
-          <div class="button__cart">
-            <button>商品詳細はこちら</button>
-            <a href="">
-              <img src="../assets/wishlistBtn.png" alt="">
+        <div class="product__item">
+          <div class="product__image">
+            <a href="#">
+              <img src="{{ '../assets/item11.jpeg' | asset_url }}" alt="">
             </a>
+            <p>麺結び　讃岐うどん</p>
+          </div>
+          <div class="product__info">
+            <div class="product__price">
+              324円（税込）
+            </div>
+            <div class="product__info-detail">
+              <div>
+                <p>★ぶっかけうどん醤油付き</p>
+                <p>★お土産にも最適</p>
+              </div>
+              <div>
+                <p>常温保管ができる讃岐うどん(乾めん)とめんつゆをご挨拶品、ノベルティ、粗品として最適な小箱に詰合せました。</p>
+                <p>名刺やメッセージカードが挿せる切り込みが入っております。</p>
+              </div>
+              <div>
+                <p>
+                  <span class="dot">●</span>2人前</p>
+                <p>
+                  <span class="dot">●</span>内容量：</p>
+                <p>・讃岐うどん180g（2人前）</p>
+                <p>・めんつゆ20ml×2</p>
+                <p>
+                  <span class="dot">●</span>賞味期限：</p>
+                <p>・うどん製造より1年半</p>
+                <p>・めんつゆ製造より1年2か月</p>
+                <p>
+                  <span class="dot">●</span>ゆで時間：13分</p>
+              </div>
+              <div class="specify__location">
+                <span>※北海道・沖縄にお届けの場合のみ、お届け先1箇所の商品代金が10,000円(税込)未満の際は別途500円(税込)を頂戴いたします。</span>
+              </div>
+            </div>
+            <div class="notice">
+              <h2>ご注文の前に必ずお読みください
+              </h2>
+              <ul>
+                <li>最低発注単位：１個より承ります</li>
+                <li>メッセージカードをご希望の場合はカードのデザインをお選びください</li>
+                <li>メッセージカードは絵文字には対応しておりません。入力いただいても印刷には表示されませんのでご注意ください</li>
+                <li>お選びいただくメッセージカードは１種類のみとなります</li>
+                <li>メッセージカードは商品と一緒にお届けしますので、お客様ご自身で商品に挿し込んでください</li>
+                <li>包装、のし対応、紙袋のサービスは含まれておりませんのでご了承ください。</li>
+              </ul>
+            </div>
+            <div class="button__cart">
+              <button>商品詳細はこちら</button>
+              <a href="">
+                <img src="{{ '../assets/wishlistBtn.png' | asset_url }}" alt="">
+              </a>
+            </div>
           </div>
         </div>
-      </div>
-      <div class="product__item">
-        <div class="product__image">
-          <a href="#">
-            <img src="../assets/item12.jpeg" alt="">
-          </a>
-          <p>麺結び　讃岐うどん</p>
-        </div>
-        <div class="product__info">
-          <div class="product__price">
-            324円（税込）
-          </div>
-          <div class="product__info-detail">
-            <div>
-              <p>★ぶっかけうどん醤油付き</p>
-              <p>★お土産にも最適</p>
-            </div>
-            <div>
-              <p>常温保管ができる讃岐うどん(乾めん)とめんつゆをご挨拶品、ノベルティ、粗品として最適な小箱に詰合せました。</p>
-              <p>名刺やメッセージカードが挿せる切り込みが入っております。</p>
-            </div>
-            <div>
-              <p>
-                <span class="dot">●</span>2人前</p>
-              <p>
-                <span class="dot">●</span>内容量：</p>
-              <p>・讃岐うどん180g（2人前）</p>
-              <p>・めんつゆ20ml×2</p>
-              <p>
-                <span class="dot">●</span>賞味期限：</p>
-              <p>・うどん製造より1年半</p>
-              <p>・めんつゆ製造より1年2か月</p>
-              <p>
-                <span class="dot">●</span>ゆで時間：13分</p>
-            </div>
-            <div class="specify__location">
-              <span>※北海道・沖縄にお届けの場合のみ、お届け先1箇所の商品代金が10,000円(税込)未満の際は別途500円(税込)を頂戴いたします。</span>
-            </div>
-          </div>
-          <div class="notice">
-            <h2>ご注文の前に必ずお読みください
-            </h2>
-            <ul>
-              <li>最低発注単位：１個より承ります</li>
-              <li>メッセージカードをご希望の場合はカードのデザインをお選びください</li>
-              <li>メッセージカードは絵文字には対応しておりません。入力いただいても印刷には表示されませんのでご注意ください</li>
-              <li>お選びいただくメッセージカードは１種類のみとなります</li>
-              <li>メッセージカードは商品と一緒にお届けしますので、お客様ご自身で商品に挿し込んでください</li>
-              <li>包装、のし対応、紙袋のサービスは含まれておりませんのでご了承ください。</li>
-            </ul>
-          </div>
-          <div class="button__cart">
-            <button>商品詳細はこちら</button>
-            <a href="">
-              <img src="../assets/wishlistBtn.png" alt="">
+        <div class="product__item">
+          <div class="product__image">
+            <a href="#">
+              <img src="{{ '../assets/item12.jpeg' | asset_url }}" alt="">
             </a>
+            <p>麺結び　讃岐うどん</p>
+          </div>
+          <div class="product__info">
+            <div class="product__price">
+              324円（税込）
+            </div>
+            <div class="product__info-detail">
+              <div>
+                <p>★ぶっかけうどん醤油付き</p>
+                <p>★お土産にも最適</p>
+              </div>
+              <div>
+                <p>常温保管ができる讃岐うどん(乾めん)とめんつゆをご挨拶品、ノベルティ、粗品として最適な小箱に詰合せました。</p>
+                <p>名刺やメッセージカードが挿せる切り込みが入っております。</p>
+              </div>
+              <div>
+                <p>
+                  <span class="dot">●</span>2人前</p>
+                <p>
+                  <span class="dot">●</span>内容量：</p>
+                <p>・讃岐うどん180g（2人前）</p>
+                <p>・めんつゆ20ml×2</p>
+                <p>
+                  <span class="dot">●</span>賞味期限：</p>
+                <p>・うどん製造より1年半</p>
+                <p>・めんつゆ製造より1年2か月</p>
+                <p>
+                  <span class="dot">●</span>ゆで時間：13分</p>
+              </div>
+              <div class="specify__location">
+                <span>※北海道・沖縄にお届けの場合のみ、お届け先1箇所の商品代金が10,000円(税込)未満の際は別途500円(税込)を頂戴いたします。</span>
+              </div>
+            </div>
+            <div class="notice">
+              <h2>ご注文の前に必ずお読みください
+              </h2>
+              <ul>
+                <li>最低発注単位：１個より承ります</li>
+                <li>メッセージカードをご希望の場合はカードのデザインをお選びください</li>
+                <li>メッセージカードは絵文字には対応しておりません。入力いただいても印刷には表示されませんのでご注意ください</li>
+                <li>お選びいただくメッセージカードは１種類のみとなります</li>
+                <li>メッセージカードは商品と一緒にお届けしますので、お客様ご自身で商品に挿し込んでください</li>
+                <li>包装、のし対応、紙袋のサービスは含まれておりませんのでご了承ください。</li>
+              </ul>
+            </div>
+            <div class="button__cart">
+              <button>商品詳細はこちら</button>
+              <a href="">
+                <img src="{{ '../assets/wishlistBtn.png' | asset_url }}" alt="">
+              </a>
+            </div>
           </div>
         </div>
-      </div>
-      <div class="product__item">
-        <div class="product__image">
-          <a href="#">
-            <img src="../assets/item13.jpeg" alt="">
-          </a>
-          <p>【風呂敷包(紫色)】半生讃岐うどん 包丁切り F-2(HP)【送料込※】</p>
-        </div>
-        <div class="product__info">
-          <div class="product__price">
-            3000円（税込）
-          </div>
-          <div class="product__info-detail">
-            <div>
-              <p>★ぶっかけうどん醤油付き</p>
-              <p>★お土産にも最適</p>
-            </div>
-            <div>
-              <p>常温保管ができる讃岐うどん(乾めん)とめんつゆをご挨拶品、ノベルティ、粗品として最適な小箱に詰合せました。</p>
-              <p>名刺やメッセージカードが挿せる切り込みが入っております。</p>
-            </div>
-            <div>
-              <p>
-                <span class="dot">●</span>2人前</p>
-              <p>
-                <span class="dot">●</span>内容量：</p>
-              <p>・讃岐うどん180g（2人前）</p>
-              <p>・めんつゆ20ml×2</p>
-              <p>
-                <span class="dot">●</span>賞味期限：</p>
-              <p>・うどん製造より1年半</p>
-              <p>・めんつゆ製造より1年2か月</p>
-              <p>
-                <span class="dot">●</span>ゆで時間：13分</p>
-            </div>
-            <div class="specify__location">
-              <span>※北海道・沖縄にお届けの場合のみ、お届け先1箇所の商品代金が10,000円(税込)未満の際は別途500円(税込)を頂戴いたします。</span>
-            </div>
-          </div>
-          <div class="button__cart">
-            <button>商品詳細はこちら</button>
-            <a href="">
-              <img src="../assets/wishlistBtn.png" alt="">
+        <div class="product__item">
+          <div class="product__image">
+            <a href="#">
+              <img src="{{ '../assets/item13.jpeg' | asset_url }}" alt="">
             </a>
+            <p>【風呂敷包(紫色)】半生讃岐うどん 包丁切り F-2(HP)【送料込※】</p>
+          </div>
+          <div class="product__info">
+            <div class="product__price">
+              3000円（税込）
+            </div>
+            <div class="product__info-detail">
+              <div>
+                <p>★ぶっかけうどん醤油付き</p>
+                <p>★お土産にも最適</p>
+              </div>
+              <div>
+                <p>常温保管ができる讃岐うどん(乾めん)とめんつゆをご挨拶品、ノベルティ、粗品として最適な小箱に詰合せました。</p>
+                <p>名刺やメッセージカードが挿せる切り込みが入っております。</p>
+              </div>
+              <div>
+                <p>
+                  <span class="dot">●</span>2人前</p>
+                <p>
+                  <span class="dot">●</span>内容量：</p>
+                <p>・讃岐うどん180g（2人前）</p>
+                <p>・めんつゆ20ml×2</p>
+                <p>
+                  <span class="dot">●</span>賞味期限：</p>
+                <p>・うどん製造より1年半</p>
+                <p>・めんつゆ製造より1年2か月</p>
+                <p>
+                  <span class="dot">●</span>ゆで時間：13分</p>
+              </div>
+              <div class="specify__location">
+                <span>※北海道・沖縄にお届けの場合のみ、お届け先1箇所の商品代金が10,000円(税込)未満の際は別途500円(税込)を頂戴いたします。</span>
+              </div>
+            </div>
+            <div class="button__cart">
+              <button>商品詳細はこちら</button>
+              <a href="">
+                <img src="{{ '../assets/wishlistBtn.png' | asset_url }}" alt="">
+              </a>
+            </div>
           </div>
         </div>
-      </div>
-      <div class="product__item">
-        <div class="product__image">
-          <a href="#">
-            <img src="../assets/item14.jpeg" alt="">
-          </a>
-          <p>【風呂敷包(桃色)】半生讃岐うどん 包丁切り F-2(HP)【送料込※】</p>
-        </div>
-        <div class="product__info">
-          <div class="product__price">
-            3000円（税込）
-          </div>
-          <div class="product__info-detail">
-            <div>
-              <p>★ぶっかけうどん醤油付き</p>
-              <p>★お土産にも最適</p>
-            </div>
-            <div>
-              <p>常温保管ができる讃岐うどん(乾めん)とめんつゆをご挨拶品、ノベルティ、粗品として最適な小箱に詰合せました。</p>
-              <p>名刺やメッセージカードが挿せる切り込みが入っております。</p>
-            </div>
-            <div>
-              <p>
-                <span class="dot">●</span>2人前</p>
-              <p>
-                <span class="dot">●</span>内容量：</p>
-              <p>・讃岐うどん180g（2人前）</p>
-              <p>・めんつゆ20ml×2</p>
-              <p>
-                <span class="dot">●</span>賞味期限：</p>
-              <p>・うどん製造より1年半</p>
-              <p>・めんつゆ製造より1年2か月</p>
-              <p>
-                <span class="dot">●</span>ゆで時間：13分</p>
-            </div>
-            <div class="specify__location">
-              <span>※北海道・沖縄にお届けの場合のみ、お届け先1箇所の商品代金が10,000円(税込)未満の際は別途500円(税込)を頂戴いたします。</span>
-            </div>
-          </div>
-          <div class="button__cart">
-            <button>商品詳細はこちら</button>
-            <a href="">
-              <img src="../assets/wishlistBtn.png" alt="">
+        <div class="product__item">
+          <div class="product__image">
+            <a href="#">
+              <img src="{{ '../assets/item14.jpeg' | asset_url }}" alt="">
             </a>
+            <p>【風呂敷包(桃色)】半生讃岐うどん 包丁切り F-2(HP)【送料込※】</p>
+          </div>
+          <div class="product__info">
+            <div class="product__price">
+              3000円（税込）
+            </div>
+            <div class="product__info-detail">
+              <div>
+                <p>★ぶっかけうどん醤油付き</p>
+                <p>★お土産にも最適</p>
+              </div>
+              <div>
+                <p>常温保管ができる讃岐うどん(乾めん)とめんつゆをご挨拶品、ノベルティ、粗品として最適な小箱に詰合せました。</p>
+                <p>名刺やメッセージカードが挿せる切り込みが入っております。</p>
+              </div>
+              <div>
+                <p>
+                  <span class="dot">●</span>2人前</p>
+                <p>
+                  <span class="dot">●</span>内容量：</p>
+                <p>・讃岐うどん180g（2人前）</p>
+                <p>・めんつゆ20ml×2</p>
+                <p>
+                  <span class="dot">●</span>賞味期限：</p>
+                <p>・うどん製造より1年半</p>
+                <p>・めんつゆ製造より1年2か月</p>
+                <p>
+                  <span class="dot">●</span>ゆで時間：13分</p>
+              </div>
+              <div class="specify__location">
+                <span>※北海道・沖縄にお届けの場合のみ、お届け先1箇所の商品代金が10,000円(税込)未満の際は別途500円(税込)を頂戴いたします。</span>
+              </div>
+            </div>
+            <div class="button__cart">
+              <button>商品詳細はこちら</button>
+              <a href="">
+                <img src="{{ '../assets/wishlistBtn.png' | asset_url }}" alt="">
+              </a>
+            </div>
           </div>
         </div>
       </div>
@@ -728,7 +731,7 @@
         </li>
       </ul>
       <div class="product__bannar">
-        <img src="../assets/brigde.jpeg" alt="">
+        <img src="{{ '../assets/brigde.jpeg' | asset_url }}" alt="">
       </div>
     </div>
     <div class="product__filter-Sp">
@@ -762,7 +765,7 @@
     <div class="product__list-Sp">
       <div class="product__item-Sp">
         <div class="product__item-ImageSp">
-          <img src="../assets/item1.jpeg" alt="">
+          <img src="{{ '../assets/item1.jpeg' | asset_url }}" alt="">
         </div>
         <div class="product__item-infoSp">
           <p>ＫＳ－１ 半なま讃岐しょうゆうどん</p>
@@ -771,7 +774,7 @@
       </div>
       <div class="product__item-Sp">
         <div class="product__item-ImageSp">
-          <img src="../assets/item2.jpeg" alt="">
+          <img src="{{ '../assets/item2.jpeg' | asset_url }}" alt="">
         </div>
         <div class="product__item-infoSp">
           <p>ＫＳ－１ 半なま讃岐しょうゆうどん</p>
@@ -780,7 +783,7 @@
       </div>
       <div class="product__item-Sp">
         <div class="product__item-ImageSp">
-          <img src="../assets/item3.jpeg" alt="">
+          <img src="{{ '../assets/item3.jpeg' | asset_url }}" alt="">
         </div>
         <div class="product__item-infoSp">
           <p>ＫＳ－１ 半なま讃岐しょうゆうどん</p>
@@ -789,7 +792,7 @@
       </div>
       <div class="product__item-Sp">
         <div class="product__item-ImageSp">
-          <img src="../assets/item4.jpeg" alt="">
+          <img src="{{ '../assets/item4.jpeg' | asset_url }}" alt="">
         </div>
         <div class="product__item-infoSp">
           <p>ＫＳ－１ 半なま讃岐しょうゆうどん</p>
@@ -798,7 +801,7 @@
       </div>
       <div class="product__item-Sp">
         <div class="product__item-ImageSp">
-          <img src="../assets/item5.jpeg" alt="">
+          <img src="{{ '../assets/item5.jpeg' | asset_url }}" alt="">
         </div>
         <div class="product__item-infoSp">
           <p>ＫＳ－１ 半なま讃岐しょうゆうどん</p>
@@ -807,7 +810,7 @@
       </div>
       <div class="product__item-Sp">
         <div class="product__item-ImageSp">
-          <img src="../assets/item6.jpeg" alt="">
+          <img src="{{ '../assets/item6.jpeg' | asset_url }}" alt="">
         </div>
         <div class="product__item-infoSp">
           <p>ＫＳ－１ 半なま讃岐しょうゆうどん</p>
@@ -816,7 +819,7 @@
       </div>
       <div class="product__item-Sp">
         <div class="product__item-ImageSp">
-          <img src="../assets/item7.jpeg" alt="">
+          <img src="{{ '../assets/item7.jpeg' | asset_url }}" alt="">
         </div>
         <div class="product__item-infoSp">
           <p>ＫＳ－１ 半なま讃岐しょうゆうどん</p>
@@ -825,7 +828,7 @@
       </div>
       <div class="product__item-Sp">
         <div class="product__item-ImageSp">
-          <img src="../assets/item8.jpeg" alt="">
+          <img src="{{ '../assets/item8.jpeg' | asset_url }}" alt="">
         </div>
         <div class="product__item-infoSp">
           <p>ＫＳ－１ 半なま讃岐しょうゆうどん</p>
@@ -834,7 +837,7 @@
       </div>
       <div class="product__item-Sp">
         <div class="product__item-ImageSp">
-          <img src="../assets/item9.jpeg" alt="">
+          <img src="{{ '../assets/item9.jpeg' | asset_url }}" alt="">
         </div>
         <div class="product__item-infoSp">
           <p>ＫＳ－１ 半なま讃岐しょうゆうどん</p>
@@ -843,7 +846,7 @@
       </div>
       <div class="product__item-Sp">
         <div class="product__item-ImageSp">
-          <img src="../assets/item10.jpeg" alt="">
+          <img src="{{ '../assets/item10.jpeg' | asset_url }}" alt="">
         </div>
         <div class="product__item-infoSp">
           <p>ＫＳ－１ 半なま讃岐しょうゆうどん</p>

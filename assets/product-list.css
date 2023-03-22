@@ -6,11 +6,15 @@ img {
     width: 100%;
 }
 .container {
-    width: 900px;
+    max-width: 1200px;
+    display: flex;
+    margin: auto;
+    gap: 20px;
 }
 .breadcrumb {
     background: #f2efeb;
     border: 1px solid #d6d3cf;
+    margin-top: 0;
 }
 ul.breadcrumb {
     list-style: none;
@@ -74,7 +78,7 @@ ul.breadcrumb li a:hover {
     width: 23%;
 }
 .product__item .product__image {
-    width: 207px;
+    max-width: 207px;
 }
 .product__item .product__image a img {
     border: 1px solid #ddd;

@@ -1,17 +1,24 @@
 p,h2,span {
     font-family: "游明朝" , "Yu Mincho" , "游明朝体" , "YuMincho" , "ヒラギノ明朝 Pro W3" , "Hiragino Mincho Pro" , "HiraMinProN-W3" , "HGS明朝E" , "ＭＳ Ｐ明朝" , "MS PMincho" , serif;
 }
+#product-detail {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin: 30px 0;
+}
 ul.breadcrumb {
     list-style: none;
     background: #f2efeb;
     border: 1px solid #d6d3cf;
+    margin-top: 0;
 }
 ul.breadcrumb li {
     display: inline;
     font-size: 11px;
 }
 .container {
-    width: 920px;
+    max-width: 920px;
     background-image: url("../assets/bgr_content.png");
     background-repeat: no-repeat;
 }
@@ -30,6 +37,10 @@ ul.breadcrumb li a:hover {
     color: #f78500;
     text-decoration: none;
 }
+.directional h2 {
+    font-size: 18px;
+    margin-left: 10px;
+}
 .prev-next {
     display: flex;
     justify-content: space-between;
@@ -37,8 +48,8 @@ ul.breadcrumb li a:hover {
     align-items: center;
     margin-bottom: 30px;
 }
-.prev-next span {
-    text-decoration: underline;
+.prev-next a {
+    color: black;
 }
 .prev-next i{
     font-size: 8px;
@@ -49,19 +60,49 @@ ul.breadcrumb li a:hover {
 .image-container {
     position: relative;
 }
-
+.image-container img:hover {
+    opacity: 0.8;
+    cursor: pointer;
+}
+#main-image {
+    max-width: 480px;
+    height: 480px;
+}
 .thumbnails {
     position: absolute;
-    left: 0;
+    left: 3px;
 }
-
-.thumbnail {
+.thumbnails img {
     width: 55px;
     height: 55px;
     cursor: pointer;
-    margin-right: 5px;
+    margin-right: 1px ;
     border: 1px solid #ccc;
     padding: 2px;
+}
+.maintain__product {
+    margin-top: 230px;
+}
+.maintain__product img {
+    width: 150px;
+}
+.maintain__item {
+    display: flex;
+    gap: 10px;
+}
+.maintain__note {
+    display: flex;
+    flex-direction: column;
+}
+.maintain__note span {
+    font-size: 20px;
+    cursor: pointer;
+}
+.maintain__note p {
+    margin: 0;
+}
+.maintain__note span:hover {
+    color: #f78500;
 }
 .detail {
     display: flex;
@@ -78,6 +119,10 @@ ul.breadcrumb li a:hover {
     padding-top: 25px;
     border-bottom: 1px dotted #ccc;
     border-top: 1px dotted #ccc;
+}
+.detail__info-note img:hover {
+    opacity: 0.8;
+    cursor: pointer;
 }
 .detail__info-note > span {
     background:#092679;
@@ -108,6 +153,10 @@ ul.breadcrumb li a:hover {
 }
 .detail__image img{
     width: 210px;
+    cursor: pointer;
+}
+.detail__image img:hover {
+    opacity: 0.8;
 }
 .count__price input{
     width: 20px;
@@ -131,17 +180,12 @@ ul.breadcrumb li a:hover {
     font-size: 11px;
     color: #999;
 }
-.button__cart button{
-    color: white;
-    background: #c1a86b;
-    border: none;
-    outline: none;
-    padding: 20px;
-    font-size: 20px;
+.button__cart img{
+    max-width: 300px;
     cursor: pointer;
     margin: 20px 0;
 }
-.button__cart button:hover {
+.button__cart img:hover {
     opacity: 0.8;
 }
 .button__cart i {
@@ -327,16 +371,15 @@ ul.breadcrumb li a:hover {
     overflow: hidden;
 }
 .slider-container {
-    position: absolute;
     width: 100%;
-    height: 100%;
+    overflow: hidden;
     transition: transform 0.3s ease-in-out;
 }
 
 .slider-container img {
+    display: block;
     width: 100%;
-    height: 100%;
-    object-fit: cover;
+    height: auto;
 }
 
 .slider .dots-container {
@@ -370,7 +413,7 @@ ul.breadcrumb li a:hover {
     border-radius: 50%;
     opacity: 0.6;
     outline: none;
-    font-size: 20px;
+    font-size: 15px;
     padding: 10px;
     cursor: pointer;
 }
@@ -383,7 +426,7 @@ ul.breadcrumb li a:hover {
     right: 10px;
 }
 .buy__often {
-    padding: 0 10px;
+    padding: 40px 10px;
 }
 .buy__often h2{
     text-align: center;
@@ -429,11 +472,12 @@ ul.breadcrumb li a:hover {
     padding: 10px 0;
 }
 .option select:nth-child(2){
-    margin: 20px 0;
+    margin: 22px 0;
 }
 .option label input {
     width: 60px;
     height: 40px;
+    margin: 5px 0;
 }
 .enter__keyword-Sp {
     text-align: center;
@@ -576,4 +620,91 @@ ul.breadcrumb li a:hover {
 
 .container-Sp {
     display: none;
+}
+@media screen and (max-width: 992px) {
+    #product-detail {
+        flex-direction: column-reverse;
+    }
+    ul.breadcrumb {
+        padding-left: 5px;
+    }
+    .detail {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+}
+@media screen and (max-width: 756px) {
+
+
+}
+@media screen and (max-width: 500px) {
+    .container {
+        display: none;
+    }
+    .container-Sp {
+        display: block;
+    }
+}
+
+slick-prev {
+    left: 0;
+}
+
+.slick-next {
+    right: 0;
+}
+
+.slick-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    border: none;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    line-height: 1;
+    z-index: 1;
+    margin: 0 12px;
+    border-radius: 50%;
+}
+.slick-dots {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 10px);
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+    gap: 0 20px;
+    list-style-type: none;
+}
+
+.slick-dots button {
+    font-size: 0;
+    width: 10px;
+    height: 10px;
+    border-radius: 100rem;
+    background-color: gray;
+    border: none;
+    outline: none;
+    transition: all 0.2s linear;
+}
+.slick-dots .slick-active button {
+    background-color: #d2524e;
+}
+.slick-prev {
+    left: -13px;
+}
+.slick-next {
+    right: -22px;
+}
+.slick-prev:before, .slick-next:before {
+    color: gray;
+    font-size: 25px;
+}
+.slick-initialized .slick-slide {
+    height: 400px;
 }
